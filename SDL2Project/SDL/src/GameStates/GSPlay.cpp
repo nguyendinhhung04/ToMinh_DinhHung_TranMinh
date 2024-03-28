@@ -23,12 +23,12 @@ GSPlay::~GSPlay()
 void GSPlay::Init()
 {
 	//auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("Ground.jpeg");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("Cave/Background_GSPlay.tga");
 
 	// background
 	
 	m_background = std::make_shared<Sprite2D>( texture, SDL_FLIP_NONE);
-	m_background->SetSize(SCREEN_WIDTH, SCREEN_HEIDHT);
+	m_background->SetSize(352, 192);
 	m_background->Set2DPosition(0, 0);
 
 
@@ -198,10 +198,12 @@ void GSPlay::Update(float deltaTime)
 	//obj->Update(deltaTime);
 }
 
+
+
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
 
-	m_background->Draw(renderer);
+	//m_background->Draw(renderer);
 	//m_score->Draw();
 	for (auto it : m_listButton)
 	{
