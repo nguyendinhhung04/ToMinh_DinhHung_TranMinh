@@ -86,43 +86,36 @@ int SpriteAnimation::GetHeight()
 
 void SpriteAnimation::MoveLeft(float deltaTime, float speed)
 {
-	printf("LeftFunc");
 	m_position.x -= speed * deltaTime;
 }
 
 void SpriteAnimation::MoveRight(float deltaTime, float speed)
 {
-	printf("RightFunc");
 	m_position.x += speed * deltaTime;
 }
 void SpriteAnimation::MoveUp(float deltaTime, float speed)
 {
-	printf("UpFunc");
 	m_position.y -= speed * deltaTime;
 }
 void SpriteAnimation::MoveDown(float deltaTime,float speed)
 {
-	printf("DownFunc");
 	m_position.y += speed * deltaTime;
 }
 
 void SpriteAnimation::MoveLeftDown(float deltaTime, float speed)
 {
-	printf("LeftDownFunc");
 	m_position.x -= speed * deltaTime;
 	m_position.y += speed * deltaTime;
 }
 
 void SpriteAnimation::MoveLeftUp(float deltaTime, float speed)
 {
-	printf("LeftUpFunc");
 	m_position.x -= speed * deltaTime;
 	m_position.y -= speed * deltaTime;
 }
 
 void SpriteAnimation::MoveRightUp(float deltaTime, float speed)
 {
-	printf("RightUpFunc");
 	m_position.x += speed * deltaTime;
 	m_position.y -= speed * deltaTime;
 }
@@ -130,7 +123,6 @@ void SpriteAnimation::MoveRightUp(float deltaTime, float speed)
 
 void SpriteAnimation::MoveRightDown(float deltaTime, float speed)
 {
-	printf("RightUpFunc");
 	m_position.x += speed * deltaTime;
 	m_position.y += speed * deltaTime;
 }
