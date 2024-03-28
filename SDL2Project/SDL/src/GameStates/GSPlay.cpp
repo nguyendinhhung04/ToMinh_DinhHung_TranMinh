@@ -28,8 +28,8 @@ void GSPlay::Init()
 	// background
 	
 	m_background = std::make_shared<Sprite2D>( texture, SDL_FLIP_NONE);
-	m_background->SetSize(352, 192);
-	m_background->Set2DPosition(0, 0);
+	m_background->SetSize(1280, 720);
+	m_background->Set2DPosition(0,0);
 
 
 	// button close
@@ -203,7 +203,7 @@ void GSPlay::Update(float deltaTime)
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
 
-	//m_background->Draw(renderer);
+	m_background->Draw(renderer);
 	//m_score->Draw();
 	for (auto it : m_listButton)
 	{
