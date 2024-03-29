@@ -37,7 +37,7 @@ public:
 
 	//Moving for enemy
 	void MoveToCharacter(float deltaTime, float speed, Vector2 other);
-	void MoveToCharacter(float deltaTime, float speed, Vector3 other);
+
 	//Moving
 	float m_MoveSpeed;
 	void MoveLeft(float deltaTime, float speed);

@@ -3,7 +3,7 @@
 #include <cmath>
 SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
-	m_MoveSpeed = (float)(70);
+	m_MoveSpeed = (float)(150);
 	m_pTexture = texture;
 	m_spriteRow = spriteRow;
 	m_frameCount = frameCount;

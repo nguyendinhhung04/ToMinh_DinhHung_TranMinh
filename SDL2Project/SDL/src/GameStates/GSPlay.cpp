@@ -44,10 +44,10 @@ void GSPlay::Init()
 
    // Animation 
 	
-	texture = ResourceManagers::GetInstance()->GetTexture("Actor1_2.tga");
-	obj = std::make_shared<SpriteAnimation>( texture, 2, 9, 6, 0.2f);
+	texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/characters/crazy.png");
+	obj = std::make_shared<SpriteAnimation>( texture, 1, 1, 1, 1.00f);
 	obj->SetFlip(SDL_FLIP_HORIZONTAL);
-	obj->SetSize(40, 50);
+	obj->SetSize(100, 100);
 	obj->Set2DPosition(240, 400);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	m_listAnimation.push_back(obj);
@@ -63,11 +63,12 @@ void GSPlay::Init()
 
 
 	//Enemy
-	auto texture2 = ResourceManagers::GetInstance()->GetTexture("Brotato.tga");
-	monster = std::make_shared<enemy>(texture, 2, 9, 6, 0.2f);
+	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
+	monster = std::make_shared<enemy>(texture, 1, 1, 1, 1.00f);
 	monster->SetFlip(SDL_FLIP_HORIZONTAL);
 	monster->SetSize(60, 100);
-	monster->Set2DPosition(240, 500);
+	monster->Set2DPosition(100, 100);
+	monster->m_MoveSpeed = 1.80f;
 	m_listEnemy.push_back(monster);
 
 	m_KeyPress = 0;

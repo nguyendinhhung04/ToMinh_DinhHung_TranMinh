@@ -162,7 +162,6 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector3 other)
 	float y_dis = other.y - m_position.y;
 	float tan_value = x_dis / y_dis;
 	float cos_value = sqrt(1 / (1 + pow(tan_value, 2));
-	print("%f", cos_value);
 
 	m_position.x += speed * cos_value;
 	m_position.y += speed * (tan_value * cos_value);
