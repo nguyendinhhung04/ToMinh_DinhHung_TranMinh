@@ -23,6 +23,17 @@ public:
 	void SetRotation(double angle);
 	void SetFlip(SDL_RendererFlip flip);
 
+	//Moving
+	float m_MoveSpeed;
+	void MoveLeft(float deltaTime, float speed);
+	void MoveRight(float deltaTime, float speed);
+	void MoveUp(float deltaTime, float speed);
+	void MoveDown(float deltaTime, float speed);
+	void MoveLeftDown(float deltaTime, float speed);
+	void MoveLeftUp(float deltaTime, float speed);
+	void MoveRightUp(float deltaTime, float speed);
+	void MoveRightDown(float deltaTime, float speed);
+
 
 
 };

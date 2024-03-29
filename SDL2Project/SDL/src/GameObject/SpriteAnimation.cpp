@@ -1,5 +1,6 @@
 #include "SpriteAnimation.h"
 #include "TextureManager.h"
+#include <cmath>
 SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
 	m_MoveSpeed = (float)(70);
