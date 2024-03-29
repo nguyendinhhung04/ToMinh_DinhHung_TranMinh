@@ -31,9 +31,8 @@ private:
 	std::shared_ptr<Sprite2D>	m_background;
 	//std::shared_ptr<Text>		m_score;
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
-	//std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
-	//std::shared_ptr<SpriteAnimation> obj;
-	std::shared_ptr<Sprite2D> player;
+	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
+	std::shared_ptr<SpriteAnimation> obj;
 	std::list<std::shared_ptr<enemy>> m_listEnemy;
 	std::shared_ptr<enemy> monster;
 	std::shared_ptr<MouseButton> button;
