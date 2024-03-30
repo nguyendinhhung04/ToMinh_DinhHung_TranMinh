@@ -3,6 +3,7 @@
 #include "GameObject/MouseButton.h"
 #include "Sound.h"
 #include "enemy.h"
+
 class Sprite2D;
 class SpriteAnimation;
 
@@ -39,5 +40,6 @@ private:
 	
 	float time = 0.0f;
 	float m_Velocity = 10.0f;
+
 };
 

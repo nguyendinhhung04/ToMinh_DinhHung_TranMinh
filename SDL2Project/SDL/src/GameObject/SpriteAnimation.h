@@ -16,6 +16,7 @@ protected:
 	float  m_currentTicks;
 	Uint32 m_lastUpdate;
 	int			m_animSpeed;
+	bool		m_rotationDirection;
 	int m_numAction; //start from 1,2,3...
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
@@ -45,4 +46,7 @@ public:
 	void MoveLeftUp(float deltaTime, float speed);
 	void MoveRightUp(float deltaTime, float speed);
 	void MoveRightDown(float deltaTime, float speed);
+
+	//Rotation
+	void Flip(bool targetDir);
 };

@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseObject.h"
+
 class enemy :public BaseObject
 {
 protected:
@@ -16,6 +17,7 @@ protected:
 	Uint32 m_lastUpdate;
 	int			m_animSpeed;
 	int m_numAction; //start from 1,2,3...
+	bool		m_rotationDirection;
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
 public:
@@ -48,5 +50,9 @@ public:
 	void MoveLeftUp(float deltaTime, float speed);
 	void MoveRightUp(float deltaTime, float speed);
 	void MoveRightDown(float deltaTime, float speed);
+
+	//Rotation for Enemy
+	void Flip(bool targetDir);
+
 };
 

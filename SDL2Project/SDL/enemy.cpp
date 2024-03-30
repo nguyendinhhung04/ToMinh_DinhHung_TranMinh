@@ -1,6 +1,7 @@
 #include "enemy.h"
 #include "TextureManager.h"
 #include <cmath>
+ 
 enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
 	m_MoveSpeed = (float)(1);
@@ -136,6 +137,15 @@ void enemy::MoveRightDown(float deltaTime, float speed)
 	m_position.y += speed * deltaTime;
 }
 
+
+void enemy::Flip(bool targetDir)
+{
+
+}
+
+
+
+
 void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 {
 	/*
@@ -156,15 +166,16 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 	//}
 	*/
 
+
 	float x_dis = other.x - m_position.x;
 	float y_dis = other.y - m_position.y;
-	if (!(x_dis == 0 && y_dis == 0))
+	if ((!(abs(x_dis) <50 && abs(y_dis)<50))      )
 	{
 
 		float tan_value = x_dis / y_dis;
 		float cos_value = sqrt(1 / (1 + pow(tan_value, 2)));
 		float sin_value = cos_value * tan_value;
-		printf("%f %f____%f %f %f\n",x_dis,y_dis, sin_value, cos_value, tan_value);
+		//printf("%f %f____%f %f %f\n",x_dis,y_dis, sin_value, cos_value, tan_value);
 		
 		
 		if (y_dis < 0) {

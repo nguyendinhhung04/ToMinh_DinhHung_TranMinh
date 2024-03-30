@@ -10,6 +10,7 @@
 
 
 
+
 GSPlay::GSPlay()
 {
 }
@@ -46,8 +47,9 @@ void GSPlay::Init()
 	
 	texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/characters/crazy.png");
 	obj = std::make_shared<SpriteAnimation>( texture, 1, 1, 1, 1.00f);
-	obj->SetFlip(SDL_FLIP_HORIZONTAL);
-	obj->SetSize(100, 100);
+	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
+	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
+	obj->SetSize(50, 50);
 	obj->Set2DPosition(240, 400);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	m_listAnimation.push_back(obj);
@@ -64,9 +66,9 @@ void GSPlay::Init()
 
 	//Enemy
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
-	monster = std::make_shared<enemy>(texture, 1, 1, 1, 1.00f);
+	monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f);
 	monster->SetFlip(SDL_FLIP_HORIZONTAL);
-	monster->SetSize(60, 100);
+	monster->SetSize(60, 60);
 	monster->Set2DPosition(100, 100);
 	monster->m_MoveSpeed = 1.80f;
 	m_listEnemy.push_back(monster);
@@ -210,7 +212,7 @@ void GSPlay::Update(float deltaTime)
 		else if (m_KeyPress == 6) {
 			it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
 		}
-
+		printf("%f %f\n", it->Get2DPosition().x, it->Get2DPosition().y);
 		it->Update(deltaTime);
 	}
 
