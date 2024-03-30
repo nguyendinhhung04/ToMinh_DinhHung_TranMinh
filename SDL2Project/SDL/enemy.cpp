@@ -4,6 +4,7 @@
  
 enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
+	m_rotationDirection = true;
 	m_MoveSpeed = (float)(1);
 	m_pTexture = texture;
 	m_spriteRow = spriteRow;
@@ -138,12 +139,20 @@ void enemy::MoveRightDown(float deltaTime, float speed)
 }
 
 
+
 void enemy::Flip(bool targetDir)
 {
-
+	if (targetDir != m_rotationDirection)
+	{
+		m_rotationDirection = !m_rotationDirection;
+		if (m_rotationDirection == true) {
+			SetFlip(SDL_FLIP_NONE);
+		}
+		else {
+			SetFlip(SDL_FLIP_HORIZONTAL);
+		}
+	}
 }
-
-
 
 
 void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
@@ -168,8 +177,18 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 
 
 	float x_dis = other.x - m_position.x;
+	if (x_dis > 0)
+	{
+		bool temp = true;
+		Flip(temp);
+	}
+	else
+	{
+		bool temp = false;
+		Flip(temp);
+	}
 	float y_dis = other.y - m_position.y;
-	if ((!(abs(x_dis) <50 && abs(y_dis)<50))      )
+	if ((!(abs(x_dis) <10 && abs(y_dis)<10))      )
 	{
 
 		float tan_value = x_dis / y_dis;

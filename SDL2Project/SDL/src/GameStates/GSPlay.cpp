@@ -67,7 +67,7 @@ void GSPlay::Init()
 	//Enemy
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
 	monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f);
-	monster->SetFlip(SDL_FLIP_HORIZONTAL);
+	monster->SetFlip(SDL_FLIP_NONE);
 	monster->SetSize(60, 60);
 	monster->Set2DPosition(100, 100);
 	monster->m_MoveSpeed = 1.80f;
