@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\SDL2Project",
-    "\\SDL2Project\\SDL",
-    "\\SDL2Project\\SDL\\src",
-    "\\SDL2Project\\SDL\\src\\GameStates"
+    ""
   ],
-  "SelectedNode": "\\SDL2Project\\SDL\\src\\GameStates\\GSPlay.cpp",
+  "SelectedNode": "\\SDLProject.sln",
   "PreviewInSolutionExplorer": false
 }
