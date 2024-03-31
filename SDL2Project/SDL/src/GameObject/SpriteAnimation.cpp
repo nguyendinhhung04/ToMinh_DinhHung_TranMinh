@@ -1,8 +1,10 @@
 #include "SpriteAnimation.h"
 #include "TextureManager.h"
+#include <cmath>
 SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
-	m_MoveSpeed = (float)(70);
+	m_MoveSpeed = (float)(150);
+	m_rotationDirection = true;           //True == Right,  false == left
 	m_pTexture = texture;
 	m_spriteRow = spriteRow;
 	m_frameCount = frameCount;
@@ -83,14 +85,32 @@ int SpriteAnimation::GetHeight()
 }
 
 
+void SpriteAnimation::Flip(bool targetDir)
+{
+	if (targetDir != m_rotationDirection)
+	{
+		m_rotationDirection = !m_rotationDirection;
+		if (m_rotationDirection == true) {
+			SetFlip(SDL_FLIP_NONE);
+		}
+		else {
+			SetFlip(SDL_FLIP_HORIZONTAL);
+		}
+	}
+}
+
 
 void SpriteAnimation::MoveLeft(float deltaTime, float speed)
 {
+	bool temp = false;
+	Flip(temp);
 	m_position.x -= speed * deltaTime;
 }
 
 void SpriteAnimation::MoveRight(float deltaTime, float speed)
 {
+	bool temp = true;
+	Flip(temp);
 	m_position.x += speed * deltaTime;
 }
 void SpriteAnimation::MoveUp(float deltaTime, float speed)
@@ -104,18 +124,24 @@ void SpriteAnimation::MoveDown(float deltaTime,float speed)
 
 void SpriteAnimation::MoveLeftDown(float deltaTime, float speed)
 {
+	bool temp = false;
+	Flip(temp);
 	m_position.x -= speed * deltaTime;
 	m_position.y += speed * deltaTime;
 }
 
 void SpriteAnimation::MoveLeftUp(float deltaTime, float speed)
 {
+	bool temp = false;
+	Flip(temp);
 	m_position.x -= speed * deltaTime;
 	m_position.y -= speed * deltaTime;
 }
 
 void SpriteAnimation::MoveRightUp(float deltaTime, float speed)
 {
+	bool temp = true;
+	Flip(temp);
 	m_position.x += speed * deltaTime;
 	m_position.y -= speed * deltaTime;
 }
@@ -123,6 +149,8 @@ void SpriteAnimation::MoveRightUp(float deltaTime, float speed)
 
 void SpriteAnimation::MoveRightDown(float deltaTime, float speed)
 {
+	bool temp = true;
+	Flip(temp);
 	m_position.x += speed * deltaTime;
 	m_position.y += speed * deltaTime;
 }
