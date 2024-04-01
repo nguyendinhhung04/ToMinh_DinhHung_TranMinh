@@ -16,7 +16,7 @@ GSMenu::~GSMenu()
 void GSMenu::Init()
 {
 	//auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("bg_main_menu.tga");
+	auto texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/key_art_1.png");
 
 	// background
 	//auto shader = ResourceManagers::GetInstance()->GetShader("TextureShader");
@@ -25,31 +25,31 @@ void GSMenu::Init()
 	m_background->Set2DPosition(0, 0);
 
 	// play button
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_play.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/New game button.png");
 	std::shared_ptr<MouseButton> btnPlay = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
-	
-	btnPlay->SetSize(150, 150);
-	btnPlay->Set2DPosition((SCREEN_WIDTH - btnPlay->GetWidth())/2, (SCREEN_HEIDHT - btnPlay->GetHeight()) / 2);
+
+	btnPlay->SetSize(270, 80);
+	btnPlay->Set2DPosition((SCREEN_WIDTH - btnPlay->GetWidth()) / 2, (SCREEN_HEIDHT - btnPlay->GetHeight()) / 2 + 120);
 	btnPlay->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
 		});
 	m_listButton.push_back(btnPlay);
 
 	// exit button
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_close.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Exit button.png");
 	std::shared_ptr<MouseButton> btnClose = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 	//btnClose = std::make_shared<MouseButton>(texture);
-	btnClose->SetSize(50, 50);
-	btnClose->Set2DPosition(SCREEN_WIDTH - btnClose->GetWidth(), 10);
+	btnClose->SetSize(270, 80);
+	btnClose->Set2DPosition(btnClose->GetWidth() - 240, SCREEN_HEIDHT - 100);
 	btnClose->SetOnClick([]() {
 		exit(0);
 		});
 	m_listButton.push_back(btnClose);
 
 	//Setting game
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_settings.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Options button.png");
 	std::shared_ptr<MouseButton> btnOption = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
-	btnOption->SetSize(100, 100);
+	btnOption->SetSize(270, 80);
 	btnOption->Set2DPosition((SCREEN_WIDTH - btnOption->GetWidth()) / 2, SCREEN_HEIDHT / 2 + 170);
 	btnOption->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_OPTION);
@@ -57,10 +57,11 @@ void GSMenu::Init()
 	m_listButton.push_back(btnOption);
 
 	//CREDIT game
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_help.tga");
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Controls button.png");
 	btnCredit = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
-	btnCredit->Set2DPosition((SCREEN_WIDTH - btnCredit->GetWidth()) / 2, SCREEN_HEIDHT / 2 + 280);
-	btnCredit->SetSize(100, 100);
+	btnCredit->SetSize(270, 80);
+	btnCredit->Set2DPosition((SCREEN_WIDTH - btnCredit->GetWidth()) / 2, SCREEN_HEIDHT / 2 + 260);
+
 	btnCredit->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
 		});
@@ -71,12 +72,13 @@ void GSMenu::Init()
 	m_textColor = { 255, 255, 0 };
 	m_textGameName = std::make_shared<Text>("Data/lazy.ttf", m_textColor);
 	m_textGameName->SetSize(300, 50);
-	m_textGameName->Set2DPosition((SCREEN_WIDTH - m_textGameName->GetWidth())/2, SCREEN_HEIDHT / 2 - 300);
-	m_textGameName->LoadFromRenderText("Your Game");
+	m_textGameName->Set2DPosition((SCREEN_WIDTH - m_textGameName->GetWidth()) / 2, SCREEN_HEIDHT / 2 - 300);
+	m_textGameName->LoadFromRenderText("");
+
 	m_Sound = std::make_shared<Sound>();
-	m_Sound->LoadSound("Data/Sounds/Alarm01.wav");
+	m_Sound->LoadSound("Data/Sounds/Mainmenu.wav");
 	m_Sound->PlaySound();
-	
+
 }
 
 void GSMenu::Exit()
@@ -89,7 +91,7 @@ void GSMenu::Pause()
 {
 	m_Sound->StopSound();
 	// button close
-	
+
 }
 
 void GSMenu::Resume()
@@ -108,10 +110,10 @@ void GSMenu::HandleKeyEvents(SDL_Event& e)
 
 void GSMenu::HandleTouchEvents(SDL_Event& e)
 {
-	
+
 	for (auto button : m_listButton)
 	{
-		if (button ->HandleTouchEvent(&e))
+		if (button->HandleTouchEvent(&e))
 		{
 			break;
 		}
@@ -139,6 +141,6 @@ void GSMenu::Draw(SDL_Renderer* renderer)
 	{
 		it->Draw(renderer);
 	}
-	
+
 	m_textGameName->Draw(renderer);
 }

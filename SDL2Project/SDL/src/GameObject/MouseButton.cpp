@@ -12,6 +12,19 @@ MouseButton::MouseButton(std::shared_ptr<TextureManager> texture, SDL_RendererFl
 {
 }
 
+void MouseButton::SetOnDrag(std::function<void(int, int)> onDrag)
+{
+	m_onDrag = onDrag;
+}
+
+void MouseButton::OnDrag(int offsetX, int offsetY)
+{
+	if (m_onDrag)
+	{
+		m_onDrag(offsetX, offsetY);
+	}
+}
+
 bool MouseButton::HandleTouchEvent(SDL_Event* e)
 {
 	//If mouse event happened (clicked/released...

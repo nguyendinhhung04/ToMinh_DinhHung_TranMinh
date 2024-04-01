@@ -34,11 +34,11 @@ void GSPlay::Init()
 
 
 	// button close
-	texture = ResourceManagers::GetInstance()->GetTexture("btn_close.tga");
-	button = std::make_shared<MouseButton>( texture, SDL_FLIP_NONE);
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Return Square Button.png");
+	button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 	button->SetSize(50, 50);
-	button->Set2DPosition(SCREEN_WIDTH - 50, 10);
-	button->SetOnClick([this]() {
+	button->Set2DPosition(SCREEN_WIDTH - 60, 10);
+	button->SetOnClick([]() {
 		GameStateMachine::GetInstance()->PopState();
 		});
 	m_listButton.push_back(button);

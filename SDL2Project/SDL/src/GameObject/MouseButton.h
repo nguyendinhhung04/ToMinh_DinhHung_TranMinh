@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <SDL.h>
 #include "Sprite2D.h"
 #include <functional>
@@ -10,6 +10,13 @@ public:
 	//Initializes internal variable
 	MouseButton();
 	MouseButton(std::shared_ptr<TextureManager> texture, SDL_RendererFlip flip);
+
+	// Thiết lập hàm callback cho sự kiện kéo chuột
+	void SetOnDrag(std::function<void(int, int)> onDrag);
+
+	// Xử lý sự kiện kéo chuột
+	void OnDrag(int offsetX, int offsetY);
+
 
 	//Handles mouse event
 	bool HandleTouchEvent(SDL_Event* e);
@@ -23,6 +30,10 @@ private:
 	//Top left position
 	SDL_Point* mPosition;
 	//Currently used global sprite
+	std::function<void(int, int)> m_onDrag;
+	bool m_dragging;
+	int m_lastX;
+	int m_lastY;
 	
 };
 

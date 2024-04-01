@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\SDL2Project",
-    "\\SDL2Project\\SDL",
-    "\\SDL2Project\\SDL\\Data",
-    "\\SDL2Project\\SDL\\Data\\Textures",
-    "\\SDL2Project\\SDL\\Data\\Textures\\Menu"
+    ""
   ],
-  "SelectedNode": "\\SDL2Project\\SDL\\Data\\Textures\\Menu\\Menu2.tga",
+  "SelectedNode": "\\SDLProject.sln",
   "PreviewInSolutionExplorer": false
 }
