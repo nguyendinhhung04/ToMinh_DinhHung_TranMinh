@@ -4,6 +4,8 @@
 #include "GameObject/MouseButton.h"
 #include "GameObject/SpriteAnimation.h"
 #include "GameObject/Camera.h"
+
+#include "GameStateMachine.h"
 #include "KeyState.h"
 
 
@@ -34,12 +36,13 @@ void GSPlay::Init()
 
 
 	// button close
-	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Return Square Button.png");
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Pause Square Button.png");
 	button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 	button->SetSize(50, 50);
 	button->Set2DPosition(SCREEN_WIDTH - 60, 10);
 	button->SetOnClick([]() {
-		GameStateMachine::GetInstance()->PopState();
+		GameStateMachine::GetInstance()->PushState(StateType::STATE_PAUSE);
+
 		});
 	m_listButton.push_back(button);
 
@@ -75,6 +78,7 @@ void GSPlay::Init()
 
 	m_KeyPress = 0;
 	
+	m_isPaused = false;
 }
 
 void GSPlay::Exit()
@@ -84,13 +88,14 @@ void GSPlay::Exit()
 
 void GSPlay::Pause()
 {
-
+	m_isPaused = true;
 }
 void GSPlay::Resume()
 {
 	// button close
 	//auto texture = ResourceManagers::GetInstance()->GetTexture("btn_restart.tga");
 	//button->SetTexture(texture);
+	m_isPaused = false;
 
 }
 
@@ -172,6 +177,8 @@ void GSPlay::HandleMouseMoveEvents(int x, int y)
 
 void GSPlay::Update(float deltaTime)
 {
+	if (m_isPaused) return;
+
 	switch (m_KeyPress)//Handle Key event
 	{
 
@@ -234,21 +241,31 @@ void GSPlay::Update(float deltaTime)
 
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
+	if (!m_isPaused)
+	{
+		m_background->Draw(renderer);
+		//m_score->Draw();
+		for (auto it : m_listButton)
+		{
+			it->Draw(renderer);
+		}
+		//	obj->Draw(renderer);
 
-	m_background->Draw(renderer);
-	//m_score->Draw();
-	for (auto it : m_listButton)
-	{
-		it->Draw(renderer);
+		for (auto it : m_listEnemy)
+		{
+			it->Draw(renderer);
+		}
+		for (auto it : m_listAnimation)
+		{
+			it->Draw(renderer);
+		}
 	}
-//	obj->Draw(renderer);
-	
-	for (auto it : m_listEnemy)
-	{
-		it->Draw(renderer);
-	}
-	for (auto it : m_listAnimation)
-	{
-		it->Draw(renderer);
-	}
+	else DrawPauseScreen(renderer);
+}
+
+void GSPlay::DrawPauseScreen(SDL_Renderer* renderer)
+{
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 128);
+	SDL_Rect rect = { 0, 0, SCREEN_WIDTH, SCREEN_HEIDHT };
+	SDL_RenderFillRect(renderer, &rect);
 }

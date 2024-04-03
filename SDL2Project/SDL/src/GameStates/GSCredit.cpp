@@ -13,10 +13,10 @@ void GSCredit::Init() {
     m_background->SetSize(SCREEN_WIDTH, SCREEN_HEIDHT);
     m_background->Set2DPosition(0, 0);
 
-    texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Return Square Button.png");
+    texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Back Button.png");
     button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
-    button->SetSize(50, 50);
-    button->Set2DPosition(SCREEN_WIDTH - 60, 10);
+    button->SetSize(180, 60);
+    button->Set2DPosition(SCREEN_WIDTH - 190, 10);
     button->SetOnClick([]() {
         GameStateMachine::GetInstance()->PopState();
         });

@@ -29,6 +29,9 @@ public:
 	int m_KeyPress;
 
 private:
+
+	void DrawPauseScreen(SDL_Renderer* renderer);
+
 	std::shared_ptr<Sprite2D>	m_background;
 	//std::shared_ptr<Text>		m_score;
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
@@ -40,6 +43,8 @@ private:
 	
 	float time = 0.0f;
 	float m_Velocity = 10.0f;
+
+	bool m_isPaused;
 
 };
 
