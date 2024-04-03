@@ -78,7 +78,7 @@
     <ClCompile Include="src\GameStates\GSPlay.cpp">
       <Filter>Source Files\GameState</Filter>
     </ClCompile>
-    <ClCompile Include="enemy.cpp">
+    <ClCompile Include="src\GameObject\enemy.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="src\GameStates\GSOption.cpp">
@@ -152,7 +152,7 @@
     <ClInclude Include="src\GameObject\KeyState.h">
       <Filter>Source Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="enemy.h">
+    <ClInclude Include="src\GameObject\enemy.h">
       <Filter>Source Files\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="src\GameStates\GSOption.h">

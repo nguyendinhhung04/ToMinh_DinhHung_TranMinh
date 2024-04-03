@@ -166,7 +166,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="src\GameObject\enemy.cpp" />
     <ClCompile Include="src\GameStates\GSCredit.cpp" />
     <ClCompile Include="src\GameStates\GSOption.cpp" />
     <ClCompile Include="src\Game.cpp" />
@@ -189,7 +189,7 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="enemy.h" />
+    <ClInclude Include="src\GameObject\enemy.h" />
     <ClInclude Include="src\GameStates\GSCredit.h" />
     <ClInclude Include="src\GameStates\GSOption.h" />
     <ClInclude Include="src\Game.h" />
