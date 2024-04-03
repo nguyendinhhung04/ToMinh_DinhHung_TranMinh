@@ -87,43 +87,43 @@ int enemy::GetHeight()
 
 void enemy::MoveLeft(float deltaTime, float speed)
 {
-	printf("LeftFunc");
+
 	m_position.x -= speed * deltaTime;
 }
 
 void enemy::MoveRight(float deltaTime, float speed)
 {
-	printf("RightFunc");
+
 	m_position.x += speed * deltaTime;
 }
 void enemy::MoveUp(float deltaTime, float speed)
 {
-	printf("UpFunc");
+
 	m_position.y -= speed * deltaTime;
 }
 void enemy::MoveDown(float deltaTime, float speed)
 {
-	printf("DownFunc");
+
 	m_position.y += speed * deltaTime;
 }
 
 void enemy::MoveLeftDown(float deltaTime, float speed)
 {
-	printf("LeftDownFunc");
+
 	m_position.x -= speed * deltaTime;
 	m_position.y += speed * deltaTime;
 }
 
 void enemy::MoveLeftUp(float deltaTime, float speed)
 {
-	printf("LeftUpFunc");
+
 	m_position.x -= speed * deltaTime;
 	m_position.y -= speed * deltaTime;
 }
 
 void enemy::MoveRightUp(float deltaTime, float speed)
 {
-	printf("RightUpFunc");
+
 	m_position.x += speed * deltaTime;
 	m_position.y -= speed * deltaTime;
 }
@@ -131,7 +131,7 @@ void enemy::MoveRightUp(float deltaTime, float speed)
 
 void enemy::MoveRightDown(float deltaTime, float speed)
 {
-	printf("RightUpFunc");
+
 	m_position.x += speed * deltaTime;
 	m_position.y += speed * deltaTime;
 }
