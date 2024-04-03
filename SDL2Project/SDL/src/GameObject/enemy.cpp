@@ -1,9 +1,11 @@
 #include "enemy.h"
 #include "TextureManager.h"
 #include <cmath>
+#define ENEMY_POWER 10
 enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
-	m_MoveSpeed = (float)(70);
+	m_rotationDirection = true;
+	m_MoveSpeed = (float)(1);
 	m_pTexture = texture;
 	m_spriteRow = spriteRow;
 	m_frameCount = frameCount;
@@ -15,6 +17,7 @@ enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCo
 	m_currentTicks = 0;
 	m_lastUpdate = SDL_GetTicks();
 	Init();
+	m_power = ENEMY_POWER;
 }
 enemy::~enemy()
 {
@@ -136,8 +139,26 @@ void enemy::MoveRightDown(float deltaTime, float speed)
 	m_position.y += speed * deltaTime;
 }
 
+
+
+void enemy::Flip(bool targetDir)
+{
+	if (targetDir != m_rotationDirection)
+	{
+		m_rotationDirection = !m_rotationDirection;
+		if (m_rotationDirection == true) {
+			SetFlip(SDL_FLIP_NONE);
+		}
+		else {
+			SetFlip(SDL_FLIP_HORIZONTAL);
+		}
+	}
+}
+
+
 void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 {
+	/*
 	float x_dis = m_position.x - other.x;
 	float y_dis = m_position.y - other.y;
 	//while (x_dis != 0 && y_dis != 0)
@@ -153,18 +174,49 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 	x_dis = m_position.x - other.x;
 	y_dis = m_position.y - other.y;
 	//}
-}
+	*/
 
 
-void enemy::MoveToCharacter(float deltaTime, float speed, Vector3 other)
-{
 	float x_dis = other.x - m_position.x;
+	if (x_dis > 0)
+	{
+		bool temp = true;
+		Flip(temp);
+	}
+	else
+	{
+		bool temp = false;
+		Flip(temp);
+	}
 	float y_dis = other.y - m_position.y;
-	float tan_value = x_dis / y_dis;
-	float cos_value = sqrt(1 / (1 + pow(tan_value, 2));
+	if ((!(abs(x_dis) < 10 && abs(y_dis) < 10)))
+	{
 
-	m_position.x += speed * cos_value;
-	m_position.y += speed * (tan_value * cos_value);
+		float tan_value = x_dis / y_dis;
+		float cos_value = sqrt(1 / (1 + pow(tan_value, 2)));
+		float sin_value = cos_value * tan_value;
+		//printf("%f %f____%f %f %f\n",x_dis,y_dis, sin_value, cos_value, tan_value);
 
-	
+
+		if (y_dis < 0) {
+			m_position.x -= sin_value * speed;
+			m_position.y -= cos_value * speed;
+		}
+		else {
+			m_position.x += sin_value * speed;
+			m_position.y += cos_value * speed;
+		}
+
+		//m_position.y += cos_value * speed;
+
+	}
 }
+
+
+int enemy::getPower()
+{
+	return m_power;
+}
+
+
+
