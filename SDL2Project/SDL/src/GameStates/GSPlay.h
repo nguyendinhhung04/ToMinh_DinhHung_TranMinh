@@ -37,7 +37,8 @@ private:
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 	std::shared_ptr<SpriteAnimation> obj;
-	std::list<std::shared_ptr<enemy>> m_listEnemy;
+	//std::list<std::shared_ptr<enemy>> m_listEnemy;
+	std::vector<std::shared_ptr<enemy>> m_vectorEnemy;
 	std::shared_ptr<enemy> monster;
 	std::shared_ptr<MouseButton> button;
 	

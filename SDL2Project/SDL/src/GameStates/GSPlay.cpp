@@ -8,6 +8,9 @@
 #include "GameStateMachine.h"
 #include "KeyState.h"
 
+#include <cstdlib> 
+#include <ctime>   
+
 
 
 
@@ -69,12 +72,18 @@ void GSPlay::Init()
 
 	//Enemy
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
-	monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f);
-	monster->SetFlip(SDL_FLIP_NONE);
-	monster->SetSize(60, 60);
-	monster->Set2DPosition(100, 100);
-	monster->m_MoveSpeed = 1.80f;
-	m_listEnemy.push_back(monster);
+	std::srand(static_cast<unsigned int>(std::time(nullptr)));
+	for (int i = 0; i <= 5; i++)
+	{
+		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f);
+		monster->SetFlip(SDL_FLIP_NONE);
+		monster->SetSize(60, 60);
+		int temp1 = rand() % 1000;
+		int temp2 = rand() % 800;
+		monster->Set2DPosition(temp1, temp2);
+		monster->m_MoveSpeed = 1.80f;
+		m_vectorEnemy.push_back(monster);
+	}
 
 	m_KeyPress = 0;
 	
@@ -223,12 +232,24 @@ void GSPlay::Update(float deltaTime)
 		it->Update(deltaTime);
 	}
 
-	for (auto it : m_listEnemy)
+	for (auto it : m_vectorEnemy)
 	{
 		it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
 		it->Update(deltaTime);
 	}
-
+	//sort the vector
+	for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
+	{
+		for (auto temp = it; temp != m_vectorEnemy.end() - 1; ++temp)
+		{
+			if ((*temp)->Get2DPosition().y > (*(temp + 1))->Get2DPosition().y)
+			{
+				std::shared_ptr<enemy> temp_monster = *temp;
+				*temp = *(temp + 1);
+				*(temp + 1) = temp_monster;
+			}
+		}
+	}
 	obj->Update(deltaTime);
 	
 
@@ -250,15 +271,15 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 			it->Draw(renderer);
 		}
 		//	obj->Draw(renderer);
-
-		for (auto it : m_listEnemy)
-		{
-			it->Draw(renderer);
-		}
 		for (auto it : m_listAnimation)
 		{
 			it->Draw(renderer);
 		}
+		for (auto it : m_vectorEnemy)
+		{
+			it->Draw(renderer);
+		}
+
 	}
 	else DrawPauseScreen(renderer);
 }
