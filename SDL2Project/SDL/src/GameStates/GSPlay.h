@@ -3,9 +3,17 @@
 #include "GameObject/MouseButton.h"
 #include "Sound.h"
 #include "enemy.h"
+#include <set>
 
 class Sprite2D;
 class SpriteAnimation;
+
+//custom compare set
+struct cmp {
+	bool operator() (const std::shared_ptr<enemy> a,const std::shared_ptr<enemy> b) const {
+		return a->Get2DPosition().y < b->Get2DPosition().y;
+	}
+};
 
 class GSPlay :
 	public GameStateBase
@@ -34,7 +42,8 @@ private:
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 	std::shared_ptr<SpriteAnimation> obj;
-	std::list<std::shared_ptr<enemy>> m_listEnemy;
+	//std::set<std::shared_ptr<enemy>, cmp> m_listEnemy;
+	std::vector<std::shared_ptr<enemy>> m_vectorEnemy;
 	std::shared_ptr<enemy> monster;
 	std::shared_ptr<MouseButton> button;
 	

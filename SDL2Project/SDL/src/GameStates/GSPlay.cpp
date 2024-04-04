@@ -5,6 +5,8 @@
 #include "GameObject/SpriteAnimation.h"
 #include "GameObject/Camera.h"
 #include "KeyState.h"
+#include <cstdlib> 
+#include <ctime>   
 
 
 
@@ -27,10 +29,10 @@ void GSPlay::Init()
 	auto texture = ResourceManagers::GetInstance()->GetTexture("Cave/Background_GSPlay.tga");
 
 	// background
-	
-	m_background = std::make_shared<Sprite2D>( texture, SDL_FLIP_NONE);
+
+	m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
 	m_background->SetSize(1280, 720);
-	m_background->Set2DPosition(0,0);
+	m_background->Set2DPosition(0, 0);
 
 
 	// button close
@@ -43,17 +45,18 @@ void GSPlay::Init()
 		});
 	m_listButton.push_back(button);
 
-   // Animation 
-	
+	// Animation 
+
 	texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/characters/crazy.png");
-	obj = std::make_shared<SpriteAnimation>( texture, 1, 1, 1, 1.00f);
+	obj = std::make_shared<SpriteAnimation>(texture, 1, 1, 1, 1.00f);
 	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
 	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
 	obj->SetSize(50, 50);
+
 	obj->Set2DPosition(240, 400);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	m_listAnimation.push_back(obj);
-	
+
 
 	//Player
 	/*
@@ -66,15 +69,22 @@ void GSPlay::Init()
 
 	//Enemy
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
-	monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f);
-	monster->SetFlip(SDL_FLIP_NONE);
-	monster->SetSize(60, 60);
-	monster->Set2DPosition(100, 100);
-	monster->m_MoveSpeed = 1.80f;
-	m_listEnemy.push_back(monster);
-
+	std::srand(static_cast<unsigned int>(std::time(nullptr)));
+	for (int i = 0; i <= 5; i++)
+	{
+		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f);
+		monster->SetFlip(SDL_FLIP_NONE);
+		monster->SetSize(60, 60);
+		int temp1 = rand() % 1000;
+		int temp2 = rand() % 800;
+		printf("%d %d\n", temp1, temp2);
+		monster->Set2DPosition(temp1, temp2);
+		monster->m_MoveSpeed = 1.80f;
+		//m_listEnemy.insert(monster);
+		m_vectorEnemy.push_back(monster);
+	}
 	m_KeyPress = 0;
-	
+
 }
 
 void GSPlay::Exit()
@@ -102,11 +112,11 @@ void GSPlay::HandleEvents()
 void GSPlay::HandleKeyEvents(SDL_Event& e)
 {
 	//If a key was pressed
-	if (e.type == SDL_KEYDOWN )//&& e.key.repeat == 0) //For e.key.repeat it's because key repeat is enabled by default and if you press and hold a key it will report multiple key presses. That means we have to check if the key press is the first one because we only care when the key was first pressed.
+	if (e.type == SDL_KEYDOWN)//&& e.key.repeat == 0) //For e.key.repeat it's because key repeat is enabled by default and if you press and hold a key it will report multiple key presses. That means we have to check if the key press is the first one because we only care when the key was first pressed.
 	{
 		//Adjust the velocity
-		switch (e.key.keysym.sym)                                                                                            
-		{              
+		switch (e.key.keysym.sym)
+		{
 
 		case SDLK_LEFT:
 			m_KeyPress |= 1;
@@ -128,7 +138,7 @@ void GSPlay::HandleKeyEvents(SDL_Event& e)
 		}
 	}
 	////Key Up
-	else if (e.type == SDL_KEYUP )//&& e.key.repeat == 0)
+	else if (e.type == SDL_KEYUP)//&& e.key.repeat == 0)
 	{
 		//Adjust the velocity
 		switch (e.key.keysym.sym)
@@ -179,12 +189,12 @@ void GSPlay::Update(float deltaTime)
 		break;
 	}
 	// Key State event
-	
+
 	for (auto it : m_listButton)
 	{
 		it->Update(deltaTime);
 	}
-	
+
 	for (auto it : m_listAnimation)
 	{
 		if (m_KeyPress == 1)
@@ -212,18 +222,36 @@ void GSPlay::Update(float deltaTime)
 		else if (m_KeyPress == 6) {
 			it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
 		}
-		printf("%f %f\n", it->Get2DPosition().x, it->Get2DPosition().y);
 		it->Update(deltaTime);
 	}
-
+	/*
 	for (auto it : m_listEnemy)
 	{
 		it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
 		it->Update(deltaTime);
 	}
+	*/
+	for (auto it : m_vectorEnemy)
+	{
+		it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
+		it->Update(deltaTime);
+	}
+	for (auto it = m_vectorEnemy.begin();it != m_vectorEnemy.end()-1;++it) 
+	{
+		for (auto temp = it;temp != m_vectorEnemy.end()-1;++temp)
+		{
+			if ((*temp)->Get2DPosition().y > (*(temp + 1))->Get2DPosition().y)
+			{
+				std::shared_ptr<enemy> temp_monster = *temp;
+				*temp = *(temp + 1);
+				*(temp + 1) = temp_monster;
+
+			}
+		}
+	}
 
 	obj->Update(deltaTime);
-	
+
 
 	//Update position of camera
 	//Camera::GetInstance()->Update(deltaTime);
@@ -241,9 +269,9 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	{
 		it->Draw(renderer);
 	}
-//	obj->Draw(renderer);
-	
-	for (auto it : m_listEnemy)
+	//	obj->Draw(renderer);
+
+	for (auto it : m_vectorEnemy)
 	{
 		it->Draw(renderer);
 	}
