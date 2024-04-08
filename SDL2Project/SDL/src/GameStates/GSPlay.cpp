@@ -97,6 +97,8 @@ void GSPlay::Init()
 	}
 
 	m_KeyPress = 0;
+
+	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
 	
 }
 
@@ -274,8 +276,8 @@ void GSPlay::Update(float deltaTime)
 
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
-	if (m_isPlaying)
-	{
+
+	
 		m_background->Draw(renderer);
 		//m_score->Draw();
 		for (auto it : m_listButton)
@@ -291,17 +293,21 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		{
 			it->Draw(renderer);
 		}
-	}
 
-	else
+	if (!m_isPlaying)
 	{
+		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 128);
-		SDL_RenderFillRect(renderer, &m_darkOverlay);
 
+		SDL_RenderFillRect(renderer, &m_darkOverlay);
 		for (auto it : m_listButton)
 		{
 			it->Draw(renderer);
 		}
+	}
+	for (auto it : m_listButton)
+	{
+		it->Draw(renderer);
 	}
 	
 
