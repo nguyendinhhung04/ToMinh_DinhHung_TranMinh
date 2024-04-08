@@ -1,4 +1,4 @@
-#include "GSPlay.h"
+﻿#include "GSPlay.h"
 #include "GameObject/TextureManager.h"
 #include "GameObject/Sprite2D.h"
 #include "GameObject/MouseButton.h"
@@ -28,6 +28,9 @@ GSPlay::~GSPlay()
 
 void GSPlay::Init()
 {
+	m_isPlaying = true;
+
+
 	//auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 	auto texture = ResourceManagers::GetInstance()->GetTexture("Cave/Background_GSPlay.tga");
 
@@ -43,8 +46,16 @@ void GSPlay::Init()
 	button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 	button->SetSize(50, 50);
 	button->Set2DPosition(SCREEN_WIDTH - 60, 10);
-	button->SetOnClick([]() {
-		GameStateMachine::GetInstance()->PushState(StateType::STATE_PAUSE);
+	button->SetOnClick([this]() {
+		m_isPlaying = !m_isPlaying;
+		if (m_isPlaying)
+		{
+			button->SetTexture(ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Pause Square Button.png"));
+		}
+		else
+		{
+			button->SetTexture(ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Play Square Button.png"));
+		}
 
 		});
 	m_listButton.push_back(button);
@@ -87,7 +98,6 @@ void GSPlay::Init()
 
 	m_KeyPress = 0;
 	
-	m_isPaused = false;
 }
 
 void GSPlay::Exit()
@@ -97,14 +107,12 @@ void GSPlay::Exit()
 
 void GSPlay::Pause()
 {
-	m_isPaused = true;
 }
 void GSPlay::Resume()
 {
 	// button close
 	//auto texture = ResourceManagers::GetInstance()->GetTexture("btn_restart.tga");
 	//button->SetTexture(texture);
-	m_isPaused = false;
 
 }
 
@@ -186,7 +194,6 @@ void GSPlay::HandleMouseMoveEvents(int x, int y)
 
 void GSPlay::Update(float deltaTime)
 {
-	if (m_isPaused) return;
 
 	switch (m_KeyPress)//Handle Key event
 	{
@@ -195,62 +202,67 @@ void GSPlay::Update(float deltaTime)
 		break;
 	}
 	// Key State event
-	
-	for (auto it : m_listButton)
+	if (m_isPlaying)
 	{
-		it->Update(deltaTime);
-	}
-	
-	for (auto it : m_listAnimation)
-	{
-		if (m_KeyPress == 1)
+		for (auto it : m_listButton)
 		{
-			it->MoveLeft(deltaTime, obj->m_MoveSpeed);
+			it->Update(deltaTime);
 		}
-		else if (m_KeyPress == 2) {
-			it->MoveDown(deltaTime, obj->m_MoveSpeed);
-		}
-		else if (m_KeyPress == 4) {
-			it->MoveRight(deltaTime, obj->m_MoveSpeed);
-		}
-		else if (m_KeyPress == 8) {
-			it->MoveUp(deltaTime, obj->m_MoveSpeed);
-		}
-		else if (m_KeyPress == 3) {
-			it->MoveLeftDown(deltaTime, obj->m_MoveSpeed);
-		}
-		else if (m_KeyPress == 9) {
-			it->MoveLeftUp(deltaTime, obj->m_MoveSpeed);
-		}
-		else if (m_KeyPress == 12) {
-			it->MoveRightUp(deltaTime, obj->m_MoveSpeed);
-		}
-		else if (m_KeyPress == 6) {
-			it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
-		}
-		printf("%f %f\n", it->Get2DPosition().x, it->Get2DPosition().y);
-		it->Update(deltaTime);
-	}
 
-	for (auto it : m_vectorEnemy)
-	{
-		it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
-		it->Update(deltaTime);
-	}
-	//sort the vector
-	for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
-	{
-		for (auto temp = it; temp != m_vectorEnemy.end() - 1; ++temp)
+		for (auto it : m_listAnimation)
 		{
-			if ((*temp)->Get2DPosition().y > (*(temp + 1))->Get2DPosition().y)
+			if (m_KeyPress == 1)
 			{
-				std::shared_ptr<enemy> temp_monster = *temp;
-				*temp = *(temp + 1);
-				*(temp + 1) = temp_monster;
+				it->MoveLeft(deltaTime, obj->m_MoveSpeed);
+			}
+			else if (m_KeyPress == 2) {
+				it->MoveDown(deltaTime, obj->m_MoveSpeed);
+			}
+			else if (m_KeyPress == 4) {
+				it->MoveRight(deltaTime, obj->m_MoveSpeed);
+			}
+			else if (m_KeyPress == 8) {
+				it->MoveUp(deltaTime, obj->m_MoveSpeed);
+			}
+			else if (m_KeyPress == 3) {
+				it->MoveLeftDown(deltaTime, obj->m_MoveSpeed);
+			}
+			else if (m_KeyPress == 9) {
+				it->MoveLeftUp(deltaTime, obj->m_MoveSpeed);
+			}
+			else if (m_KeyPress == 12) {
+				it->MoveRightUp(deltaTime, obj->m_MoveSpeed);
+			}
+			else if (m_KeyPress == 6) {
+				it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
+			}
+			printf("%f %f\n", it->Get2DPosition().x, it->Get2DPosition().y);
+			it->Update(deltaTime);
+		}
+
+		for (auto it : m_vectorEnemy)
+		{
+			it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
+			it->Update(deltaTime);
+		}
+		//sort the vector
+		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
+		{
+			for (auto temp = it; temp != m_vectorEnemy.end() - 1; ++temp)
+			{
+				if ((*temp)->Get2DPosition().y > (*(temp + 1))->Get2DPosition().y)
+				{
+					std::shared_ptr<enemy> temp_monster = *temp;
+					*temp = *(temp + 1);
+					*(temp + 1) = temp_monster;
+				}
 			}
 		}
+		obj->Update(deltaTime);
 	}
-	obj->Update(deltaTime);
+	
+	
+	
 	
 
 	//Update position of camera
@@ -262,7 +274,7 @@ void GSPlay::Update(float deltaTime)
 
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
-	if (!m_isPaused)
+	if (m_isPlaying)
 	{
 		m_background->Draw(renderer);
 		//m_score->Draw();
@@ -279,14 +291,19 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		{
 			it->Draw(renderer);
 		}
-
 	}
-	else DrawPauseScreen(renderer);
-}
 
-void GSPlay::DrawPauseScreen(SDL_Renderer* renderer)
-{
-	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 128);
-	SDL_Rect rect = { 0, 0, SCREEN_WIDTH, SCREEN_HEIDHT };
-	SDL_RenderFillRect(renderer, &rect);
+	else
+	{
+		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 128);
+		SDL_RenderFillRect(renderer, &m_darkOverlay);
+
+		for (auto it : m_listButton)
+		{
+			it->Draw(renderer);
+		}
+	}
+	
+
+
 }

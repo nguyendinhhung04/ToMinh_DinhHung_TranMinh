@@ -41,11 +41,15 @@ private:
 	std::vector<std::shared_ptr<enemy>> m_vectorEnemy;
 	std::shared_ptr<enemy> monster;
 	std::shared_ptr<MouseButton> button;
+
+
+
+	SDL_Rect m_darkOverlay;
 	
 	float time = 0.0f;
 	float m_Velocity = 10.0f;
 
-	bool m_isPaused;
+	bool m_isPlaying;
 
 };
 

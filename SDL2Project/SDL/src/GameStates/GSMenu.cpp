@@ -63,7 +63,7 @@ void GSMenu::Init()
 	btnCredit->Set2DPosition((SCREEN_WIDTH - btnCredit->GetWidth()) / 2, SCREEN_HEIDHT / 2 + 260);
 
 	btnCredit->SetOnClick([]() {
-		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_CREDIT);
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PAUSE);
 		});
 	m_listButton.push_back(btnCredit);
 
