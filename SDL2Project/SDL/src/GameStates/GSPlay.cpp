@@ -260,12 +260,19 @@ void GSPlay::Update(float deltaTime)
 				}
 			}
 		}
+
+
+		for (auto it : m_vectorEnemy)
+		{
+			it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
+			if (obj->CheckCollision(it->Get2DPosition(), it->GetWidth(), it->GetHeight()))
+			{
+				obj->minusHP(it->getPower(), deltaTime);
+			}
+			it->Update(deltaTime);
+		}
 		obj->Update(deltaTime);
 	}
-	
-	
-	
-	
 
 	//Update position of camera
 	//Camera::GetInstance()->Update(deltaTime);
@@ -287,7 +294,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		//	obj->Draw(renderer);
 		for (auto it : m_listAnimation)
 		{
-			it->Draw(renderer);
+			if (it->getHP() > 0) it->Draw(renderer);
 		}
 		for (auto it : m_vectorEnemy)
 		{
@@ -309,7 +316,4 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	{
 		it->Draw(renderer);
 	}
-	
-
-
 }

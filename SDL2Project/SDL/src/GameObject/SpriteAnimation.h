@@ -20,6 +20,10 @@ protected:
 	int m_numAction; //start from 1,2,3...
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
+
+	// HP
+	int m_hp;
+	float m_timeSinceLastDeduction;
 public:
 	SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~SpriteAnimation();
@@ -49,4 +53,9 @@ public:
 
 	//Rotation
 	void Flip(bool targetDir);
+
+	//HP
+	bool CheckCollision(Vector2 other, int width, int height);
+	void minusHP(int, float);
+	int getHP();
 };

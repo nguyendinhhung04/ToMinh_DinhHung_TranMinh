@@ -20,6 +20,8 @@ protected:
 	bool		m_rotationDirection;
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
+	//enemy power
+	int m_power;
 public:
 	enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~enemy();
@@ -53,6 +55,6 @@ public:
 
 	//Rotation for Enemy
 	void Flip(bool targetDir);
-
+	int getPower();
 };
 

@@ -1,6 +1,7 @@
 #include "SpriteAnimation.h"
 #include "TextureManager.h"
 #include <cmath>
+#define INITIAL_HP 100
 SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
 	m_MoveSpeed = (float)(150);
@@ -16,6 +17,8 @@ SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int sp
 	m_currentTicks = 0;
 	m_lastUpdate = SDL_GetTicks();
 	Init();
+	m_hp = INITIAL_HP;
+	m_timeSinceLastDeduction = 0;
 }
 SpriteAnimation::~SpriteAnimation()
 {
@@ -154,4 +157,40 @@ void SpriteAnimation::MoveRightDown(float deltaTime, float speed)
 	m_position.x += speed * deltaTime;
 	m_position.y += speed * deltaTime;
 }
+
+
+bool SpriteAnimation::CheckCollision(Vector2 other, int width, int height)
+{
+	int e_x_left = other.x;
+	int e_x_right = e_x_left + width;
+	int e_y_top = other.y;
+	int e_y_bot = e_y_top + height;
+	int x_left = m_position.x;
+	int x_right = x_left + m_iWidth;
+	int y_top = m_position.y;
+	int y_bot = y_top + m_iHeight;
+	if (x_left <= e_x_left && e_x_left <= x_right && y_top <= e_y_bot && e_y_bot <= y_bot) return true;
+	else if (x_left <= e_x_left && e_x_left <= x_right && e_y_top <= y_bot && y_bot <= e_y_bot) return true;
+	else if (x_left >= e_x_left && x_left <= e_x_right && y_top <= e_y_bot && e_y_bot <= y_bot) return true;
+	else if (x_left >= e_x_left && x_left <= e_x_right && e_y_top <= y_bot && y_bot <= e_y_bot) return true;
+	return false;
+}
+
+
+// minus = enemy_power
+void SpriteAnimation::minusHP(int enemy_power, float deltaTime)
+{
+	m_timeSinceLastDeduction += deltaTime;
+	if (m_timeSinceLastDeduction >= 1.0f)
+	{
+		m_hp -= enemy_power;
+		m_timeSinceLastDeduction = 0;
+	}
+}
+
+int SpriteAnimation::getHP()
+{
+	return m_hp;
+}
+
 

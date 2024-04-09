@@ -1,7 +1,10 @@
 #include "enemy.h"
 #include "TextureManager.h"
 #include <cmath>
-
+#include <iostream>
+#include <random>
+#include <cstdlib> 
+#define ENEMY_POWER 10
 enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
 	m_rotationDirection = true;
@@ -17,6 +20,7 @@ enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCo
 	m_currentTicks = 0;
 	m_lastUpdate = SDL_GetTicks();
 	Init();
+	m_power = ENEMY_POWER;
 }
 enemy::~enemy()
 {
@@ -175,7 +179,6 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 	//}
 	*/
 
-
 	float x_dis = other.x - m_position.x;
 	if (x_dis > 0)
 	{
@@ -209,6 +212,12 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 		//m_position.y += cos_value * speed;
 
 	}
+}
+
+
+int enemy::getPower()
+{
+	return m_power;
 }
 
 
