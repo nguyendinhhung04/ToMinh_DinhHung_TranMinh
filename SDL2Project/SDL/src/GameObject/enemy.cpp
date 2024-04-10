@@ -21,6 +21,7 @@ enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCo
 	m_lastUpdate = SDL_GetTicks();
 	Init();
 	m_power = ENEMY_POWER;
+
 }
 enemy::~enemy()
 {
@@ -191,7 +192,7 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 		Flip(temp);
 	}
 	float y_dis = other.y - m_position.y;
-	if ((!(abs(x_dis) < 10 && abs(y_dis) < 10)))
+	if ((!(abs(x_dis) < 30 && abs(y_dis) < 30)))
 	{
 
 		float tan_value = x_dis / y_dis;

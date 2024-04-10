@@ -287,18 +287,41 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	
 		m_background->Draw(renderer);
 		//m_score->Draw();
+		
 		for (auto it : m_listButton)
 		{
 			it->Draw(renderer);
 		}
+		/*
 		//	obj->Draw(renderer);
 		for (auto it : m_listAnimation)
 		{
 			if (it->getHP() > 0) it->Draw(renderer);
 		}
+		*/
+		bool m_alreadyDrawPlayer = false;
 		for (auto it : m_vectorEnemy)
 		{
+			if (m_alreadyDrawPlayer == false) 
+			{
+				if (it->Get2DPosition().y > obj->Get2DPosition().y)
+				{
+					if (obj->getHP() > 0)
+					{
+						obj->Draw(renderer);
+						m_alreadyDrawPlayer = true;
+					}
+				}
+			}
 			it->Draw(renderer);
+		}
+		if (m_alreadyDrawPlayer == false)
+		{
+			if (obj->getHP() > 0)
+			{
+				obj->Draw(renderer);
+				m_alreadyDrawPlayer = true;
+			}
 		}
 
 	if (!m_isPlaying)
