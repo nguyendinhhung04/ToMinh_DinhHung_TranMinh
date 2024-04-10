@@ -21,6 +21,8 @@ enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCo
 	m_lastUpdate = SDL_GetTicks();
 	Init();
 	m_power = ENEMY_POWER;
+	m_actualSize = 30;
+
 }
 enemy::~enemy()
 {
@@ -159,25 +161,49 @@ void enemy::Flip(bool targetDir)
 }
 
 
-void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
+bool enemy::CheckCollisionX(std::shared_ptr<enemy> other)
 {
-	/*
-	float x_dis = m_position.x - other.x;
-	float y_dis = m_position.y - other.y;
-	//while (x_dis != 0 && y_dis != 0)
-	//{
-	if (x_dis < 0 && y_dis > 0)MoveRightUp(deltaTime, speed);
-	else if (x_dis > 0 && y_dis > 0) MoveLeftUp(deltaTime, speed);
-	else if (x_dis > 0 && y_dis == 0) MoveLeft(deltaTime, speed);
-	else if (x_dis < 0 && y_dis == 0) MoveRight(deltaTime, speed);
-	else if (x_dis < 0 && y_dis < 0) MoveRightDown(deltaTime, speed);
-	else if (x_dis > 0 && y_dis < 0) MoveLeftDown(deltaTime, speed);
-	else if (x_dis == 0 && y_dis < 0) MoveDown(deltaTime, speed);
-	else MoveUp(deltaTime, speed);
-	x_dis = m_position.x - other.x;
-	y_dis = m_position.y - other.y;
-	//}
-	*/
+	if (m_position.x == other->Get2DPosition().x && m_position.y == other->Get2DPosition().y)
+	{
+		return false;
+	}
+	bool check = false;
+	if ((other->Get2DPosition().x > m_position.x - m_actualSize && other->Get2DPosition().x < m_position.x + m_iWidth - m_actualSize) || (m_position.x > other->Get2DPosition().x - m_actualSize && m_position.x < other->Get2DPosition().x + other->GetWidth() - m_actualSize))
+	{
+		if ((other->Get2DPosition().y > m_position.y - m_actualSize && other->Get2DPosition().y < m_position.y + m_iHeight - m_actualSize) || (m_position.y > other->Get2DPosition().y - m_actualSize && m_position.y < other->Get2DPosition().y + other->GetHeight() - m_actualSize))
+		{
+			if ((other->Get2DPosition().x > m_position.x - m_actualSize && other->Get2DPosition().x < m_position.x + m_iWidth - m_actualSize) || (m_position.x > other->Get2DPosition().x - m_actualSize && m_position.x < other->Get2DPosition().x + other->GetWidth() - m_actualSize))
+			{
+				check = true;
+			}
+		}
+	}
+	return check;
+}
+
+bool enemy::CheckCollisionY(std::shared_ptr<enemy> other)
+{
+	if (m_position.x == other->Get2DPosition().x && m_position.y == other->Get2DPosition().y)
+	{
+		return false;
+	}
+	bool check = false;
+	if ((other->Get2DPosition().x > m_position.x - m_actualSize && other->Get2DPosition().x < m_position.x + m_iWidth - m_actualSize) || (m_position.x > other->Get2DPosition().x - m_actualSize && m_position.x < other->Get2DPosition().x + other->GetWidth() - m_actualSize))
+	{
+		if ((other->Get2DPosition().y > m_position.y - m_actualSize && other->Get2DPosition().y < m_position.y + m_iHeight - m_actualSize) || (m_position.y > other->Get2DPosition().y - m_actualSize && m_position.y < other->Get2DPosition().y + other->GetHeight() - m_actualSize))
+		{
+			if ((other->Get2DPosition().y > m_position.y - m_actualSize && other->Get2DPosition().y < m_position.y + m_iHeight - m_actualSize) || (m_position.y > other->Get2DPosition().y - m_actualSize && m_position.y < other->Get2DPosition().y + other->GetHeight() - m_actualSize))
+			{
+				check = true;
+			}
+		}
+	}
+	return check;
+}
+
+void enemy::MoveToCharacterX(float deltaTime, float speed, Vector2 other, std::vector<std::shared_ptr<enemy>> m_vectorEnemy)
+{
+
 
 	float x_dis = other.x - m_position.x;
 	if (x_dis > 0)
@@ -191,34 +217,81 @@ void enemy::MoveToCharacter(float deltaTime, float speed, Vector2 other)
 		Flip(temp);
 	}
 	float y_dis = other.y - m_position.y;
-	if ((!(abs(x_dis) < 10 && abs(y_dis) < 10)))
+	if ((!(abs(x_dis) < 30)))
 	{
 
 		float tan_value = x_dis / y_dis;
 		float cos_value = sqrt(1 / (1 + pow(tan_value, 2)));
 		float sin_value = cos_value * tan_value;
-		//printf("%f %f____%f %f %f\n",x_dis,y_dis, sin_value, cos_value, tan_value);
 
 
 		if (y_dis < 0) {
 			m_position.x -= sin_value * speed;
-			m_position.y -= cos_value * speed;
+			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
+			{
+				if (CheckCollisionX(*it))
+				{
+					m_position.x += sin_value * speed;
+					break;
+				}
+			}
 		}
 		else {
 			m_position.x += sin_value * speed;
-			m_position.y += cos_value * speed;
+			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
+			{
+				if (CheckCollisionX(*it))
+				{
+					m_position.x -= sin_value * speed;
+					break;
+				}
+			}
 		}
-
-		//m_position.y += cos_value * speed;
-
 	}
 }
 
+void enemy::MoveToCharacterY(float deltaTime, float speed, Vector2 other, std::vector<std::shared_ptr<enemy>> m_vectorEnemy)
+{
+
+
+	float x_dis = other.x - m_position.x;
+	float y_dis = other.y - m_position.y;
+	if ((!(abs(y_dis) < 30)))
+	{
+
+		float tan_value = x_dis / y_dis;
+		float cos_value = sqrt(1 / (1 + pow(tan_value, 2)));
+		float sin_value = cos_value * tan_value;
+
+
+		if (y_dis < 0) {
+			m_position.y -= cos_value * speed;
+			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
+			{
+				if (CheckCollisionY(*it))
+				{
+					m_position.y += cos_value * speed;
+					break;
+				}
+			}
+		}
+		else {
+			m_position.y += cos_value * speed;
+			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
+			{
+				if (CheckCollisionY(*it))
+				{
+					m_position.y -= cos_value * speed;
+					break;
+				}
+			}
+		}
+	}
+}
 
 int enemy::getPower()
 {
 	return m_power;
 }
-
 
 

@@ -35,10 +35,10 @@ void GSPlay::Init()
 	auto texture = ResourceManagers::GetInstance()->GetTexture("Cave/Background_GSPlay.tga");
 
 	// background
-	
-	m_background = std::make_shared<Sprite2D>( texture, SDL_FLIP_NONE);
+
+	m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
 	m_background->SetSize(1280, 720);
-	m_background->Set2DPosition(0,0);
+	m_background->Set2DPosition(0, 0);
 
 
 	// button close
@@ -60,17 +60,17 @@ void GSPlay::Init()
 		});
 	m_listButton.push_back(button);
 
-   // Animation 
-	
+	// Animation 
+
 	texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/characters/crazy.png");
-	obj = std::make_shared<SpriteAnimation>( texture, 1, 1, 1, 1.00f);
+	obj = std::make_shared<SpriteAnimation>(texture, 1, 1, 1, 1.00f);
 	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
 	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
 	obj->SetSize(50, 50);
 	obj->Set2DPosition(240, 400);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	m_listAnimation.push_back(obj);
-	
+
 
 	//Player
 	/*
@@ -99,7 +99,7 @@ void GSPlay::Init()
 	m_KeyPress = 0;
 
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
-	
+
 }
 
 void GSPlay::Exit()
@@ -126,11 +126,11 @@ void GSPlay::HandleEvents()
 void GSPlay::HandleKeyEvents(SDL_Event& e)
 {
 	//If a key was pressed
-	if (e.type == SDL_KEYDOWN )//&& e.key.repeat == 0) //For e.key.repeat it's because key repeat is enabled by default and if you press and hold a key it will report multiple key presses. That means we have to check if the key press is the first one because we only care when the key was first pressed.
+	if (e.type == SDL_KEYDOWN)//&& e.key.repeat == 0) //For e.key.repeat it's because key repeat is enabled by default and if you press and hold a key it will report multiple key presses. That means we have to check if the key press is the first one because we only care when the key was first pressed.
 	{
 		//Adjust the velocity
-		switch (e.key.keysym.sym)                                                                                            
-		{              
+		switch (e.key.keysym.sym)
+		{
 
 		case SDLK_LEFT:
 			m_KeyPress |= 1;
@@ -152,7 +152,7 @@ void GSPlay::HandleKeyEvents(SDL_Event& e)
 		}
 	}
 	////Key Up
-	else if (e.type == SDL_KEYUP )//&& e.key.repeat == 0)
+	else if (e.type == SDL_KEYUP)//&& e.key.repeat == 0)
 	{
 		//Adjust the velocity
 		switch (e.key.keysym.sym)
@@ -238,24 +238,15 @@ void GSPlay::Update(float deltaTime)
 			else if (m_KeyPress == 6) {
 				it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
 			}
-			printf("%f %f\n", it->Get2DPosition().x, it->Get2DPosition().y);
 			it->Update(deltaTime);
 		}
-
-		
-
 
 		for (auto it : m_vectorEnemy)
 		{
-			it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
-			if (obj->CheckCollision(it->Get2DPosition(), it->GetWidth(), it->GetHeight()))
-			{
-				obj->minusHP(it->getPower(), deltaTime);
-			}
+			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			it->Update(deltaTime);
 		}
-		obj->Update(deltaTime);
-
 		//sort the vector
 		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
 		{
@@ -270,6 +261,18 @@ void GSPlay::Update(float deltaTime)
 			}
 		}
 
+
+		for (auto it : m_vectorEnemy)
+		{
+			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			if (obj->CheckCollision(it->Get2DPosition(), it->GetWidth(), it->GetHeight()))
+			{
+				obj->minusHP(it->getPower(), deltaTime);
+			}
+			it->Update(deltaTime);
+		}
+		obj->Update(deltaTime);
 	}
 
 	//Update position of camera
@@ -282,39 +285,45 @@ void GSPlay::Update(float deltaTime)
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
 
-	
-		m_background->Draw(renderer);
-		//m_score->Draw();
-		for (auto it : m_listButton)
-		{
-			it->Draw(renderer);
-		}
-			
-		bool m_alreadyDrawPlayer = false;
-		for (auto it : m_vectorEnemy)
-		{
-			if (m_alreadyDrawPlayer == false)
-			{
-				if (it->Get2DPosition().y > obj->Get2DPosition().y)
-				{
-					if (obj->getHP() > 0)
-					{
-						obj->Draw(renderer);
-						m_alreadyDrawPlayer = true;
-					}
-				}
-			}
-			it->Draw(renderer);
-		}
+
+	m_background->Draw(renderer);
+	//m_score->Draw();
+
+	for (auto it : m_listButton)
+	{
+		it->Draw(renderer);
+	}
+	/*
+	//	obj->Draw(renderer);
+	for (auto it : m_listAnimation)
+	{
+		if (it->getHP() > 0) it->Draw(renderer);
+	}
+	*/
+	bool m_alreadyDrawPlayer = false;
+	for (auto it : m_vectorEnemy)
+	{
 		if (m_alreadyDrawPlayer == false)
 		{
-			if (obj->getHP() > 0)
+			if (it->Get2DPosition().y > obj->Get2DPosition().y)
 			{
-				obj->Draw(renderer);
-				m_alreadyDrawPlayer = true;
+				if (obj->getHP() > 0)
+				{
+					obj->Draw(renderer);
+					m_alreadyDrawPlayer = true;
+				}
 			}
 		}
-
+		it->Draw(renderer);
+	}
+	if (m_alreadyDrawPlayer == false)
+	{
+		if (obj->getHP() > 0)
+		{
+			obj->Draw(renderer);
+			m_alreadyDrawPlayer = true;
+		}
+	}
 
 	if (!m_isPlaying)
 	{
