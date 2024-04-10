@@ -1,4 +1,5 @@
 #pragma once
+#include "GameStateBase.h"
 #include "BaseObject.h"
 
 class enemy :public BaseObject
@@ -22,6 +23,7 @@ protected:
 	//std::shared_ptr<TextureManager> m_texture;
 	//enemy power
 	int m_power;
+	int m_actualSize;
 public:
 	enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~enemy();
@@ -40,9 +42,10 @@ public:
 	int GetHeight();
 
 	//Moving for enemy
-	void MoveToCharacter(float deltaTime, float speed, Vector2 other);
+	void MoveToCharacterX(float deltaTime, float speed, Vector2 other, std::vector<std::shared_ptr<enemy>> m_vectorEnemy);
+	void MoveToCharacterY(float deltaTime, float speed, Vector2 other, std::vector<std::shared_ptr<enemy>> m_vectorEnemy);
 
-	//Moving
+	
 	float m_MoveSpeed;
 	void MoveLeft(float deltaTime, float speed);
 	void MoveRight(float deltaTime, float speed);
@@ -52,9 +55,14 @@ public:
 	void MoveLeftUp(float deltaTime, float speed);
 	void MoveRightUp(float deltaTime, float speed);
 	void MoveRightDown(float deltaTime, float speed);
+	
 
 	//Rotation for Enemy
 	void Flip(bool targetDir);
 	int getPower();
+
+	//Collision
+	bool CheckCollisionX(std::shared_ptr<enemy> other);
+	bool CheckCollisionY(std::shared_ptr<enemy> other);
 };
 

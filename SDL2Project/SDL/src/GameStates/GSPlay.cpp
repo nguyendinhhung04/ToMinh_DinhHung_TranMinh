@@ -238,13 +238,13 @@ void GSPlay::Update(float deltaTime)
 			else if (m_KeyPress == 6) {
 				it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
 			}
-			printf("%f %f\n", it->Get2DPosition().x, it->Get2DPosition().y);
 			it->Update(deltaTime);
 		}
 
 		for (auto it : m_vectorEnemy)
 		{
-			it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
+			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			it->Update(deltaTime);
 		}
 		//sort the vector
@@ -264,7 +264,8 @@ void GSPlay::Update(float deltaTime)
 
 		for (auto it : m_vectorEnemy)
 		{
-			it->MoveToCharacter(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition());
+			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			if (obj->CheckCollision(it->Get2DPosition(), it->GetWidth(), it->GetHeight()))
 			{
 				obj->minusHP(it->getPower(), deltaTime);
