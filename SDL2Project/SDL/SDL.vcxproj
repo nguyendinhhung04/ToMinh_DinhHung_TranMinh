@@ -166,6 +166,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\GameObject\BaseWeapon.cpp" />
+    <ClCompile Include="src\GameObject\Bullet.cpp" />
     <ClCompile Include="src\GameObject\enemy.cpp" />
     <ClCompile Include="src\GameStates\GSCredit.cpp" />
     <ClCompile Include="src\GameStates\GSOption.cpp" />
@@ -190,6 +192,8 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\GameObject\BaseWeapon.h" />
+    <ClInclude Include="src\GameObject\Bullet.h" />
     <ClInclude Include="src\GameObject\enemy.h" />
     <ClInclude Include="src\GameStates\GSCredit.h" />
     <ClInclude Include="src\GameStates\GSOption.h" />

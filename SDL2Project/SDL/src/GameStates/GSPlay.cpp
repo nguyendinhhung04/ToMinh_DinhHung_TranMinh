@@ -71,15 +71,10 @@ void GSPlay::Init()
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	m_listAnimation.push_back(obj);
 
-
-	//Player
-	/*
-	texture = ResourceManagers::GetInstance()->GetTexture("PlayerCharacter.tga");
-	player = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
-	player->SetSize(350, 350);
-	player->Set2DPosition(500 , 500);
-	*/
-
+	texture = texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/weapons/chain_gun.png");
+	weapon = std::make_shared<BaseWeapon>(texture, 1, 1, 1, 1.00f);
+	weapon->SetSize(50, 50);
+	weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() , obj->Get2DPosition().y);
 
 	//Enemy
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
@@ -99,6 +94,8 @@ void GSPlay::Init()
 	m_KeyPress = 0;
 
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
+
+
 
 }
 
@@ -247,6 +244,8 @@ void GSPlay::Update(float deltaTime)
 			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			it->Update(deltaTime);
 		}
+		
+
 		//sort the vector
 		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
 		{
@@ -261,6 +260,12 @@ void GSPlay::Update(float deltaTime)
 			}
 		}
 
+		weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth(), obj->Get2DPosition().y);
+
+		if (weapon->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
+		{
+			weapon->Fire(m_vectorEnemy[0]->Get2DPosition());
+		}
 
 		for (auto it : m_vectorEnemy)
 		{
@@ -300,6 +305,11 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		if (it->getHP() > 0) it->Draw(renderer);
 	}
 	*/
+	
+
+	
+
+
 	bool m_alreadyDrawPlayer = false;
 	for (auto it : m_vectorEnemy)
 	{
@@ -323,6 +333,12 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 			obj->Draw(renderer);
 			m_alreadyDrawPlayer = true;
 		}
+	}
+
+	weapon->Draw(renderer);
+	if (weapon->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
+	{
+		weapon->FireP2(renderer);
 	}
 
 	if (!m_isPlaying)

@@ -90,6 +90,12 @@
     <ClCompile Include="src\GameStates\GSPause.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\GameObject\Bullet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\BaseWeapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GameObject\BaseObject.h">
@@ -165,6 +171,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\GameStates\GSPause.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\BaseWeapon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\Bullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

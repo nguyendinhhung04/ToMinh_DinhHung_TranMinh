@@ -3,6 +3,7 @@
 #include "GameObject/MouseButton.h"
 #include "Sound.h"
 #include "enemy.h"
+#include "BaseWeapon.h"
 
 class Sprite2D;
 class SpriteAnimation;
@@ -41,6 +42,7 @@ private:
 	std::vector<std::shared_ptr<enemy>> m_vectorEnemy;
 	std::shared_ptr<enemy> monster;
 	std::shared_ptr<MouseButton> button;
+	std::shared_ptr<BaseWeapon> weapon;
 
 
 
