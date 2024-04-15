@@ -22,7 +22,8 @@ enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCo
 	Init();
 	m_power = ENEMY_POWER;
 	m_actualSize = 30;
-
+	m_timeSinceLastDeduction = 0;
+	m_hp = 20;
 }
 enemy::~enemy()
 {
@@ -295,3 +296,36 @@ int enemy::getPower()
 }
 
 
+bool enemy::CheckCollision(Vector2 other, int width, int height)
+{
+	int e_x_left = other.x;
+	int e_x_right = e_x_left + width;
+	int e_y_top = other.y;
+	int e_y_bot = e_y_top + height;
+	int x_left = m_position.x;
+	int x_right = x_left + m_iWidth;
+	int y_top = m_position.y;
+	int y_bot = y_top + m_iHeight;
+	if (x_left <= e_x_left && e_x_left <= x_right && y_top <= e_y_bot && e_y_bot <= y_bot) return true;
+	else if (x_left <= e_x_left && e_x_left <= x_right && e_y_top <= y_bot && y_bot <= e_y_bot) return true;
+	else if (x_left >= e_x_left && x_left <= e_x_right && y_top <= e_y_bot && e_y_bot <= y_bot) return true;
+	else if (x_left >= e_x_left && x_left <= e_x_right && e_y_top <= y_bot && y_bot <= e_y_bot) return true;
+	return false;
+}
+
+
+// minus = enemy_power
+void enemy::minusHP(int damage, float deltaTime)
+{
+	m_timeSinceLastDeduction += deltaTime;
+	if (m_timeSinceLastDeduction >= 0.5f)
+	{
+		m_hp -= damage;
+		m_timeSinceLastDeduction = 0;
+	}
+}
+
+int enemy::getHP()
+{
+	return m_hp;
+}

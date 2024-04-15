@@ -24,6 +24,9 @@ protected:
 	//enemy power
 	int m_power;
 	int m_actualSize;
+	//hp
+	int m_hp;
+	float m_timeSinceLastDeduction;
 public:
 	enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~enemy();
@@ -64,4 +67,9 @@ public:
 	//Collision
 	bool CheckCollisionX(std::shared_ptr<enemy> other);
 	bool CheckCollisionY(std::shared_ptr<enemy> other);
+
+	//
+	bool CheckCollision(Vector2 other, int width, int height);
+	void minusHP(int, float);
+	int getHP();
 };

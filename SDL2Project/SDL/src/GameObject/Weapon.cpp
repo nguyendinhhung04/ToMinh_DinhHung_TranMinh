@@ -162,6 +162,11 @@ void Weapon::followPlayer(std::shared_ptr<SpriteAnimation> player)
 	Set2DPosition(player->Get2DPosition().x,player->Get2DPosition().y);
 }
 
+std::shared_ptr<Bullet> Weapon::getLastBullet()
+{
+	if (!m_bullets.empty()) return m_bullets[m_bullets.size() - 1];
+	return NULL;
+}
 
 
 

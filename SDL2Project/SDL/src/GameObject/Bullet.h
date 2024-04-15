@@ -50,5 +50,9 @@ public:
 
 	//Bullet movement
 	void BulletMovement();
+
+	//check collision with enemy
+	
+
 };
 

@@ -255,6 +255,7 @@ void GSPlay::Update(float deltaTime)
 		{
 			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			//it->CheckCollision()
 			it->Update(deltaTime);
 		}
 		//sort the vector
@@ -293,9 +294,25 @@ void GSPlay::Update(float deltaTime)
 			if (it->IsEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
 			{
 				it->Fire(m_vectorEnemy[0]->Get2DPosition());
+				if (it->getLastBullet() != NULL)
+				{
+					if (m_vectorEnemy[0]->CheckCollision(it->getLastBullet()->Get2DPosition(), it->getLastBullet()->GetWidth(), it->getLastBullet()->GetHeight()))
+					{
+						m_vectorEnemy[0]->minusHP(10, deltaTime);
+					}
+				}
+	
 			}
 			it->Update(deltaTime);
 			it->UpdateBullets(deltaTime);
+		}
+
+		for (int i = 0 ; i < m_vectorEnemy.size() - 1 ; i++)
+		{
+			if (m_vectorEnemy[i]->getHP() <= 0)
+			{
+				m_vectorEnemy.erase(m_vectorEnemy.begin() + i);
+			}
 		}
 	}
 

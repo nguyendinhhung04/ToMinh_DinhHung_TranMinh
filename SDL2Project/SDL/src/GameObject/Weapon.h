@@ -56,5 +56,8 @@ public :
 	bool IsEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorEnemy, Vector2 characterPos);
 	void initBullet(std::vector<std::shared_ptr<enemy>> m_vectorEnemy, Vector2 characterPos, float deltaTime);
 	void UpdateBullets(float deltaTime);
+
+	//get last Bullet
+	std::shared_ptr<Bullet> getLastBullet();
 };
 
