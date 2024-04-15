@@ -5,6 +5,7 @@
 #include <random>
 #include <cstdlib> 
 #define ENEMY_POWER 10
+#define ENEMY_HP 100
 enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
 	m_rotationDirection = true;
@@ -20,6 +21,7 @@ enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCo
 	m_currentTicks = 0;
 	m_lastUpdate = SDL_GetTicks();
 	Init();
+	m_hp = ENEMY_HP;
 	m_power = ENEMY_POWER;
 	m_actualSize = 30;
 
@@ -294,4 +296,14 @@ int enemy::getPower()
 	return m_power;
 }
 
+
+void enemy::Damaged(float bullet_damgage)
+{
+	m_hp -= bullet_damgage;
+}
+
+float enemy::GetHP()
+{
+	return m_hp;
+}
 

@@ -22,6 +22,7 @@ protected:
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
 	//enemy power
+	float m_hp;
 	int m_power;
 	int m_actualSize;
 public:
@@ -64,4 +65,6 @@ public:
 	//Collision
 	bool CheckCollisionX(std::shared_ptr<enemy> other);
 	bool CheckCollisionY(std::shared_ptr<enemy> other);
+	void Damaged(float bullet_damage);
+	float GetHP();
 };

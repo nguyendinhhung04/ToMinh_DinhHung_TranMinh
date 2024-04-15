@@ -27,6 +27,9 @@ protected:
 	// HP
 	int m_hp;
 	float m_timeSinceLastDeduction;
+	float cos_value;
+	float sin_value;
+	float y_dis;
 public:
 	Bullet(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~Bullet();
@@ -56,8 +59,9 @@ public:
 
 	//Rotation
 	void Flip(bool targetDir);
-
-	//HP
+	void SetTarget(Vector2 target);
 	bool CheckCollision(Vector2 other, int width, int height);
-	void MoveToTarget( Vector2 other);
+	void MoveToTarget();
+
+	float GetDamageAmount();
 };

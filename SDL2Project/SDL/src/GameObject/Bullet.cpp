@@ -166,6 +166,12 @@ void Bullet::MoveRightDown(float deltaTime, float speed)
 
 bool Bullet::CheckCollision(Vector2 other, int width, int height)
 {
+	if (Get2DPosition().x > 2000 || Get2DPosition().y > 1500) 
+	{
+		return true;
+	}
+
+	bool check;
 	int e_x_left = other.x;
 	int e_x_right = e_x_left + width;
 	int e_y_top = other.y;
@@ -181,12 +187,10 @@ bool Bullet::CheckCollision(Vector2 other, int width, int height)
 	return false;
 }
 
-void Bullet::MoveToTarget( Vector2 other)
+
+void Bullet::SetTarget(Vector2 target)
 {
-	
-
-
-	float x_dis = other.x - m_position.x;
+	float x_dis = target.x - m_position.x;
 	if (x_dis > 0)
 	{
 		bool temp = true;
@@ -197,28 +201,31 @@ void Bullet::MoveToTarget( Vector2 other)
 		bool temp = false;
 		Flip(temp);
 	}
-	float y_dis = other.y - m_position.y;
-	if ((!(abs(x_dis) < 10 && abs(y_dis) < 10)))
-	{
+	y_dis = target.y - m_position.y;
 
-		float tan_value = x_dis / y_dis;
-		float cos_value = sqrt(1 / (1 + pow(tan_value, 2)));
-		float sin_value = cos_value * tan_value;
-
+	float tan_value = x_dis / y_dis;
+	cos_value = sqrt(1 / (1 + pow(tan_value, 2)));
+	sin_value = cos_value * tan_value;
+}
 
 
-		if (y_dis < 0) {
-			m_position.x -= sin_value * m_speed;
-			m_position.y -= cos_value * m_speed;
-		}
-		else {
-			m_position.x += sin_value * m_speed;
-			m_position.y += cos_value * m_speed;
-		}
 
-
+void Bullet::MoveToTarget( )
+{
+	if (y_dis < 0) {
+		m_position.x -= sin_value * m_speed;
+		m_position.y -= cos_value * m_speed;
+	}
+	else {
+		m_position.x += sin_value * m_speed;
+		m_position.y += cos_value * m_speed;
 	}
 }
 
+
+float Bullet::GetDamageAmount()
+{
+	return m_damage;
+}
 
 

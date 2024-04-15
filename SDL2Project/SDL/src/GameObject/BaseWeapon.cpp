@@ -1,9 +1,8 @@
 #include "BaseWeapon.h"
 #include "TextureManager.h"
 #include <cmath>
-#define INITIAL_HP 100
 #define INITIAL_RANGE 100
-#define INITIAL_FIRESPEED 10
+#define INITIAL_FIRESPEED 1
 BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
 	m_MoveSpeed = (float)(250);
@@ -19,8 +18,7 @@ BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, i
 	m_currentTicks = 0;
 	m_lastUpdate = SDL_GetTicks();
 	Init();
-	m_hp = INITIAL_HP;
-	m_timeSinceLastDeduction = 0;
+	m_timeSinceLastFire = 0;
 	m_fireSpeed = INITIAL_FIRESPEED;
 	m_range = INITIAL_RANGE;
 	BulletOfWeapon = NULL;
@@ -115,17 +113,6 @@ void BaseWeapon::Flip(bool targetDir)
 //range
 bool BaseWeapon::CheckEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorEnemy, Vector2 characterPos)
 {
-	
-	if (BulletOfWeapon == NULL)
-	{
-		auto texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/items/acid.png");
-		BulletOfWeapon = new Bullet(texture, 1, 1, 1, 1.00f);
-		BulletOfWeapon->Set2DPosition(m_position.x, m_position.y);
-		BulletOfWeapon->SetSize(50, 50);
-	}
-	
-
-
 	for (auto it : m_vectorEnemy)
 	{
 		int x_dis = abs(characterPos.x - it->Get2DPosition().x);
@@ -136,13 +123,18 @@ bool BaseWeapon::CheckEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorE
 	return false;
 }
 
-void BaseWeapon::Fire(Vector2 other)
+std::shared_ptr<Bullet> BaseWeapon::Fire(Vector2 other, float deltaTime)
 {
-	BulletOfWeapon->MoveToTarget(other);
+	m_timeSinceLastFire += deltaTime;
+	if (m_timeSinceLastFire >= (1.00f / m_fireSpeed))
+	{
+		auto texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/items/acid.png");
+		BulletOfWeapon = std::make_shared<Bullet>(texture, 1, 1, 1, 1.00f);
+		BulletOfWeapon->Set2DPosition(m_position.x, m_position.y);
+		BulletOfWeapon->SetSize(50, 50);
+		BulletOfWeapon->SetTarget(other);
+		return BulletOfWeapon;
+	}
 }
 
-void BaseWeapon::FireP2(SDL_Renderer* renderer)
-{
-	BulletOfWeapon->Draw(renderer);
-}
 

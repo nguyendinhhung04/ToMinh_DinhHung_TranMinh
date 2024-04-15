@@ -70,11 +70,13 @@ void GSPlay::Init()
 	obj->Set2DPosition(240, 400);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	m_listAnimation.push_back(obj);
-
+	
+	//weapon	
 	texture = texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/weapons/chain_gun.png");
 	weapon = std::make_shared<BaseWeapon>(texture, 1, 1, 1, 1.00f);
 	weapon->SetSize(50, 50);
 	weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() , obj->Get2DPosition().y);
+	m_vectorWeapon.push_back(weapon);
 
 	//Enemy
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
@@ -260,24 +262,58 @@ void GSPlay::Update(float deltaTime)
 			}
 		}
 
-		weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth(), obj->Get2DPosition().y);
-
-		if (weapon->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
+		
+		for (auto it : m_vectorWeapon)
 		{
-			weapon->Fire(m_vectorEnemy[0]->Get2DPosition());
-		}
-
-		for (auto it : m_vectorEnemy)
-		{
-			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
-			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
-			if (obj->CheckCollision(it->Get2DPosition(), it->GetWidth(), it->GetHeight()))
+			it->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth(), obj->Get2DPosition().y);
+			if (it->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
 			{
-				obj->minusHP(it->getPower(), deltaTime);
+				bullet =  it->Fire(m_vectorEnemy[0]->Get2DPosition(), deltaTime);
+				m_vectorBullet.push_back(bullet);
 			}
 			it->Update(deltaTime);
 		}
+		
+		
 		obj->Update(deltaTime);
+		for (auto it = m_vectorBullet.begin(); it!=m_vectorBullet.end(); ++it)
+		{
+			(*it)->MoveToTarget();
+			if ((*it)->Get2DPosition().x > 2000 || (*it)->Get2DPosition().y > 1500) 
+			{
+				(*it) = nullptr;
+				m_vectorBullet.erase(it);
+			}
+			(*it)->Update(deltaTime);
+		}
+		
+		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
+		{
+			(*it)->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			(*it)->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			if (obj->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()))
+			{
+				obj->minusHP((*it)->getPower(), deltaTime);
+			}
+			for (auto it2 = m_vectorBullet.begin(); it2 != m_vectorBullet.end(); ++it2)
+			{
+				if ((*it2)->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()) == true)
+		 		{
+					(*it)->Damaged((*it2)->GetDamageAmount());
+					(*it2) = nullptr;
+					m_vectorBullet.erase(it2);
+				}
+			}
+			
+			if ((*it)->GetHP() <= 0) 
+			{
+				(*it) = nullptr;
+				m_vectorEnemy.erase(it);
+			}
+			(*it)->Update(deltaTime);
+
+		}
+
 	}
 
 	//Update position of camera
@@ -335,10 +371,14 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		}
 	}
 
-	weapon->Draw(renderer);
-	if (weapon->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
+	for (auto it : m_vectorWeapon)
 	{
-		weapon->FireP2(renderer);
+		it->Draw(renderer);
+	}
+
+	for (auto it : m_vectorBullet)
+	{
+		it->Draw(renderer);
 	}
 
 	if (!m_isPlaying)

@@ -3,6 +3,7 @@
 #include <SDL_render.h>
 #include "Bullet.h"
 #include "enemy.h"
+
 class TextureManager;
 class BaseWeapon : public BaseObject {
 protected:
@@ -28,8 +29,8 @@ protected:
 
 	// HP
 	int m_hp;
-	float m_timeSinceLastDeduction;
-	Bullet* BulletOfWeapon;
+	float m_timeSinceLastFire;
+	std::shared_ptr<Bullet> BulletOfWeapon;
 public:
 	BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~BaseWeapon();
@@ -53,7 +54,6 @@ public:
 	//Rotation
 	void Flip(bool targetDir);
 
-	void Fire(Vector2 other);
+	std::shared_ptr<Bullet> Fire(Vector2 other, float deltaTime );
 	bool CheckEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorEnemy, Vector2 characterPos);
-	void FireP2(SDL_Renderer* renderer);
 };
