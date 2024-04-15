@@ -1,8 +1,7 @@
 #pragma once
 #include "BaseObject.h"
-#include <SDL_render.h>
-class TextureManager;
-class SpriteAnimation : public BaseObject{
+class Bullet : public BaseObject
+{
 protected:
 	Vector2			m_Vec2DPos;
 	int			m_iHeight;
@@ -15,19 +14,14 @@ protected:
 	int		m_frameCount; // start from 1,2,3...
 	float  m_currentTicks;
 	Uint32 m_lastUpdate;
-	int			m_animSpeed;
-	bool		m_rotationDirection;
 	int m_numAction; //start from 1,2,3...
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
-
-	// HP
-	int m_hp;
-	float m_timeSinceLastDeduction;
-
+	int m_speed;
+	int m_damage;
 public:
-	SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
-	~SpriteAnimation();
+	Bullet(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
+	~Bullet();
 
 	void		Init() override;
 	void		Draw(SDL_Renderer* renderer) override;
@@ -35,14 +29,13 @@ public:
 
 	void		Set2DPosition(float x, float y);
 	void		SetRotation(double angle);
-	void SetFlip (SDL_RendererFlip flip);
+	void SetFlip(SDL_RendererFlip flip);
 
 	Vector2		Get2DPosition();
 	void		SetSize(int width, int height);
 	int GetWidth();
 	int GetHeight();
-	//Moving
-	float m_MoveSpeed;
+
 	void MoveLeft(float deltaTime, float speed);
 	void MoveRight(float deltaTime, float speed);
 	void MoveUp(float deltaTime, float speed);
@@ -52,11 +45,10 @@ public:
 	void MoveRightUp(float deltaTime, float speed);
 	void MoveRightDown(float deltaTime, float speed);
 
-	//Rotation
-	void Flip(bool targetDir);
+	//
+	void MoveToTarget(Vector2 other);
 
-	//HP
-	bool CheckCollision(Vector2 other, int width, int height);
-	void minusHP(int, float);
-	int getHP();
+	//Bullet movement
+	void BulletMovement();
 };
+

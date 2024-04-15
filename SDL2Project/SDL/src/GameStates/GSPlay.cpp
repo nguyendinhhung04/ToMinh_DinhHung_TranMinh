@@ -96,6 +96,16 @@ void GSPlay::Init()
 		m_vectorEnemy.push_back(monster);
 	}
 
+	//Weapon
+	texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/weapons/chain_gun.png");
+	weapon = std::make_shared<Weapon>(texture, 1, 1, 1, 1.00f);
+	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
+	weapon->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
+	weapon->SetSize(50, 50);
+	weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth(),obj->Get2DPosition().y);
+	m_weapons.push_back(weapon);
+
+
 	m_KeyPress = 0;
 
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
@@ -272,7 +282,21 @@ void GSPlay::Update(float deltaTime)
 			}
 			it->Update(deltaTime);
 		}
+
 		obj->Update(deltaTime);
+
+		for (auto it : m_weapons)
+		{
+			it->followPlayer(obj);
+			//it->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth(), obj->Get2DPosition().y);
+			it->initBullet(m_vectorEnemy, obj->Get2DPosition(), deltaTime);
+			if (it->IsEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
+			{
+				it->Fire(m_vectorEnemy[0]->Get2DPosition());
+			}
+			it->Update(deltaTime);
+			it->UpdateBullets(deltaTime);
+		}
 	}
 
 	//Update position of camera
@@ -316,6 +340,16 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		}
 		it->Draw(renderer);
 	}
+
+	for (auto it : m_weapons)
+	{
+		it->Draw(renderer);
+		if (it->IsEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
+		{
+			it->FireP2(renderer);
+		}
+	}
+
 	if (m_alreadyDrawPlayer == false)
 	{
 		if (obj->getHP() > 0)
@@ -324,6 +358,8 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 			m_alreadyDrawPlayer = true;
 		}
 	}
+
+
 
 	if (!m_isPlaying)
 	{
@@ -336,6 +372,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 			it->Draw(renderer);
 		}
 	}
+
 	for (auto it : m_listButton)
 	{
 		it->Draw(renderer);
