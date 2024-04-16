@@ -246,18 +246,23 @@ void GSPlay::Update(float deltaTime)
 			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			it->Update(deltaTime);
 		}
+
+
 		
 
 		//sort the vector
-		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
+		if (m_vectorEnemy.size() > 1)
 		{
-			for (auto temp = it; temp != m_vectorEnemy.end() - 1; ++temp)
+			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
 			{
-				if ((*temp)->Get2DPosition().y > (*(temp + 1))->Get2DPosition().y)
+				for (auto temp = it; temp != m_vectorEnemy.end() - 1; ++temp)
 				{
-					std::shared_ptr<enemy> temp_monster = *temp;
-					*temp = *(temp + 1);
-					*(temp + 1) = temp_monster;
+					if ((*temp)->Get2DPosition().y > (*(temp + 1))->Get2DPosition().y)
+					{
+						std::shared_ptr<enemy> temp_monster = *temp;
+						*temp = *(temp + 1);
+						*(temp + 1) = temp_monster;
+					}
 				}
 			}
 		}
@@ -269,25 +274,33 @@ void GSPlay::Update(float deltaTime)
 			if (it->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
 			{
 				bullet =  it->Fire(m_vectorEnemy[0]->Get2DPosition(), deltaTime);
-				m_vectorBullet.push_back(bullet);
+				if(bullet)
+				{
+					m_vectorBullet.push_back(bullet);
+					printf("Fire");
+				}
 			}
 			it->Update(deltaTime);
 		}
 		
 		
 		obj->Update(deltaTime);
-		for (auto it = m_vectorBullet.begin(); it!=m_vectorBullet.end(); ++it)
+		for (auto it = m_vectorBullet.begin(); it!=m_vectorBullet.end(); )
 		{
-			(*it)->MoveToTarget();
+			(*it)->MoveToTarget(deltaTime);
 			if ((*it)->Get2DPosition().x > 2000 || (*it)->Get2DPosition().y > 1500) 
 			{
-				(*it) = nullptr;
-				m_vectorBullet.erase(it);
+				(*it).reset();
+				it = m_vectorBullet.erase(it);
 			}
-			(*it)->Update(deltaTime);
+			else
+			{
+				(*it)->Update(deltaTime);
+				++it;
+			}
 		}
 		
-		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
+		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end()&& m_vectorEnemy.size()>0; )
 		{
 			(*it)->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			(*it)->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
@@ -295,22 +308,31 @@ void GSPlay::Update(float deltaTime)
 			{
 				obj->minusHP((*it)->getPower(), deltaTime);
 			}
-			for (auto it2 = m_vectorBullet.begin(); it2 != m_vectorBullet.end(); ++it2)
+			for (auto it2 = m_vectorBullet.begin(); it2 != m_vectorBullet.end() && m_vectorBullet.size()>0 ; )
 			{
 				if ((*it2)->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()) == true)
 		 		{
 					(*it)->Damaged((*it2)->GetDamageAmount());
-					(*it2) = nullptr;
-					m_vectorBullet.erase(it2);
+					(*it2).reset();
+					it2 = m_vectorBullet.erase(it2);
+				}
+				else
+				{
+					++it2;
 				}
 			}
 			
 			if ((*it)->GetHP() <= 0) 
 			{
-				(*it) = nullptr;
-				m_vectorEnemy.erase(it);
+				(*it).reset();
+				it = m_vectorEnemy.erase(it);
 			}
-			(*it)->Update(deltaTime);
+			else
+			{
+				(*it)->Update(deltaTime);
+				++it;
+				
+			}
 
 		}
 

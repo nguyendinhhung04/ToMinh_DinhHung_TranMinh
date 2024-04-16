@@ -61,7 +61,7 @@ public:
 	void Flip(bool targetDir);
 	void SetTarget(Vector2 target);
 	bool CheckCollision(Vector2 other, int width, int height);
-	void MoveToTarget();
+	void MoveToTarget(float deltaTime);
 
 	float GetDamageAmount();
 };

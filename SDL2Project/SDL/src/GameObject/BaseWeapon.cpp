@@ -1,7 +1,7 @@
 #include "BaseWeapon.h"
 #include "TextureManager.h"
 #include <cmath>
-#define INITIAL_RANGE 100
+#define INITIAL_RANGE 700
 #define INITIAL_FIRESPEED 1
 BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
@@ -126,14 +126,19 @@ bool BaseWeapon::CheckEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorE
 std::shared_ptr<Bullet> BaseWeapon::Fire(Vector2 other, float deltaTime)
 {
 	m_timeSinceLastFire += deltaTime;
-	if (m_timeSinceLastFire >= (1.00f / m_fireSpeed))
+	if (m_timeSinceLastFire >= (0.300f))
 	{
 		auto texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/items/acid.png");
 		BulletOfWeapon = std::make_shared<Bullet>(texture, 1, 1, 1, 1.00f);
 		BulletOfWeapon->Set2DPosition(m_position.x, m_position.y);
 		BulletOfWeapon->SetSize(50, 50);
 		BulletOfWeapon->SetTarget(other);
+		m_timeSinceLastFire = 0;
 		return BulletOfWeapon;
+	}
+	else
+	{
+		return 0;
 	}
 }
 

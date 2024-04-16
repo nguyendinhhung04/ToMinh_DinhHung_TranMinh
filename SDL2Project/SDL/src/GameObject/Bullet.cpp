@@ -2,8 +2,8 @@
 #include "TextureManager.h"
 #include <cmath>
 #define INITIAL_HP 100
-#define INITIAL_SPEED 20
-#define INITIAL_DAMAGE 5
+#define INITIAL_SPEED 700
+#define INITIAL_DAMAGE 10
 
 
 Bullet::Bullet(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
@@ -210,15 +210,15 @@ void Bullet::SetTarget(Vector2 target)
 
 
 
-void Bullet::MoveToTarget( )
+void Bullet::MoveToTarget( float deltaTime)
 {
 	if (y_dis < 0) {
-		m_position.x -= sin_value * m_speed;
-		m_position.y -= cos_value * m_speed;
+		m_position.x -= sin_value * m_speed * deltaTime;
+		m_position.y -= cos_value * m_speed * deltaTime;
 	}
 	else {
-		m_position.x += sin_value * m_speed;
-		m_position.y += cos_value * m_speed;
+		m_position.x += sin_value * m_speed * deltaTime;
+		m_position.y += cos_value * m_speed * deltaTime;
 	}
 }
 
