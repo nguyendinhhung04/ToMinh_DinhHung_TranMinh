@@ -6,7 +6,7 @@
 //}
 
 Sprite2D::Sprite2D(std::shared_ptr<TextureManager> texture, SDL_RendererFlip flip)
-	:BaseObject(texture), m_iWidth(100), m_iHeight(50)
+	:BaseObject(texture), m_iWidth(100), m_iHeight(50), m_type(SpriteType::DYNAMIC)
 {
 	m_flip = flip;
 	m_MoveSpeed = (float)(70);
@@ -19,12 +19,30 @@ void Sprite2D::Init()
 	// Init Camera
 }
 
+SpriteType Sprite2D::GetType()
+{
+	return m_type;
+}
+
+void Sprite2D::SetType(SpriteType type)
+{
+	m_type = type;
+}
+
 void Sprite2D::Draw(SDL_Renderer * renderer)
 {
 	//Get2DPosition();
 	if (m_pTexture != nullptr)
 	{
-		m_pTexture->Render(m_position.x, m_position.y, m_iWidth, m_iHeight, m_angle, m_flip);
+		if (GetType() == DYNAMIC) 
+		{
+			m_pTexture->Render(m_position.x, m_position.y, m_iWidth, m_iHeight, m_angle, m_flip);
+		}
+		else
+		{
+			m_pTexture->RenderRelativeToCamera(m_position.x, m_position.y, m_iWidth, m_iHeight, m_angle, m_flip);
+		}
+		
 	}
 	
 }

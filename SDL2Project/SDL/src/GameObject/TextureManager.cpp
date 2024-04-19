@@ -91,6 +91,14 @@ void TextureManager::Render(int x, int y, int width, int height, double angle, S
 	
 }
 
+void TextureManager::RenderRelativeToCamera(int x, int y, int width, int height, double angle, SDL_RendererFlip flip)
+{
+	SDL_Rect srcRect = { 0 ,0 , width, height };
+	SDL_Rect dstRect = { x - Camera::GetInstance()->GetPosition().x , y - Camera::GetInstance()->GetPosition().y , width, height };
+	SDL_RenderCopyEx(Renderer::GetInstance()->GetRenderer(), m_Texture, NULL, &dstRect, angle, nullptr, flip);
+
+}
+
 void TextureManager::RenderFrame(int x, int y, int width, int height, int spriteRow, int currentframe, int framecount, int numAction, double angle, SDL_RendererFlip flip)
 {
 	float srcWidth = originWidth/ framecount;

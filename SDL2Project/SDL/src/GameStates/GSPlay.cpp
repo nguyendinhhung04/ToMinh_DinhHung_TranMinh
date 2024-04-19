@@ -39,6 +39,7 @@ void GSPlay::Init()
 	m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
 	m_background->SetSize(1280, 720);
 	m_background->Set2DPosition(0, 0);
+	m_background->SetType(STATIC);
 
 
 	// button close
@@ -46,6 +47,7 @@ void GSPlay::Init()
 	button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 	button->SetSize(50, 50);
 	button->Set2DPosition(SCREEN_WIDTH - 60, 10);
+	button->SetType(DYNAMIC);
 	button->SetOnClick([this]() {
 		m_isPlaying = !m_isPlaying;
 		if (m_isPlaying)
@@ -240,14 +242,7 @@ void GSPlay::Update(float deltaTime)
 			it->Update(deltaTime);
 		}
 
-		/*
-		for (auto it : m_vectorEnemy)
-		{
-			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
-			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
-			it->Update(deltaTime);
-		}
-		*/
+
 
 		
 
@@ -342,8 +337,8 @@ void GSPlay::Update(float deltaTime)
 	}
 
 	//Update position of camera
-	//Camera::GetInstance()->Update(deltaTime);
-	//obj->Update(deltaTime);
+	Camera::GetInstance()->Update(deltaTime);
+	obj->Update(deltaTime);
 }
 
 
