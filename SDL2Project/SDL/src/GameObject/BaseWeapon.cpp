@@ -1,8 +1,9 @@
 #include "BaseWeapon.h"
 #include "TextureManager.h"
 #include <cmath>
-#define INITIAL_RANGE 700
+#define INITIAL_RANGE 300
 #define INITIAL_FIRESPEED 1
+#define PI 3.14159265
 BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
 	m_MoveSpeed = (float)(250);
@@ -22,6 +23,8 @@ BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, i
 	m_fireSpeed = INITIAL_FIRESPEED;
 	m_range = INITIAL_RANGE;
 	BulletOfWeapon = NULL;
+	m_angle = 180.00;
+	m_flip = SDL_FLIP_NONE;
 }
 
 BaseWeapon::~BaseWeapon()
@@ -110,31 +113,91 @@ void BaseWeapon::Flip(bool targetDir)
 
 
 
+/*
+void BaseWeapon::AimToEnemy(Vector2 enemy)
+{
+	SetRotation(atan2(enemy.x- Get2DPosition().x, enemy.y-Get2DPosition().y) * (180 / PI));
+	printf("%f\n", atan2(enemy.x - Get2DPosition().x, enemy.y - Get2DPosition().y) * (180 / PI));
+
+}
+*/
+
+void BaseWeapon::AimToEnemy(std::shared_ptr<enemy> enemy)
+{
+	float a = enemy->Get2DPosition().x + enemy->GetWidth() / 2 - Get2DPosition().x - GetWidth()/2;
+	float b = enemy->Get2DPosition().y + enemy->GetHeight() / 2 - Get2DPosition().y - GetHeight() / 2;
+	float c = atan2(a, b) * (180 / PI);
+	if (c >= 0.10000 && c <= 180)
+	{
+		SetFlip(SDL_FLIP_NONE);
+	}
+	else
+	{
+		SetFlip(SDL_FLIP_VERTICAL);
+	}
+
+	SetRotation(-(atan2( a,b ) * (180 / PI) - 90));
+	printf("%f_____", atan2(a, b)* (180 / PI));
+	printf("%f\n", -(atan2(a, b) * (180 / PI) - 90));
+}
+
+
+
 //range
 bool BaseWeapon::CheckEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorEnemy, Vector2 characterPos)
 {
 	for (auto it : m_vectorEnemy)
 	{
-		int x_dis = abs(characterPos.x - it->Get2DPosition().x);
-		int y_dis = abs(characterPos.y - it->Get2DPosition().y);
+		float x_dis = abs(characterPos.x - it->Get2DPosition().x);
+		float y_dis = abs(characterPos.y - it->Get2DPosition().y);
 		float distance = sqrt(x_dis * x_dis + y_dis * y_dis);
 		if (distance <= m_range) return true;
 	}
 	return false;
 }
 
-std::shared_ptr<Bullet> BaseWeapon::Fire(Vector2 other, float deltaTime)
+std::shared_ptr<Bullet> BaseWeapon::Fire( float deltaTime, std::vector<std::shared_ptr<enemy>> tempVector)
 {
 	m_timeSinceLastFire += deltaTime;
 	if (m_timeSinceLastFire >= (0.300f))
 	{
 		auto texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/items/acid.png");
 		BulletOfWeapon = std::make_shared<Bullet>(texture, 1, 1, 1, 1.00f);
-		BulletOfWeapon->Set2DPosition(m_position.x, m_position.y);
-		BulletOfWeapon->SetSize(50, 50);
-		BulletOfWeapon->SetTarget(other);
-		m_timeSinceLastFire = 0;
-		return BulletOfWeapon;
+		BulletOfWeapon->Set2DPosition(m_position.x + GetWidth()/2, m_position.y + GetHeight()/2);
+		BulletOfWeapon->SetSize(20, 20);
+		std::vector<std::shared_ptr<enemy>> m_vectorDistanceEnemy;
+		m_vectorDistanceEnemy = tempVector;
+		if (m_vectorDistanceEnemy.size() >= 1)
+		{
+			float minDistance = 1000000;
+			auto temp = m_vectorDistanceEnemy.begin();
+			for (auto it = m_vectorDistanceEnemy.begin(); it != m_vectorDistanceEnemy.end(); ++it)
+			{
+				
+				float a = ((*it)->Get2DPosition().x + (*it)->GetWidth()/2 ) - (Get2DPosition().x +GetWidth()/2);
+				float b = ((*it)->Get2DPosition().y + (*it)->GetHeight()/2) - (Get2DPosition().y + +GetHeight()/2);
+
+				float distance = sqrt(pow(a, 2) + pow(b, 2));
+				if (distance < minDistance)
+				{
+					minDistance = distance;
+					temp = it;
+				}
+			}
+			Vector2 Nearest;
+			Nearest.x = (*temp)->Get2DPosition().x + (*temp)->GetWidth() / 2;
+			Nearest.y = (*temp)->Get2DPosition().y + (*temp)->GetHeight() / 2;
+			AimToEnemy((*temp));
+			BulletOfWeapon->SetTarget(Nearest);
+			m_timeSinceLastFire = 0;
+			return BulletOfWeapon;
+		}
+		else
+		{
+			return 0;
+		}
+
+
 	}
 	else
 	{

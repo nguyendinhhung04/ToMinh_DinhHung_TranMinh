@@ -49,11 +49,13 @@ public:
 	int GetHeight();
 	//Moving
 	float m_MoveSpeed;
-	
 
 	//Rotation
 	void Flip(bool targetDir);
+	//void AimToEnemy(Vector2 enemy);
+	void AimToEnemy(std::shared_ptr<enemy> enemy);
 
-	std::shared_ptr<Bullet> Fire(Vector2 other, float deltaTime );
+	virtual std::shared_ptr<Bullet> Fire( float deltaTime, std::vector<std::shared_ptr<enemy>> tempVector);
 	bool CheckEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorEnemy, Vector2 characterPos);
+
 };

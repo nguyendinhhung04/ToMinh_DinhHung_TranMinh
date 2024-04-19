@@ -72,9 +72,9 @@ void GSPlay::Init()
 	m_listAnimation.push_back(obj);
 	
 	//weapon	
-	texture = texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/weapons/chain_gun.png");
+	texture = texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/weapons/laser_pistol.png");
 	weapon = std::make_shared<BaseWeapon>(texture, 1, 1, 1, 1.00f);
-	weapon->SetSize(50, 50);
+	weapon->SetSize(40, 40);
 	weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() , obj->Get2DPosition().y);
 	m_vectorWeapon.push_back(weapon);
 
@@ -240,13 +240,14 @@ void GSPlay::Update(float deltaTime)
 			it->Update(deltaTime);
 		}
 
+		/*
 		for (auto it : m_vectorEnemy)
 		{
 			it->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			it->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
 			it->Update(deltaTime);
 		}
-
+		*/
 
 		
 
@@ -267,17 +268,19 @@ void GSPlay::Update(float deltaTime)
 			}
 		}
 
+
+
 		
 		for (auto it : m_vectorWeapon)
 		{
-			it->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth(), obj->Get2DPosition().y);
+			it->Set2DPosition(obj->Get2DPosition().x +50, obj->Get2DPosition().y - 50);
 			if (it->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
 			{
-				bullet =  it->Fire(m_vectorEnemy[0]->Get2DPosition(), deltaTime);
+				bullet =  it->Fire( deltaTime, m_vectorEnemy);
 				if(bullet)
 				{
 					m_vectorBullet.push_back(bullet);
-					printf("Fire");
+					
 				}
 			}
 			it->Update(deltaTime);
@@ -335,7 +338,7 @@ void GSPlay::Update(float deltaTime)
 			}
 
 		}
-
+		
 	}
 
 	//Update position of camera
@@ -393,15 +396,16 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		}
 	}
 
+	for (auto it : m_vectorBullet)
+	{
+		it->Draw(renderer);
+	}
+
 	for (auto it : m_vectorWeapon)
 	{
 		it->Draw(renderer);
 	}
 
-	for (auto it : m_vectorBullet)
-	{
-		it->Draw(renderer);
-	}
 
 	if (!m_isPlaying)
 	{

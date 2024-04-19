@@ -3,6 +3,7 @@
 #include <cmath>
 #define INITIAL_HP 100
 #define INITIAL_SPEED 700
+//#define INITIAL_DAMAGE 10
 #define INITIAL_DAMAGE 10
 
 
