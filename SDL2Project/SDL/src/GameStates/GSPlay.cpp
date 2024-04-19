@@ -273,7 +273,7 @@ void GSPlay::Update(float deltaTime)
 		
 		for (auto it : m_vectorWeapon)
 		{
-			it->Set2DPosition(obj->Get2DPosition().x +50, obj->Get2DPosition().y - 50);
+			it->Set2DPosition(obj->Get2DPosition().x +35, obj->Get2DPosition().y - 25);
 			if (it->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
 			{
 				bullet =  it->Fire( deltaTime, m_vectorEnemy);
