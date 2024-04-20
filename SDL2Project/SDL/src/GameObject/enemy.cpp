@@ -6,10 +6,10 @@
 #include <cstdlib> 
 #define ENEMY_POWER 10
 #define ENEMY_HP 100
-enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
+enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime,float HP,float power,float speed) : BaseObject(texture)
 {
 	m_rotationDirection = true;
-	m_MoveSpeed = (float)(1);
+	
 	m_pTexture = texture;
 	m_spriteRow = spriteRow;
 	m_frameCount = frameCount;
@@ -21,10 +21,10 @@ enemy::enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCo
 	m_currentTicks = 0;
 	m_lastUpdate = SDL_GetTicks();
 	Init();
-	m_hp = ENEMY_HP;
-	m_power = ENEMY_POWER;
+	m_hp = HP;
+	m_power = power;
 	m_actualSize = 30;
-
+	m_MoveSpeed = speed;
 }
 enemy::~enemy()
 {
@@ -55,6 +55,9 @@ void enemy::Update(float deltatime)
 		m_currentTicks -= m_frameTime;
 	}
 }
+
+float enemy::getSpeed() { return m_MoveSpeed;}
+void enemy::setSpeed(float s) { this->m_MoveSpeed = s; }
 
 void enemy::Set2DPosition(float x, float y)
 {

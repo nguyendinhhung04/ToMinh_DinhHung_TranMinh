@@ -32,6 +32,7 @@ public:
 private:
 
 	void DrawPauseScreen(SDL_Renderer* renderer);
+	int m_level = 0;
 
 	std::shared_ptr<Sprite2D>	m_background;
 	//std::shared_ptr<Text>		m_score;
@@ -39,6 +40,7 @@ private:
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 	std::shared_ptr<SpriteAnimation> obj;
 	//std::list<std::shared_ptr<enemy>> m_listEnemy;
+	std::vector<std::vector<std::shared_ptr<enemy>>> m_vectorEnemyS;
 	std::vector<std::shared_ptr<enemy>> m_vectorEnemy;
 	std::shared_ptr<enemy> monster;
 	std::shared_ptr<MouseButton> button;

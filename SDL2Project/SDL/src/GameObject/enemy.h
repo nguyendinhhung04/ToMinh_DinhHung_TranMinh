@@ -25,8 +25,9 @@ protected:
 	float m_hp;
 	int m_power;
 	int m_actualSize;
+	float m_MoveSpeed;
 public:
-	enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
+	enemy(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime,float HP,float power,float speed);
 	~enemy();
 
 	void		Init() override;
@@ -47,7 +48,7 @@ public:
 	void MoveToCharacterY(float deltaTime, float speed, Vector2 other, std::vector<std::shared_ptr<enemy>> m_vectorEnemy);
 
 
-	float m_MoveSpeed;
+	
 	void MoveLeft(float deltaTime, float speed);
 	void MoveRight(float deltaTime, float speed);
 	void MoveUp(float deltaTime, float speed);
@@ -56,7 +57,8 @@ public:
 	void MoveLeftUp(float deltaTime, float speed);
 	void MoveRightUp(float deltaTime, float speed);
 	void MoveRightDown(float deltaTime, float speed);
-
+	float getSpeed();
+	void setSpeed(float s);
 
 	//Rotation for Enemy
 	void Flip(bool targetDir);

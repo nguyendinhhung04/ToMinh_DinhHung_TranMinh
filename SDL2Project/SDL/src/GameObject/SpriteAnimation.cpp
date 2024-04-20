@@ -4,7 +4,7 @@
 #define INITIAL_HP 100
 SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime) : BaseObject(texture)
 {
-	m_MoveSpeed = (float)(250);
+	m_MoveSpeed = (float)(250);           //
 	m_rotationDirection = true;           //True == Right,  false == left
 	m_pTexture = texture;
 	m_spriteRow = spriteRow;

@@ -81,19 +81,40 @@ void GSPlay::Init()
 	m_vectorWeapon.push_back(weapon);
 
 	//Enemy
+	//lv1 init
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
 	for (int i = 0; i <= 5; i++)
 	{
-		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f);
+		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f,10.0/*enemy HP*/, 10.0/*enemy power*/, obj->m_MoveSpeed * 2 /*enemy speed*/);
 		monster->SetFlip(SDL_FLIP_NONE);
 		monster->SetSize(60, 60);
 		int temp1 = rand() % 1000;
 		int temp2 = rand() % 800;
 		monster->Set2DPosition(temp1, temp2);
-		monster->m_MoveSpeed = 1.80f;
 		m_vectorEnemy.push_back(monster);
 	}
+	m_vectorEnemyS.push_back(m_vectorEnemy);
+	m_vectorEnemy.clear();
+	//lv2 init
+	texture2 = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/enemies/5.png");
+	std::srand(static_cast<unsigned int>(std::time(nullptr)));
+	for (int i = 0; i <= 8; i++)
+	{
+		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f, 100.0, 20.0,3);
+		monster->SetFlip(SDL_FLIP_NONE);
+		monster->SetSize(60, 60);
+		int temp1 = rand() % 1000;
+		int temp2 = rand() % 800;
+		monster->Set2DPosition(temp1, temp2);
+		m_vectorEnemy.push_back(monster);
+	}
+	m_vectorEnemyS.push_back(m_vectorEnemy);
+	
+
+
+
+
 
 	m_KeyPress = 0;
 
@@ -247,11 +268,11 @@ void GSPlay::Update(float deltaTime)
 		
 
 		//sort the vector
-		if (m_vectorEnemy.size() > 1)
+		if (m_vectorEnemyS[m_level].size() > 1)
 		{
-			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end() - 1; ++it)
+			for (auto it = m_vectorEnemyS[m_level].begin(); it != m_vectorEnemyS[m_level].end() - 1; ++it)
 			{
-				for (auto temp = it; temp != m_vectorEnemy.end() - 1; ++temp)
+				for (auto temp = it; temp != m_vectorEnemyS[m_level].end() - 1; ++temp)
 				{
 					if ((*temp)->Get2DPosition().y > (*(temp + 1))->Get2DPosition().y)
 					{
@@ -269,9 +290,9 @@ void GSPlay::Update(float deltaTime)
 		for (auto it : m_vectorWeapon)
 		{
 			it->Set2DPosition(obj->Get2DPosition().x +35, obj->Get2DPosition().y - 25);
-			if (it->CheckEnemyInRange(m_vectorEnemy, obj->Get2DPosition()))
+			if (it->CheckEnemyInRange(m_vectorEnemyS[m_level], obj->Get2DPosition()))
 			{
-				bullet =  it->Fire( deltaTime, m_vectorEnemy);
+				bullet =  it->Fire( deltaTime, m_vectorEnemyS[m_level]);
 				if(bullet)
 				{
 					m_vectorBullet.push_back(bullet);
@@ -298,10 +319,10 @@ void GSPlay::Update(float deltaTime)
 			}
 		}
 		
-		for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end()&& m_vectorEnemy.size()>0; )
+		for (auto it = m_vectorEnemyS[m_level].begin(); it != m_vectorEnemyS[m_level].end()&& m_vectorEnemyS[m_level].size()>0; )
 		{
-			(*it)->MoveToCharacterX(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
-			(*it)->MoveToCharacterY(deltaTime, monster->m_MoveSpeed, obj->Get2DPosition(), m_vectorEnemy);
+			(*it)->MoveToCharacterX(deltaTime, monster->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
+			(*it)->MoveToCharacterY(deltaTime, monster->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
 			if (obj->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()))
 			{
 				obj->minusHP((*it)->getPower(), deltaTime);
@@ -323,7 +344,7 @@ void GSPlay::Update(float deltaTime)
 			if ((*it)->GetHP() <= 0) 
 			{
 				(*it).reset();
-				it = m_vectorEnemy.erase(it);
+				it = m_vectorEnemyS[m_level].erase(it);
 			}
 			else
 			{
@@ -334,6 +355,7 @@ void GSPlay::Update(float deltaTime)
 
 		}
 		
+		if (m_vectorEnemyS[m_level].size() == 0) m_level++;
 	}
 
 	//Update position of camera
@@ -367,7 +389,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 
 
 	bool m_alreadyDrawPlayer = false;
-	for (auto it : m_vectorEnemy)
+	for (auto it : m_vectorEnemyS[m_level])
 	{
 		if (m_alreadyDrawPlayer == false)
 		{
