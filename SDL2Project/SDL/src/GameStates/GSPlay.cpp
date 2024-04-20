@@ -71,6 +71,7 @@ void GSPlay::Init()
 	obj->SetSize(50, 50);
 	obj->Set2DPosition(240, 400);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
+	Camera::GetInstance()->Init();       //Init the camera position
 	m_listAnimation.push_back(obj);
 	
 	//weapon	

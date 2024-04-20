@@ -12,6 +12,7 @@ public:
 	Vector2 GetPosition();
 	void SetTarget(std::shared_ptr<SpriteAnimation> target);
 	void Update(float deltaTime);
+	void Init();
 private:
 	std::shared_ptr<SpriteAnimation> m_Target;
 	Vector2 m_Position;
