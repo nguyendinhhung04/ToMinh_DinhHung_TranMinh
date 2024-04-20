@@ -71,6 +71,7 @@ void GSPlay::Init()
 	obj->SetSize(50, 50);
 	obj->Set2DPosition(240, 400);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
+	Camera::GetInstance()->Init();
 	m_listAnimation.push_back(obj);
 	
 	//weapon	
@@ -86,7 +87,7 @@ void GSPlay::Init()
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
 	for (int i = 0; i <= 5; i++)
 	{
-		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f,10.0/*enemy HP*/, 10.0/*enemy power*/, obj->m_MoveSpeed * 2 /*enemy speed*/);
+		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f,10.0/*enemy HP*/, 10.0/*enemy power*/, obj->GetSpeed() * 0.500 /*enemy speed*/);
 		monster->SetFlip(SDL_FLIP_NONE);
 		monster->SetSize(60, 60);
 		int temp1 = rand() % 1000;
@@ -303,7 +304,6 @@ void GSPlay::Update(float deltaTime)
 		}
 		
 		
-		obj->Update(deltaTime);
 		for (auto it = m_vectorBullet.begin(); it!=m_vectorBullet.end(); )
 		{
 			(*it)->MoveToTarget(deltaTime);
@@ -321,8 +321,9 @@ void GSPlay::Update(float deltaTime)
 		
 		for (auto it = m_vectorEnemyS[m_level].begin(); it != m_vectorEnemyS[m_level].end()&& m_vectorEnemyS[m_level].size()>0; )
 		{
-			(*it)->MoveToCharacterX(deltaTime, monster->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
-			(*it)->MoveToCharacterY(deltaTime, monster->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
+			(*it)->MoveToCharacterX(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
+			(*it)->MoveToCharacterY(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
+			printf("%f____%f\n",obj->GetSpeed(), monster->getSpeed());
 			if (obj->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()))
 			{
 				obj->minusHP((*it)->getPower(), deltaTime);
@@ -355,12 +356,17 @@ void GSPlay::Update(float deltaTime)
 
 		}
 		
-		if (m_vectorEnemyS[m_level].size() == 0) m_level++;
+		if (m_vectorEnemyS[m_level].size() == 0)
+		{
+			if (m_level < 1)
+			{
+				m_level++;
+			}
+		}
 	}
 
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
-	obj->Update(deltaTime);
 }
 
 
@@ -389,20 +395,23 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 
 
 	bool m_alreadyDrawPlayer = false;
-	for (auto it : m_vectorEnemyS[m_level])
+	if (m_vectorEnemyS[m_level].size() >= 1)
 	{
-		if (m_alreadyDrawPlayer == false)
+		for (auto it : m_vectorEnemyS[m_level])
 		{
-			if (it->Get2DPosition().y > obj->Get2DPosition().y)
+			if (m_alreadyDrawPlayer == false)
 			{
-				if (obj->getHP() > 0)
+				if (it->Get2DPosition().y > obj->Get2DPosition().y)
 				{
-					obj->Draw(renderer);
-					m_alreadyDrawPlayer = true;
+					if (obj->getHP() > 0)
+					{
+						obj->Draw(renderer);
+						m_alreadyDrawPlayer = true;
+					}
 				}
 			}
+			it->Draw(renderer);
 		}
-		it->Draw(renderer);
 	}
 	if (m_alreadyDrawPlayer == false)
 	{

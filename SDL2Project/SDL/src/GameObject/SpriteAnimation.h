@@ -58,4 +58,5 @@ public:
 	bool CheckCollision(Vector2 other, int width, int height);
 	void minusHP(int, float);
 	int getHP();
+	float GetSpeed() { return m_MoveSpeed; }
 };

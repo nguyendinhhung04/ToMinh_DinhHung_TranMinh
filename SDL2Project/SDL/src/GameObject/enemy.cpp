@@ -231,23 +231,23 @@ void enemy::MoveToCharacterX(float deltaTime, float speed, Vector2 other, std::v
 
 
 		if (y_dis < 0) {
-			m_position.x -= sin_value * speed;
+			m_position.x -= sin_value * speed * deltaTime;
 			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
 			{
 				if (CheckCollisionX(*it))
 				{
-					m_position.x += sin_value * speed;
+					m_position.x += sin_value * speed * deltaTime;
 					break;
 				}
 			}
 		}
 		else {
-			m_position.x += sin_value * speed;
+			m_position.x += sin_value * speed * deltaTime;
 			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
 			{
 				if (CheckCollisionX(*it))
 				{
-					m_position.x -= sin_value * speed;
+					m_position.x -= sin_value * speed * deltaTime;
 					break;
 				}
 			}
@@ -270,23 +270,23 @@ void enemy::MoveToCharacterY(float deltaTime, float speed, Vector2 other, std::v
 
 
 		if (y_dis < 0) {
-			m_position.y -= cos_value * speed;
+			m_position.y -= cos_value * speed * deltaTime;
 			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
 			{
 				if (CheckCollisionY(*it))
 				{
-					m_position.y += cos_value * speed;
+					m_position.y += cos_value * speed * deltaTime;
 					break;
 				}
 			}
 		}
 		else {
-			m_position.y += cos_value * speed;
+			m_position.y += cos_value * speed * deltaTime;
 			for (auto it = m_vectorEnemy.begin(); it != m_vectorEnemy.end(); ++it)
 			{
 				if (CheckCollisionY(*it))
 				{
-					m_position.y -= cos_value * speed;
+					m_position.y -= cos_value * speed * deltaTime;
 					break;
 				}
 			}

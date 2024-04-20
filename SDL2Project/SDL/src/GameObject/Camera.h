@@ -4,6 +4,8 @@
 #include "SpriteAnimation.h"
 #include "Define.h"
 #include "GameManager/Singleton.h"
+#define WIDTH_OFFSET 300
+#define HEIGHT_OFFSET 100
 class Camera : public CSingleton<Camera>
 {
 public:
@@ -12,6 +14,7 @@ public:
 	Vector2 GetPosition();
 	void SetTarget(std::shared_ptr<SpriteAnimation> target);
 	void Update(float deltaTime);
+	void Init();
 private:
 	std::shared_ptr<SpriteAnimation> m_Target;
 	Vector2 m_Position;

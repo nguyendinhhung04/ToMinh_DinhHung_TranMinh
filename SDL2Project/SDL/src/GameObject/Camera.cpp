@@ -1,4 +1,12 @@
 #include"Camera.h"
+#define WIDTH_OFFSET 300
+#define HEIGHT_OFFSET 100
+
+void Camera::Init()
+{
+	m_ViewBox.x = (m_Target->Get2DPosition().x - SCREEN_WIDTH / 2);
+	m_ViewBox.y = (m_Target->Get2DPosition().y - SCREEN_HEIDHT / 2);
+}
 
 SDL_Rect Camera::GetViewBox()
 {
@@ -20,32 +28,31 @@ void Camera::Update(float deltaTime)
 	if (m_Target != nullptr)
 	{
 		//Center the camera over the dot
-		m_ViewBox.x = (m_Target->Get2DPosition().x  - SCREEN_WIDTH / 2) ;
-		m_ViewBox.y = (m_Target->Get2DPosition().y  - SCREEN_HEIDHT / 2) ;
+		//m_ViewBox.x = (m_Target->Get2DPosition().x  - SCREEN_WIDTH / 2) ;
+		//m_ViewBox.y = (m_Target->Get2DPosition().y  - SCREEN_HEIDHT / 2) ;
 		
 		//m_ViewBox.x = (m_Target->Get2DPosition().x );
 		//m_ViewBox.y = (m_Target->Get2DPosition().y );
 		
 
-		/*
-		//Keep the camera in bounds
-		if (m_ViewBox.x < 0)
+		if (m_Target->Get2DPosition().x < m_ViewBox.x + WIDTH_OFFSET)
 		{
-			m_ViewBox.x = 0;
+			m_ViewBox.x -= m_ViewBox.x + WIDTH_OFFSET - m_Target->Get2DPosition().x;
 		}
-		if (m_ViewBox.y < 0)
+
+		else if (m_Target->Get2DPosition().x + m_Target->GetWidth() > m_ViewBox.x + SCREEN_WIDTH - WIDTH_OFFSET)
 		{
-			m_ViewBox.y = 0;
+			m_ViewBox.x += m_Target->Get2DPosition().x + m_Target->GetWidth() - (m_ViewBox.x + SCREEN_WIDTH - WIDTH_OFFSET);
 		}
-		if (m_ViewBox.x > (2 * SCREEN_WIDTH - m_ViewBox.w))
+		if (m_Target->Get2DPosition().y < m_ViewBox.y + HEIGHT_OFFSET)
 		{
-			m_ViewBox.x = (2 * SCREEN_WIDTH - m_ViewBox.w);
+			m_ViewBox.y -= m_ViewBox.y + HEIGHT_OFFSET - m_Target->Get2DPosition().y;
 		}
-		if (m_ViewBox.y > (2 * SCREEN_HEIDHT - m_ViewBox.h))
+
+		else if (m_Target->Get2DPosition().y + m_Target->GetHeight() > m_ViewBox.y + SCREEN_HEIDHT - HEIGHT_OFFSET)
 		{
-			m_ViewBox.y = (SCREEN_HEIDHT - m_ViewBox.h);
+			m_ViewBox.y += m_Target->Get2DPosition().y + m_Target->GetHeight() - (m_ViewBox.y + SCREEN_HEIDHT - HEIGHT_OFFSET);
 		}
-		*/
 		m_Position = Vector2(m_ViewBox.x, m_ViewBox.y);
 		
 		
