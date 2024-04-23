@@ -12,7 +12,20 @@
 #include <ctime>   
 
 
-
+float RandomNumber()
+{
+	float temp1 = rand() % 2 + 1;
+	float temp2;
+	if (temp1 == 1)
+	{
+		temp2 = rand() % 401 + 1600;
+	}
+	else
+	{
+		temp2 = -(rand() % 401 + 1600);
+	}
+	return temp2;
+}
 
 
 
@@ -81,8 +94,8 @@ void GSPlay::Init()
 	weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() , obj->Get2DPosition().y);
 	m_vectorWeapon.push_back(weapon);
 
-	//Enemy
-	//lv1 init
+	////Enemy
+	////lv1 init
 	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
 	for (int i = 0; i <= 5; i++)
@@ -90,8 +103,9 @@ void GSPlay::Init()
 		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f,10.0/*enemy HP*/, 10.0/*enemy power*/, obj->GetSpeed() * 0.500 /*enemy speed*/);
 		monster->SetFlip(SDL_FLIP_NONE);
 		monster->SetSize(60, 60);
-		int temp1 = rand() % 1000;
-		int temp2 = rand() % 800;
+		float temp1 = RandomNumber();
+		float temp2 = RandomNumber();
+		printf("%f____%f", temp1, temp2);
 		monster->Set2DPosition(temp1, temp2);
 		m_vectorEnemy.push_back(monster);
 	}
@@ -102,15 +116,18 @@ void GSPlay::Init()
 	std::srand(static_cast<unsigned int>(std::time(nullptr)));
 	for (int i = 0; i <= 8; i++)
 	{
-		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f, 100.0, 20.0,3);
+		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f, 100.0, 20.0,250);
 		monster->SetFlip(SDL_FLIP_NONE);
 		monster->SetSize(60, 60);
-		int temp1 = rand() % 1000;
-		int temp2 = rand() % 800;
+		float temp1 = RandomNumber();
+		float temp2 = RandomNumber();
+		printf("%f____%f", temp1, temp2);
 		monster->Set2DPosition(temp1, temp2);
 		m_vectorEnemy.push_back(monster);
 	}
 	m_vectorEnemyS.push_back(m_vectorEnemy);
+
+
 	
 
 
