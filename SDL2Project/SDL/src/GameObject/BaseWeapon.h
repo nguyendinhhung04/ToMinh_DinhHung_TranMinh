@@ -27,12 +27,17 @@ protected:
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
 
-	// HP
-	int m_hp;
+	//
+
+	// damage
+	float damage;
 	float m_timeSinceLastFire;
 	std::shared_ptr<Bullet> BulletOfWeapon;
+
+	std::string bullet_path;
 public:
 	BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
+	BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime,std::string bullet_path,float damage);
 	~BaseWeapon();
 
 	void		Init() override;
@@ -58,4 +63,6 @@ public:
 	virtual std::shared_ptr<Bullet> Fire( float deltaTime, std::vector<std::shared_ptr<enemy>> tempVector);
 	bool CheckEnemyInRange(std::vector<std::shared_ptr<enemy>> m_vectorEnemy, Vector2 characterPos);
 
+	float getDamage() { return damage; }
+	void setDamage(float damage) {if(BulletOfWeapon != NULL) this->BulletOfWeapon->setDamage(damage);}
 };

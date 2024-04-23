@@ -1,0 +1,8 @@
+brotato_presskit/enemies/1.png
+5 50 10 50
+brotato_presskit/enemies/2.png
+5 50 10 60
+brotato_presskit/enemies/1.png
+5 50 10 70
+brotato_presskit/enemies/1.png
+5 50 10 80

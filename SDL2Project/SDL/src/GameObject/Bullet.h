@@ -64,4 +64,8 @@ public:
 	void MoveToTarget(float deltaTime);
 
 	float GetDamageAmount();
+
+
+	//float getDamage() { return m_damage; }
+	void setDamage(float x) { m_damage = x; }
 };

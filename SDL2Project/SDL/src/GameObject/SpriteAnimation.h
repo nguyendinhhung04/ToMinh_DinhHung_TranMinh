@@ -59,4 +59,7 @@ public:
 	void minusHP(int, float);
 	int getHP();
 	float GetSpeed() { return m_MoveSpeed; }
+
+
+	void setHP(float hp) { this->m_hp = hp; }
 };

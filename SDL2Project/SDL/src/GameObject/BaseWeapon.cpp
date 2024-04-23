@@ -25,7 +25,35 @@ BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, i
 	BulletOfWeapon = NULL;
 	m_angle = 180.00;
 	m_flip = SDL_FLIP_NONE;
+	damage = 10;
 }
+
+BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime,std::string bullet_path,float damage) : BaseObject(texture)
+{
+	m_MoveSpeed = (float)(250);
+	m_rotationDirection = true;           //True == Right,  false == left
+	m_pTexture = texture;
+	m_spriteRow = spriteRow;
+	m_frameCount = frameCount;
+	m_numAction = numAction;
+	//m_animSpeed = animSpeed;
+	m_frameTime = frameTime;
+	//m_flip = flip;
+	m_currentFrame = 0;
+	m_currentTicks = 0;
+	m_lastUpdate = SDL_GetTicks();
+	Init();
+	m_timeSinceLastFire = 0;
+	m_fireSpeed = INITIAL_FIRESPEED;
+	m_range = INITIAL_RANGE;
+	//BulletOfWeapon = new BulletOfWeapon();
+	m_angle = 180.00;
+	m_flip = SDL_FLIP_NONE;
+	this->bullet_path = bullet_path;
+	this->damage = damage;
+}
+
+
 
 BaseWeapon::~BaseWeapon()
 {
@@ -162,9 +190,12 @@ std::shared_ptr<Bullet> BaseWeapon::Fire( float deltaTime, std::vector<std::shar
 	if (m_timeSinceLastFire >= (0.300f))
 	{
 		auto texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/items/acid.png");
+		if (bullet_path != "") texture = ResourceManagers::GetInstance()->GetTexture(bullet_path);
 		BulletOfWeapon = std::make_shared<Bullet>(texture, 1, 1, 1, 1.00f);
 		BulletOfWeapon->Set2DPosition(m_position.x + GetWidth()/2, m_position.y + GetHeight()/2);
+		BulletOfWeapon->setDamage(damage);
 		BulletOfWeapon->SetSize(20, 20);
+
 		std::vector<std::shared_ptr<enemy>> m_vectorDistanceEnemy;
 		m_vectorDistanceEnemy = tempVector;
 		if (m_vectorDistanceEnemy.size() >= 1)

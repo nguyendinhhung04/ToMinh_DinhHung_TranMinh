@@ -1,0 +1,6 @@
+brotato_presskit/updateGun/shotgunn.png
+brotato_presskit/weapons/double_barrel_shotgun.png
+30 
+brotato_presskit/updateGun/shotgunn.png
+brotato_presskit/weapons/double_barrel_shotgun.png
+50

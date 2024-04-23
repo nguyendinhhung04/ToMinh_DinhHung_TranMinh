@@ -1,4 +1,6 @@
 #pragma once
+#include <fstream>
+#include <sstream>
 #include "GameStateBase.h"
 #include "GameObject/MouseButton.h"
 #include "Sound.h"
@@ -30,12 +32,19 @@ public:
 	int m_KeyPress;
 
 private:
-
+	void createChooseButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList);
+	void createChooseGunButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList);
+	void createLevelFromFile(std::string& filename);
 	void DrawPauseScreen(SDL_Renderer* renderer);
 	int m_level = 0;
-
+	int gun_slot = 1;
+	bool m_isUpdate = false;
 	std::shared_ptr<Sprite2D>	m_background;
+	std::vector<std::shared_ptr<Sprite2D>> m_listUpdate;
+	std::shared_ptr<Sprite2D>	m_update;
 	//std::shared_ptr<Text>		m_score;
+	std::shared_ptr<MouseButton> update_button;
+	std::vector<std::shared_ptr<MouseButton>>	m_listUpdateButton;
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 	std::shared_ptr<SpriteAnimation> obj;

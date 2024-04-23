@@ -41,7 +41,12 @@ void GSPlay::Init()
 	m_background->Set2DPosition(0, 0);
 	m_background->SetType(STATIC);
 
-
+	std::string fileName = "Data/update.txt";
+	std::string fileName2 = "Data/updateGun.txt";
+	std::string fileName3 = "Data/level.txt";
+	createChooseButtonFromFile(fileName, m_listUpdateButton);
+	createChooseGunButtonFromFile(fileName2, m_listUpdateButton);
+	createLevelFromFile(fileName3);
 	// button close
 	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Pause Square Button.png");
 	button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
@@ -81,37 +86,6 @@ void GSPlay::Init()
 	weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() , obj->Get2DPosition().y);
 	m_vectorWeapon.push_back(weapon);
 
-	//Enemy
-	//lv1 init
-	auto texture2 = ResourceManagers::GetInstance()->GetTexture("enemy1.tga");
-	std::srand(static_cast<unsigned int>(std::time(nullptr)));
-	for (int i = 0; i <= 5; i++)
-	{
-		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f,10.0/*enemy HP*/, 10.0/*enemy power*/, obj->GetSpeed() * 0.500 /*enemy speed*/);
-		monster->SetFlip(SDL_FLIP_NONE);
-		monster->SetSize(60, 60);
-		int temp1 = rand() % 1000;
-		int temp2 = rand() % 800;
-		monster->Set2DPosition(temp1, temp2);
-		m_vectorEnemy.push_back(monster);
-	}
-	m_vectorEnemyS.push_back(m_vectorEnemy);
-	m_vectorEnemy.clear();
-	//lv2 init
-	texture2 = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/enemies/5.png");
-	std::srand(static_cast<unsigned int>(std::time(nullptr)));
-	for (int i = 0; i <= 8; i++)
-	{
-		monster = std::make_shared<enemy>(texture2, 1, 1, 1, 1.00f, 100.0, 20.0,3);
-		monster->SetFlip(SDL_FLIP_NONE);
-		monster->SetSize(60, 60);
-		int temp1 = rand() % 1000;
-		int temp2 = rand() % 800;
-		monster->Set2DPosition(temp1, temp2);
-		m_vectorEnemy.push_back(monster);
-	}
-	m_vectorEnemyS.push_back(m_vectorEnemy);
-	
 
 
 
@@ -211,6 +185,14 @@ void GSPlay::HandleTouchEvents(SDL_Event& e)
 			break;
 		}
 	}
+
+	for (auto button : m_listUpdateButton)
+	{
+		if (button->HandleTouchEvent(&e))
+		{
+			break;
+		}
+	}
 }
 
 void GSPlay::HandleMouseMoveEvents(int x, int y)
@@ -230,6 +212,11 @@ void GSPlay::Update(float deltaTime)
 	if (m_isPlaying)
 	{
 		for (auto it : m_listButton)
+		{
+			it->Update(deltaTime);
+		}
+
+		for (auto it : m_listUpdateButton)
 		{
 			it->Update(deltaTime);
 		}
@@ -288,19 +275,25 @@ void GSPlay::Update(float deltaTime)
 
 
 		
-		for (auto it : m_vectorWeapon)
+		for (int i = 0; i < m_vectorWeapon.size(); i++)
 		{
-			it->Set2DPosition(obj->Get2DPosition().x +35, obj->Get2DPosition().y - 25);
-			if (it->CheckEnemyInRange(m_vectorEnemyS[m_level], obj->Get2DPosition()))
+			if (i == 0) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x - 10, obj->Get2DPosition().y - 25);
+			else if (i == 1) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() - 5, obj->Get2DPosition().y - 25);
+			else if (i == 2) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x - 10, obj->Get2DPosition().y + obj->GetHeight() / 2);
+			else if (i == 4) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth(), obj->Get2DPosition().y + obj->GetHeight() / 2);
+			else if (i == 5) i = 5; // sua cho nay
+			else if (i == 6) i = 6; // sua cho nay
+			//m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x + 35 * i, obj->Get2DPosition().y - 25);
+			if (m_vectorWeapon[i]->CheckEnemyInRange(m_vectorEnemyS[m_level], obj->Get2DPosition()))
 			{
-				bullet =  it->Fire( deltaTime, m_vectorEnemyS[m_level]);
+				bullet = m_vectorWeapon[i]->Fire(deltaTime, m_vectorEnemyS[m_level]);
 				if(bullet)
 				{
 					m_vectorBullet.push_back(bullet);
 					
 				}
 			}
-			it->Update(deltaTime);
+			m_vectorWeapon[i]->Update(deltaTime);
 		}
 		
 		
@@ -358,7 +351,9 @@ void GSPlay::Update(float deltaTime)
 		
 		if (m_vectorEnemyS[m_level].size() == 0)
 		{
-			if (m_level < 1)
+			m_isPlaying = false;
+			m_isUpdate = true;
+			if (m_level < 2)
 			{
 				m_level++;
 			}
@@ -389,6 +384,25 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		if (it->getHP() > 0) it->Draw(renderer);
 	}
 	*/
+	if (m_isUpdate)
+	{
+		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 128);
+
+		SDL_RenderFillRect(renderer, &m_darkOverlay);
+		//rand 3 num
+		auto b1 = m_listUpdateButton[0];
+		b1->Set2DPosition(SCREEN_WIDTH / 2 - 550, SCREEN_HEIDHT / 2);
+		b1->Draw(renderer);
+		auto b2 = m_listUpdateButton[1];
+		b2->Set2DPosition(SCREEN_WIDTH / 2 - 150, SCREEN_HEIDHT / 2);
+		b2->Draw(renderer);
+		auto b3 = m_listUpdateButton[9];
+		b3->Set2DPosition(SCREEN_WIDTH / 2 + 250, SCREEN_HEIDHT / 2);
+		b3->Draw(renderer);
+
+
+	}
 	
 
 	
@@ -413,6 +427,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 			it->Draw(renderer);
 		}
 	}
+
 	if (m_alreadyDrawPlayer == false)
 	{
 		if (obj->getHP() > 0)
@@ -449,3 +464,112 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		it->Draw(renderer);
 	}
 }
+
+
+
+
+
+void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList)
+{
+	std::ifstream file(filename);
+	std::string texturePath;
+	std::string bonus;
+
+	std::shared_ptr<MouseButton> chooseButton;
+	while (std::getline(file, texturePath) && std::getline(file, bonus))
+	{
+		auto texture = ResourceManagers::GetInstance()->GetTexture(texturePath);
+		std::istringstream iss(bonus); // Construct istringstream with 'bonus'
+		float hp, damage, speed;
+		if (iss >> hp >> damage >> speed)
+		{
+			chooseButton = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
+			chooseButton->SetSize(300, 300);
+			chooseButton->Set2DPosition(0, 0);
+			chooseButton->SetType(DYNAMIC);
+			chooseButton->SetOnClick([this, hp,damage,speed]() {
+				m_isPlaying = !m_isPlaying;
+				m_isUpdate = false;
+				obj->setHP(obj->getHP() + hp);
+				obj->m_MoveSpeed += speed;
+				for (auto it : m_vectorWeapon)
+				{
+					it->setDamage(it->getDamage() + damage);
+				}
+				//obj->
+				});
+
+			buttonList.push_back(chooseButton);
+		}
+	}
+}
+
+
+
+void GSPlay::createChooseGunButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList)
+{
+	std::ifstream file(filename);
+	std::string texturePath;
+	std::string textureGunPath;
+	std::string damage;
+	std::shared_ptr<MouseButton> chooseButton;
+	while (std::getline(file, texturePath) && std::getline(file, textureGunPath) && std::getline(file,damage))
+	{
+		auto texture = ResourceManagers::GetInstance()->GetTexture(texturePath);
+		std::istringstream iss(damage); // Construct istringstream with 'bonus'
+		float damage;
+		if (iss >> damage)
+		{
+			chooseButton = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
+			chooseButton->SetSize(300, 300);
+			chooseButton->Set2DPosition(0, 0);
+			chooseButton->SetType(DYNAMIC);
+			chooseButton->SetOnClick([this, damage , textureGunPath]() {
+				m_isPlaying = !m_isPlaying;
+				m_isUpdate = false;
+				if (gun_slot <= 5)
+				{
+					auto textureGun = ResourceManagers::GetInstance()->GetTexture(textureGunPath);
+					auto addWeapon = std::make_shared<BaseWeapon>(textureGun, 1, 1, 1, 1.00f,""/*se dien dan o day*/, damage);
+					addWeapon->SetSize(40, 40);
+					m_vectorWeapon.push_back(addWeapon);
+					gun_slot++;
+				}
+				});
+
+			buttonList.push_back(chooseButton);
+		}
+	}
+}
+
+
+void GSPlay::createLevelFromFile(std::string& filename)
+{
+	std::ifstream file(filename);
+	std::string textureEnemyPath;
+	std::string infomation;
+	while (std::getline(file, textureEnemyPath) && std::getline(file, infomation))
+	{
+		auto textureEnemy = ResourceManagers::GetInstance()->GetTexture(textureEnemyPath);
+		std::istringstream iss(infomation); // Construct istringstream with 'bonus'
+		float number,hp,damage,speed;
+		if (iss >> number >> hp >> damage >> speed)
+		{
+			std::srand(static_cast<unsigned int>(std::time(nullptr)));
+			for (int i = 0; i <= number; i++)
+			{
+				monster = std::make_shared<enemy>(textureEnemy, 1, 1, 1, 1.00f, hp/*enemy HP*/, damage/*enemy power*/, speed /*enemy speed*/);
+				monster->SetFlip(SDL_FLIP_NONE);
+				monster->SetSize(60, 60);
+				int temp1 = rand() % 1000;
+				int temp2 = rand() % 800;
+				monster->Set2DPosition(temp1, temp2);
+				m_vectorEnemy.push_back(monster);
+			}
+			m_vectorEnemyS.push_back(m_vectorEnemy);
+			m_vectorEnemy.clear();
+		}
+	}
+}
+
+
