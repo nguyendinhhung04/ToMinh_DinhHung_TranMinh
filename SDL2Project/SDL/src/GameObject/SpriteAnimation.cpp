@@ -108,6 +108,11 @@ void SpriteAnimation::MoveLeft(float deltaTime, float speed)
 	bool temp = false;
 	Flip(temp);
 	m_position.x -= speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
+	{
+		printf("OUT");
+		m_position.x += speed * deltaTime;
+	}
 }
 
 void SpriteAnimation::MoveRight(float deltaTime, float speed)
@@ -115,14 +120,26 @@ void SpriteAnimation::MoveRight(float deltaTime, float speed)
 	bool temp = true;
 	Flip(temp);
 	m_position.x += speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
+	{
+		m_position.x -= speed * deltaTime;
+	}
 }
 void SpriteAnimation::MoveUp(float deltaTime, float speed)
 {
 	m_position.y -= speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
+	{
+		m_position.y += speed * deltaTime;
+	}
 }
-void SpriteAnimation::MoveDown(float deltaTime,float speed)
+void SpriteAnimation::MoveDown(float deltaTime, float speed)
 {
 	m_position.y += speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
+	{
+		m_position.y -= speed * deltaTime;
+	}
 }
 
 void SpriteAnimation::MoveLeftDown(float deltaTime, float speed)
@@ -131,6 +148,14 @@ void SpriteAnimation::MoveLeftDown(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x -= speed * deltaTime;
 	m_position.y += speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835)
+	{
+		m_position.x += speed * deltaTime;
+	}
+	if (m_position.y < 80 || m_position.y >942)
+	{
+		m_position.y -= speed * deltaTime;
+	}
 }
 
 void SpriteAnimation::MoveLeftUp(float deltaTime, float speed)
@@ -139,6 +164,14 @@ void SpriteAnimation::MoveLeftUp(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x -= speed * deltaTime;
 	m_position.y -= speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835)
+	{
+		m_position.x += speed * deltaTime;
+	}
+	if (m_position.y < 80 || m_position.y >942)
+	{
+		m_position.y += speed * deltaTime;
+	}
 }
 
 void SpriteAnimation::MoveRightUp(float deltaTime, float speed)
@@ -147,6 +180,14 @@ void SpriteAnimation::MoveRightUp(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x += speed * deltaTime;
 	m_position.y -= speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835)
+	{
+		m_position.x -= speed * deltaTime;
+	}
+	if (m_position.y < 80 || m_position.y >942)
+	{
+		m_position.y += speed * deltaTime;
+	}
 }
 
 
@@ -156,6 +197,15 @@ void SpriteAnimation::MoveRightDown(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x += speed * deltaTime;
 	m_position.y += speed * deltaTime;
+	if (m_position.x < 111 || m_position.x >1835)
+	{
+		m_position.x -= speed * deltaTime;
+	}
+	if (m_position.y < 80 || m_position.y >942)
+	{
+		m_position.y -= speed * deltaTime;
+	}
+
 }
 
 

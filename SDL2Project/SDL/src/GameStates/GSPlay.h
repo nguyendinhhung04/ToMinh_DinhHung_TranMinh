@@ -53,6 +53,7 @@ private:
 	std::vector<std::shared_ptr<enemy>> m_vectorEnemy;
 	std::shared_ptr<enemy> monster;
 	std::shared_ptr<MouseButton> button;
+	std::shared_ptr<Sprite2D> m_border;
 	std::shared_ptr<BaseWeapon> weapon;
 	std::vector<std::shared_ptr<BaseWeapon>> m_vectorWeapon;
 	std::shared_ptr<Bullet> bullet;
