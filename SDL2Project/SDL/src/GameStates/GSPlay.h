@@ -35,6 +35,7 @@ private:
 	int m_level = 0;
 
 	std::shared_ptr<Sprite2D>	m_background;
+	std::shared_ptr<Sprite2D>	m_border;
 	//std::shared_ptr<Text>		m_score;
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;

@@ -1,5 +1,5 @@
 #include"Camera.h"
-#define WIDTH_OFFSET 300
+#define WIDTH_OFFSET 100
 #define HEIGHT_OFFSET 100
 
 void Camera::Init()
@@ -27,12 +27,7 @@ void Camera::Update(float deltaTime)
 {
 	if (m_Target != nullptr)
 	{
-		//Center the camera over the dot
-		//m_ViewBox.x = (m_Target->Get2DPosition().x  - SCREEN_WIDTH / 2) ;
-		//m_ViewBox.y = (m_Target->Get2DPosition().y  - SCREEN_HEIDHT / 2) ;
 		
-		//m_ViewBox.x = (m_Target->Get2DPosition().x );
-		//m_ViewBox.y = (m_Target->Get2DPosition().y );
 		
 
 		if (m_Target->Get2DPosition().x < m_ViewBox.x + WIDTH_OFFSET)

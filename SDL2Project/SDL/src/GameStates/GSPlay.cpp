@@ -50,8 +50,13 @@ void GSPlay::Init()
 	// background
 
 	m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
-	m_background->SetSize(1280, 720);
+	m_background->SetSize(2000, 1114);
 	m_background->Set2DPosition(0, 0);
+	m_background->SetType(STATIC);
+	texture = ResourceManagers::GetInstance()->GetTexture("Border.png");
+	m_border = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
+	m_border->SetSize(2100, 1169.7);
+	m_border->Set2DPosition(0-(m_border->GetWidth()/2 - m_background->GetWidth()/2), 0 - (m_border->GetHeight()/2 - m_background->GetHeight()/2));
 	m_background->SetType(STATIC);
 
 
@@ -82,7 +87,7 @@ void GSPlay::Init()
 	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
 	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
 	obj->SetSize(50, 50);
-	obj->Set2DPosition(240, 400);
+	obj->Set2DPosition(m_background->GetWidth()/2, m_background->GetHeight()/2);
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	Camera::GetInstance()->Init();
 	m_listAnimation.push_back(obj);
@@ -279,6 +284,7 @@ void GSPlay::Update(float deltaTime)
 				it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
 			}
 			it->Update(deltaTime);
+			printf("%f___%f\n", it->Get2DPosition().x, it->Get2DPosition().y);
 		}
 
 
@@ -340,7 +346,6 @@ void GSPlay::Update(float deltaTime)
 		{
 			(*it)->MoveToCharacterX(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
 			(*it)->MoveToCharacterY(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
-			printf("%f____%f\n",obj->GetSpeed(), monster->getSpeed());
 			if (obj->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()))
 			{
 				obj->minusHP((*it)->getPower(), deltaTime);
@@ -390,7 +395,6 @@ void GSPlay::Update(float deltaTime)
 
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
-
 
 	m_background->Draw(renderer);
 	//m_score->Draw();
@@ -448,7 +452,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	{
 		it->Draw(renderer);
 	}
-
+	m_border->Draw(renderer);
 
 	if (!m_isPlaying)
 	{

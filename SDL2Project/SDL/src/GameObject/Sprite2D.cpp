@@ -6,7 +6,7 @@
 //}
 
 Sprite2D::Sprite2D(std::shared_ptr<TextureManager> texture, SDL_RendererFlip flip)
-	:BaseObject(texture), m_iWidth(100), m_iHeight(50), m_type(SpriteType::DYNAMIC)
+	:BaseObject(texture), m_iWidth(100), m_iHeight(50), m_type(SpriteType::STATIC)
 {
 	m_flip = flip;
 	m_MoveSpeed = (float)(70);
