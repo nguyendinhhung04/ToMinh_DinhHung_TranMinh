@@ -1,18 +1,18 @@
 brotato_presskit/enemies/1.png
-2 1 50 50
+5 1 50 50
 brotato_presskit/enemies/2.png
-1 1 10 50
+5 1 10 50
 brotato_presskit/enemies/3.png
-1 1 10 50
+5 1 10 50
 brotato_presskit/enemies/4.png
-1 1 10 50
+5 1 10 50
 brotato_presskit/enemies/5.png
-1 1 10 50
+5 1 10 50
 brotato_presskit/enemies/6.png
-1 1 10 50
+5 1 10 50
 brotato_presskit/enemies/7.png
-1 1 10 50
+5 1 10 50
 brotato_presskit/enemies/8.png
-1 1 10 50
+5 1 10 50
 brotato_presskit/enemies/9.png
-1 1 10 50
+5 1 10 50

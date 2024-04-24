@@ -69,4 +69,8 @@ public:
 	bool CheckCollisionY(std::shared_ptr<enemy> other);
 	void Damaged(float bullet_damage);
 	float GetHP();
+
+
+	//special skill
+	virtual void specialSkill();
 };

@@ -528,10 +528,10 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 void GSPlay::createChooseGunButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList)
 {
 	std::ifstream file(filename);
-	std::string texturePath;
-	std::string textureGunPath;
-	std::string bulletPath;
-	std::string damage;
+	std::string texturePath;  // = "" brotato_presskit/updateGun/shotgunn.png
+	std::string textureGunPath; // = "" brotato_presskit/weapons/double_barrel_shotgun.png
+	std::string bulletPath; // = ""Bullet/Laser_Sprites/03.png
+	std::string damage; // =""20 3 500
 	std::shared_ptr<MouseButton> chooseButton;
 	while (std::getline(file, texturePath) && std::getline(file, textureGunPath) && std::getline(file,bulletPath) && std::getline(file, damage))
 	{

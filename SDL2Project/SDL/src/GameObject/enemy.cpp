@@ -310,3 +310,7 @@ float enemy::GetHP()
 	return m_hp;
 }
 
+void enemy::specialSkill()
+{
+	// this is special skill of enemy
+}
