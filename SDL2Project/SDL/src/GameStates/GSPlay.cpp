@@ -74,8 +74,8 @@ void GSPlay::Init()
 
 	// Animation 
 
-	texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/characters/crazy.png");
-	obj = std::make_shared<SpriteAnimation>(texture, 1, 1, 1, 1.00f);
+	texture = ResourceManagers::GetInstance()->GetTexture("PlayerCharecterAnimation.png");
+	obj = std::make_shared<SpriteAnimation>(texture, 1, 8, 8, 1.00f);
 	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
 	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
 	obj->SetSize(50, 50);
