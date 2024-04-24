@@ -97,6 +97,11 @@ void BaseWeapon::SetRotation(double angle)
 	m_angle = angle;
 }
 
+SDL_RendererFlip BaseWeapon::GetFlip()
+{
+	return m_flip;
+}
+
 void BaseWeapon::SetFlip(SDL_RendererFlip flip)
 {
 	m_flip = flip;
@@ -105,6 +110,11 @@ void BaseWeapon::SetFlip(SDL_RendererFlip flip)
 Vector2 BaseWeapon::Get2DPosition()
 {
 	return Vector2(m_position.x, m_position.y);
+}
+
+double BaseWeapon::GetRotation()
+{
+	return m_angle;
 }
 
 void BaseWeapon::SetSize(int width, int height)
@@ -165,8 +175,8 @@ void BaseWeapon::AimToEnemy(std::shared_ptr<enemy> enemy)
 	}
 
 	SetRotation(-(atan2( a,b ) * (180 / PI) - 90));
-	printf("%f_____", atan2(a, b)* (180 / PI));
-	printf("%f\n", -(atan2(a, b) * (180 / PI) - 90));
+	//printf("%f_____", atan2(a, b)* (180 / PI));
+	//printf("%f\n", -(atan2(a, b) * (180 / PI) - 90));
 }
 
 
@@ -189,12 +199,12 @@ std::shared_ptr<Bullet> BaseWeapon::Fire( float deltaTime, std::vector<std::shar
 	m_timeSinceLastFire += deltaTime;
 	if (m_timeSinceLastFire >= (0.300f))
 	{
-		auto texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/items/acid.png");
+		auto texture = ResourceManagers::GetInstance()->GetTexture("Bullet/Laser_Sprites/11.png");
 		if (bullet_path != "") texture = ResourceManagers::GetInstance()->GetTexture(bullet_path);
 		BulletOfWeapon = std::make_shared<Bullet>(texture, 1, 1, 1, 1.00f);
 		BulletOfWeapon->Set2DPosition(m_position.x + GetWidth()/2, m_position.y + GetHeight()/2);
 		BulletOfWeapon->setDamage(damage);
-		BulletOfWeapon->SetSize(20, 20);
+		BulletOfWeapon->SetSize(178/3, 41/3);
 
 		std::vector<std::shared_ptr<enemy>> m_vectorDistanceEnemy;
 		m_vectorDistanceEnemy = tempVector;
@@ -220,6 +230,8 @@ std::shared_ptr<Bullet> BaseWeapon::Fire( float deltaTime, std::vector<std::shar
 			Nearest.y = (*temp)->Get2DPosition().y + (*temp)->GetHeight() / 2;
 			AimToEnemy((*temp));
 			BulletOfWeapon->SetTarget(Nearest);
+			BulletOfWeapon->SetRotation(GetRotation());
+			BulletOfWeapon->SetFlip(GetFlip());
 			m_timeSinceLastFire = 0;
 			return BulletOfWeapon;
 		}

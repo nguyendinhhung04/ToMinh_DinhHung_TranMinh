@@ -191,6 +191,8 @@ bool Bullet::CheckCollision(Vector2 other, int width, int height)
 
 void Bullet::SetTarget(Vector2 target)
 {
+
+
 	float x_dis = target.x - m_position.x;
 	if (x_dis > 0)
 	{
