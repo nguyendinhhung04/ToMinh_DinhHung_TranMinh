@@ -1,4 +1,7 @@
 #pragma once
+#include <cstdlib>
+#include <algorithm>
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include "GameStateBase.h"
@@ -35,10 +38,13 @@ private:
 	void createChooseButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList);
 	void createChooseGunButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList);
 	void createLevelFromFile(std::string& filename);
+	int getRandomNumber(int low, int high);
+	void generateUniqueRandomNumbers(int n,int &x,int &y,int &z);
 	void DrawPauseScreen(SDL_Renderer* renderer);
 	int m_level = 0;
-	int gun_slot = 1;
+	int gun_slot = 0;
 	bool m_isUpdate = false;
+	bool m_isChooseUpdate = false;
 	std::shared_ptr<Sprite2D>	m_background;
 	std::vector<std::shared_ptr<Sprite2D>> m_listUpdate;
 	std::shared_ptr<Sprite2D>	m_update;
@@ -59,7 +65,7 @@ private:
 	std::shared_ptr<Bullet> bullet;
 	std::vector<std::shared_ptr<Bullet>> m_vectorBullet;
 
-
+	int op1, op2, op3;
 
 
 	SDL_Rect m_darkOverlay;

@@ -5,12 +5,6 @@ brotato_presskit/update/run.png
 brotato_presskit/update/powerUp.png
 0 10 0
 brotato_presskit/update/heal.png
-10 10 10
-brotato_presskit/update/shotgunn.png
-10 10 10
+30 0 0
 brotato_presskit/update/heal.png
-10 10 10
-brotato_presskit/update/shotgunn.png
-10 10 10
-brotato_presskit/update/shotgunn.png
-10 10 10
+30 0 0

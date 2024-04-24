@@ -37,7 +37,7 @@ protected:
 	std::string bullet_path;
 public:
 	BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
-	BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime,std::string bullet_path,float damage);
+	BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime,std::string bullet_path,float damage,float fire_speed,float range);
 	~BaseWeapon();
 
 	void		Init() override;
@@ -67,4 +67,8 @@ public:
 
 	float getDamage() { return damage; }
 	void setDamage(float damage) {if(BulletOfWeapon != NULL) this->BulletOfWeapon->setDamage(damage);}
+
+
+	void setFireSpeed(float sr) { this->m_fireSpeed = sr; }
+	void setRange(float range) { this->m_range = range; }
 };

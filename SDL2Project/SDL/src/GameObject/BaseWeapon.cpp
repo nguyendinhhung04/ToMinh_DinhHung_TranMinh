@@ -28,7 +28,7 @@ BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, i
 	damage = 10;
 }
 
-BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime,std::string bullet_path,float damage) : BaseObject(texture)
+BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime,std::string bullet_path,float damage, float fire_speed, float range) : BaseObject(texture)
 {
 	m_MoveSpeed = (float)(250);
 	m_rotationDirection = true;           //True == Right,  false == left
@@ -44,8 +44,8 @@ BaseWeapon::BaseWeapon(std::shared_ptr<TextureManager> texture, int spriteRow, i
 	m_lastUpdate = SDL_GetTicks();
 	Init();
 	m_timeSinceLastFire = 0;
-	m_fireSpeed = INITIAL_FIRESPEED;
-	m_range = INITIAL_RANGE;
+	m_fireSpeed = fire_speed;
+	m_range = range;
 	//BulletOfWeapon = new BulletOfWeapon();
 	m_angle = 180.00;
 	m_flip = SDL_FLIP_NONE;
