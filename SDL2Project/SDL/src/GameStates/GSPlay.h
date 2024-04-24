@@ -58,6 +58,10 @@ private:
 	std::vector<std::shared_ptr<BaseWeapon>> m_vectorWeapon;
 	std::shared_ptr<Bullet> bullet;
 	std::vector<std::shared_ptr<Bullet>> m_vectorBullet;
+	std::shared_ptr<Sound> fireSound;
+	std::list<std::shared_ptr<Sound>> m_listFireSound;
+
+
 
 
 

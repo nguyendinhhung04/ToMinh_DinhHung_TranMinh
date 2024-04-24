@@ -35,7 +35,7 @@ void GSPlay::Init()
 	auto texture = ResourceManagers::GetInstance()->GetTexture("Cave/Background_GSPlay.tga");
 
 	// background
-
+	
 	m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
 	m_background->SetSize(2000, 1114);
 	m_background->Set2DPosition(0, 0);
@@ -292,6 +292,11 @@ void GSPlay::Update(float deltaTime)
 			if (m_vectorWeapon[i]->CheckEnemyInRange(m_vectorEnemyS[m_level], obj->Get2DPosition()))
 			{
 				bullet = m_vectorWeapon[i]->Fire(deltaTime, m_vectorEnemyS[m_level]);
+				//fireSound = std::make_shared<Sound>();
+				//fireSound->LoadSound("Data/Sounds/Laser_Bullet_Sound.mp3");
+				//fireSound->PlaySound();
+				//m_listFireSound.push_back(fireSound);
+
 				if(bullet)
 				{
 					m_vectorBullet.push_back(bullet);

@@ -16,6 +16,9 @@ public:
 	unsigned int LoadSfx(const char * path);
 	void PlaySfx(unsigned int sfx, int repeat = 0);
 	void CleanUp();
+	bool CheckSoundEnd();
+	float m_playedTime;
+	
 private:
 	std::string m_PathMusic;
 	Mix_Music* m_Music = NULL;
