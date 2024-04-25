@@ -19,6 +19,9 @@ SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int sp
 	Init();
 	m_hp = INITIAL_HP;
 	m_timeSinceLastDeduction = 0;
+	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
+	gScratch = Mix_LoadWAV("Data/Sounds/Footstep SFX.wav");
 }
 SpriteAnimation::~SpriteAnimation()
 {
@@ -108,6 +111,7 @@ void SpriteAnimation::MoveLeft(float deltaTime, float speed)
 	bool temp = false;
 	Flip(temp);
 	m_position.x -= speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
 	{
 		printf("OUT");
@@ -120,6 +124,7 @@ void SpriteAnimation::MoveRight(float deltaTime, float speed)
 	bool temp = true;
 	Flip(temp);
 	m_position.x += speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
 	{
 		m_position.x -= speed * deltaTime;
@@ -128,6 +133,7 @@ void SpriteAnimation::MoveRight(float deltaTime, float speed)
 void SpriteAnimation::MoveUp(float deltaTime, float speed)
 {
 	m_position.y -= speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
 	{
 		m_position.y += speed * deltaTime;
@@ -136,6 +142,7 @@ void SpriteAnimation::MoveUp(float deltaTime, float speed)
 void SpriteAnimation::MoveDown(float deltaTime, float speed)
 {
 	m_position.y += speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
 	{
 		m_position.y -= speed * deltaTime;
@@ -148,6 +155,7 @@ void SpriteAnimation::MoveLeftDown(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x -= speed * deltaTime;
 	m_position.y += speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835)
 	{
 		m_position.x += speed * deltaTime;
@@ -164,6 +172,7 @@ void SpriteAnimation::MoveLeftUp(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x -= speed * deltaTime;
 	m_position.y -= speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835)
 	{
 		m_position.x += speed * deltaTime;
@@ -180,6 +189,7 @@ void SpriteAnimation::MoveRightUp(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x += speed * deltaTime;
 	m_position.y -= speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835)
 	{
 		m_position.x -= speed * deltaTime;
@@ -197,6 +207,7 @@ void SpriteAnimation::MoveRightDown(float deltaTime, float speed)
 	Flip(temp);
 	m_position.x += speed * deltaTime;
 	m_position.y += speed * deltaTime;
+	Mix_PlayChannel(-1, gScratch, 0);
 	if (m_position.x < 111 || m_position.x >1835)
 	{
 		m_position.x -= speed * deltaTime;
@@ -242,5 +253,4 @@ int SpriteAnimation::getHP()
 {
 	return m_hp;
 }
-
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "BaseObject.h"
 #include <SDL_render.h>
+#include <SDL_mixer.h>
 class TextureManager;
 class SpriteAnimation : public BaseObject{
 protected:
@@ -24,6 +25,9 @@ protected:
 	// HP
 	int m_hp;
 	float m_timeSinceLastDeduction;
+
+	//foot step sound
+	Mix_Chunk* gScratch = NULL;
 public:
 	SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~SpriteAnimation();
@@ -62,4 +66,8 @@ public:
 
 
 	void setHP(float hp) { this->m_hp = hp; }
+
+	//sound
+	//bool loadMedia();
+	//void close();
 };
