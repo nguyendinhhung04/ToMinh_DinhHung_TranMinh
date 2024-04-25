@@ -201,7 +201,8 @@ std::shared_ptr<Bullet> BaseWeapon::Fire( float deltaTime, std::vector<std::shar
 	{
 		auto texture = ResourceManagers::GetInstance()->GetTexture("Bullet/Laser_Sprites/11.png");
 		if (bullet_path != "") texture = ResourceManagers::GetInstance()->GetTexture(bullet_path);
-		BulletOfWeapon = std::make_shared<Bullet>(texture, 1, 1, 1, 1.00f);
+		char* audioPath = "Data/SoundsInGame/Retro Weapon Gun Lofi 03.wav";
+		BulletOfWeapon = std::make_shared<Bullet>(texture, 1, 1, 1, 1.00f, audioPath);
 		BulletOfWeapon->Set2DPosition(m_position.x + GetWidth()/2, m_position.y + GetHeight()/2);
 		BulletOfWeapon->setDamage(damage);
 		BulletOfWeapon->SetSize(178/3, 41/3);

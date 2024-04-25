@@ -26,6 +26,34 @@ Bullet::Bullet(std::shared_ptr<TextureManager> texture, int spriteRow, int frame
 	m_speed = INITIAL_SPEED;
 	m_damage = INITIAL_DAMAGE;
 }
+
+
+Bullet::Bullet(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float frameTime,char* soundPath) : BaseObject(texture)
+{
+
+	m_pTexture = texture;
+	m_spriteRow = spriteRow;
+	m_frameCount = frameCount;
+	m_numAction = numAction;
+	//m_animSpeed = animSpeed;
+	m_frameTime = frameTime;
+	//m_flip = flip;
+	m_currentFrame = 0;
+	m_currentTicks = 0;
+	m_lastUpdate = SDL_GetTicks();
+	Init();
+	m_hp = INITIAL_HP;
+	m_timeSinceLastDeduction = 0;
+	m_speed = INITIAL_SPEED;
+	m_damage = INITIAL_DAMAGE;
+	this->soundPath = soundPath;
+	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
+	gScratch = Mix_LoadWAV(soundPath);
+	isExistSound = false;
+}
+
+
 Bullet::~Bullet()
 {
 
@@ -215,6 +243,11 @@ void Bullet::SetTarget(Vector2 target)
 
 void Bullet::MoveToTarget( float deltaTime)
 {
+	if (isExistSound == false)
+	{
+		Mix_PlayChannel(-1, gScratch, 0);
+		isExistSound = true;
+	}
 	if (y_dis < 0) {
 		m_position.x -= sin_value * m_speed * deltaTime;
 		m_position.y -= cos_value * m_speed * deltaTime;

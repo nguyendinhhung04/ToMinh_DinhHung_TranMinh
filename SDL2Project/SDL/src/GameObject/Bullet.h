@@ -1,6 +1,7 @@
 #pragma once
 #include "BaseObject.h"
 #include <SDL_render.h>
+#include <SDL_mixer.h>
 class TextureManager;
 class Bullet : public BaseObject {
 protected:
@@ -30,8 +31,14 @@ protected:
 	float cos_value;
 	float sin_value;
 	float y_dis;
+
+	//sound
+	char* soundPath;
+	float isExistSound;
+	Mix_Chunk* gScratch = NULL;
 public:
 	Bullet(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
+	Bullet(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime, char* soundPath);
 	~Bullet();
 
 	void		Init() override;

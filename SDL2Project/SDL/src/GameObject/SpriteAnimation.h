@@ -27,6 +27,7 @@ protected:
 	float m_timeSinceLastDeduction;
 
 	//foot step sound
+	float m_timeSinceLastSound;
 	Mix_Chunk* gScratch = NULL;
 public:
 	SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
