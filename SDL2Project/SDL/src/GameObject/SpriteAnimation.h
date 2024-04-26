@@ -10,26 +10,33 @@ protected:
 	int			m_iWidth;
 	float			m_numFrames;
 	int			m_currentFrame;
-	float		m_frameTime;
+	
 	float		m_currentTime;
-	int			m_spriteRow; //start 1,2,3
+	//int			m_spriteRow; //start 1,2,3
 	int		m_frameCount; // start from 1,2,3...
 	float  m_currentTicks;
+	int m_numAction;
 	Uint32 m_lastUpdate;
 	int			m_animSpeed;
 	bool		m_rotationDirection;
-	int m_numAction; //start from 1,2,3...
+	 //start from 1,2,3...
 	//SDL_RendererFlip m_flip;
 	//std::shared_ptr<TextureManager> m_texture;
 
 	// HP
-	int m_hp;
+	float m_hp;
 	float m_timeSinceLastDeduction;
+	float m_timeSinceLastAnim;
 
 	//foot step sound
 	float m_timeSinceLastSound;
 	Mix_Chunk* gScratch = NULL;
+
+
 public:
+	int			m_spriteRow;
+	float		m_frameTime;
+
 	SpriteAnimation(std::shared_ptr<TextureManager> texture, int spriteRow, int frameCount, int numAction, float  frameTime);
 	~SpriteAnimation();
 
@@ -62,11 +69,14 @@ public:
 	//HP
 	bool CheckCollision(Vector2 other, int width, int height);
 	void minusHP(int, float);
-	int getHP();
+	float getHP();
 	float GetSpeed() { return m_MoveSpeed; }
 
 
 	void setHP(float hp) { this->m_hp = hp; }
+
+	void GotHit(float deltaTime);
+	bool isGotHit;
 
 	//sound
 	//bool loadMedia();

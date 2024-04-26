@@ -20,9 +20,12 @@ SpriteAnimation::SpriteAnimation(std::shared_ptr<TextureManager> texture, int sp
 	m_hp = INITIAL_HP;
 	m_timeSinceLastSound = 0;
 	m_timeSinceLastDeduction = 0;
+	m_timeSinceLastAnim = 0;
+	isGotHit = false;
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 	gScratch = Mix_LoadWAV("Data/SoundsInGame/Retro FootStep 03.wav");
+
 }
 SpriteAnimation::~SpriteAnimation()
 {
@@ -44,6 +47,9 @@ void SpriteAnimation::Draw(SDL_Renderer* renderer)
 
 void SpriteAnimation::Update(float deltatime)
 {
+
+	GotHit(deltatime);
+
 	m_currentTicks += deltatime;
 		if(m_currentTicks  >= m_frameTime) {
 		m_currentFrame++;
@@ -52,6 +58,8 @@ void SpriteAnimation::Update(float deltatime)
 		}
 		m_currentTicks -= m_frameTime;
 	}
+
+
 }
 
 void SpriteAnimation::Set2DPosition(float x, float y)
@@ -284,15 +292,34 @@ bool SpriteAnimation::CheckCollision(Vector2 other, int width, int height)
 void SpriteAnimation::minusHP(int enemy_power, float deltaTime)
 {
 	m_timeSinceLastDeduction += deltaTime;
-	if (m_timeSinceLastDeduction >= 1.0f)
+	if (m_timeSinceLastDeduction >= 0.75f)
 	{
 		m_hp -= enemy_power;
 		m_timeSinceLastDeduction = 0;
+		m_spriteRow = 3;
+		m_frameTime = 0.08f;
+		isGotHit = true;
 	}
 }
 
-int SpriteAnimation::getHP()
+float SpriteAnimation::getHP()
 {
 	return m_hp;
+}
+
+void SpriteAnimation::GotHit(float deltaTime)
+{
+	if (isGotHit == true)
+	{
+		m_timeSinceLastAnim += deltaTime;
+		if (m_timeSinceLastAnim > 0.50f)
+		{
+			m_spriteRow = 1;
+			m_frameTime = 0.03f;
+			isGotHit = false;
+			m_timeSinceLastAnim = 0;
+		}
+	}
+	
 }
 

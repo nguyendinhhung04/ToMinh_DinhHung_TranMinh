@@ -10,6 +10,8 @@
 #include "enemy.h"
 #include "BaseWeapon.h"
 
+
+
 class Sprite2D;
 class SpriteAnimation;
 
@@ -64,6 +66,9 @@ private:
 	std::vector<std::shared_ptr<BaseWeapon>> m_vectorWeapon;
 	std::shared_ptr<Bullet> bullet;
 	std::vector<std::shared_ptr<Bullet>> m_vectorBullet;
+	std::shared_ptr<Sprite2D> grayBorder;
+	std::shared_ptr<Sprite2D> redBox;
+	std::shared_ptr<Sprite2D> greenBox;
 
 	int op1, op2, op3;
 
@@ -74,6 +79,7 @@ private:
 	float m_Velocity = 10.0f;
 
 	bool m_isPlaying;
+	
 
 };
 

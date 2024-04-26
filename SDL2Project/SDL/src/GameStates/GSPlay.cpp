@@ -11,9 +11,23 @@
 #include <cstdlib> 
 #include <ctime>   
 
+#define INIT_HEALTHBAR_WIDTH 290
+#define INIT_HEALTHBAR_HEIGHT 40
 
-
-
+float RandomNumber()
+{
+	float temp1 = rand() % 2 + 1;
+	float temp2;
+	if (temp1 == 1)
+	{
+		temp2 = rand() % 151 + 1300;
+	}
+	else
+	{
+		temp2 = -(rand() % 151 + 1000);
+	}
+	return temp2;
+}
 
 
 GSPlay::GSPlay()
@@ -29,7 +43,6 @@ GSPlay::~GSPlay()
 void GSPlay::Init()
 {
 	m_isPlaying = true;
-
 	op1 = -1, op2 = -1, op3 = -1;
 
 	//auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
@@ -52,7 +65,6 @@ void GSPlay::Init()
 	std::string fileName3 = "Data/level.txt";
 	createChooseGunButtonFromFile(fileName2, m_listUpdateButton);
 	createChooseButtonFromFile(fileName, m_listUpdateButton);
-	
 	createLevelFromFile(fileName3);
 	// button close
 	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Pause Square Button.png");
@@ -76,8 +88,8 @@ void GSPlay::Init()
 
 	// Animation 
 
-	texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/characters/crazy.png");
-	obj = std::make_shared<SpriteAnimation>(texture, 1, 1, 1, 1.00f);
+	texture = ResourceManagers::GetInstance()->GetTexture("PlayerAnimation.png");
+	obj = std::make_shared<SpriteAnimation>(texture, 1, 8, 3, 0.03f);
 	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
 	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
 	obj->SetSize(50, 50);
@@ -85,6 +97,26 @@ void GSPlay::Init()
 	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
 	Camera::GetInstance()->Init();
 	m_listAnimation.push_back(obj);
+
+	texture = ResourceManagers::GetInstance()->GetTexture("Menu/GrayBorder.png");
+	grayBorder = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
+	grayBorder->Set2DPosition(15, 15);
+	grayBorder->SetSize(300, 50);
+	grayBorder->SetType(DYNAMIC);
+
+	texture = ResourceManagers::GetInstance()->GetTexture("Menu/RedBox.png");
+	redBox = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
+	redBox->SetSize(290, 40);
+	redBox->Set2DPosition( grayBorder->Get2DPosition().x + (grayBorder->GetWidth()/2 - redBox->GetWidth()/2), grayBorder->Get2DPosition().y + (grayBorder->GetHeight()/2 - redBox->GetHeight()/2));
+	redBox->SetType(DYNAMIC);
+
+	texture = ResourceManagers::GetInstance()->GetTexture("Menu/GreenBox.png");
+	greenBox = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
+	greenBox->SetSize(290, 40);
+	greenBox->Set2DPosition(redBox->Get2DPosition().x, redBox->Get2DPosition().y);
+	greenBox->SetType(DYNAMIC);
+
+
 	
 	//weapon	
 	texture = texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/weapons/laser_pistol.png");
@@ -92,6 +124,7 @@ void GSPlay::Init()
 	weapon->SetSize(40, 40);
 	weapon->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() , obj->Get2DPosition().y);
 	m_vectorWeapon.push_back(weapon);
+
 
 
 
@@ -208,7 +241,10 @@ void GSPlay::HandleMouseMoveEvents(int x, int y)
 
 void GSPlay::Update(float deltaTime)
 {
-
+	if (obj->isGotHit == false)
+	{
+		obj->m_spriteRow = 2;
+	}
 	switch (m_KeyPress)//Handle Key event
 	{
 
@@ -227,33 +263,64 @@ void GSPlay::Update(float deltaTime)
 		{
 			it->Update(deltaTime);
 		}
-
 		for (auto it : m_listAnimation)
 		{
 			if (m_KeyPress == 1)
 			{
 				it->MoveLeft(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			else if (m_KeyPress == 2) {
 				it->MoveDown(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			else if (m_KeyPress == 4) {
 				it->MoveRight(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			else if (m_KeyPress == 8) {
 				it->MoveUp(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			else if (m_KeyPress == 3) {
 				it->MoveLeftDown(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			else if (m_KeyPress == 9) {
 				it->MoveLeftUp(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			else if (m_KeyPress == 12) {
 				it->MoveRightUp(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			else if (m_KeyPress == 6) {
 				it->MoveRightDown(deltaTime, obj->m_MoveSpeed);
+				if (obj->isGotHit == false)
+				{
+					obj->m_spriteRow = 1;
+				}
 			}
 			it->Update(deltaTime);
 		}
@@ -323,7 +390,7 @@ void GSPlay::Update(float deltaTime)
 		{
 			(*it)->MoveToCharacterX(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
 			(*it)->MoveToCharacterY(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
-			printf("%f____%f\n",obj->GetSpeed(), monster->getSpeed());
+
 			if (obj->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()))
 			{
 				obj->minusHP((*it)->getPower(), deltaTime);
@@ -376,6 +443,8 @@ void GSPlay::Update(float deltaTime)
 		}
 	}
 
+	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
+	printf("%d____%d____%d\n", obj->getHP(), INIT_HEALTHBAR_WIDTH* (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
 }
@@ -425,7 +494,9 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	{
 		if (obj->getHP() > 0)
 		{
+			
 			obj->Draw(renderer);
+			
 			m_alreadyDrawPlayer = true;
 		}
 	}
@@ -457,6 +528,9 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	{
 		it->Draw(renderer);
 	}
+	grayBorder->Draw(renderer);
+	redBox->Draw(renderer);
+	greenBox->Draw(renderer);
 
 	if (m_isUpdate)
 	{
@@ -528,10 +602,10 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 void GSPlay::createChooseGunButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList)
 {
 	std::ifstream file(filename);
-	std::string texturePath;  // = "" brotato_presskit/updateGun/shotgunn.png
-	std::string textureGunPath; // = "" brotato_presskit/weapons/double_barrel_shotgun.png
-	std::string bulletPath; // = ""Bullet/Laser_Sprites/03.png
-	std::string damage; // =""20 3 500
+	std::string texturePath;  
+	std::string textureGunPath; 
+	std::string bulletPath; 
+	std::string damage; 
 	std::shared_ptr<MouseButton> chooseButton;
 	while (std::getline(file, texturePath) && std::getline(file, textureGunPath) && std::getline(file,bulletPath) && std::getline(file, damage))
 	{
@@ -582,11 +656,11 @@ void GSPlay::createLevelFromFile(std::string& filename)
 			std::srand(static_cast<unsigned int>(std::time(nullptr)));
 			for (int i = 0; i <= number; i++)
 			{
-				monster = std::make_shared<enemy>(textureEnemy, 1, 1, 1, 1.00f, hp/*enemy HP*/, damage/*enemy power*/, speed /*enemy speed*/);
+				monster = std::make_shared<enemy>(textureEnemy, 1, 8, 1, 0.07f, hp/*enemy HP*/, damage/*enemy power*/, speed /*enemy speed*/);
 				monster->SetFlip(SDL_FLIP_NONE);
 				monster->SetSize(60, 60);
-				int temp1 = rand() % 1000;
-				int temp2 = rand() % 800;
+				float temp1 = RandomNumber();
+				float temp2 = RandomNumber();
 				monster->Set2DPosition(temp1, temp2);
 				m_vectorEnemy.push_back(monster);
 			}
