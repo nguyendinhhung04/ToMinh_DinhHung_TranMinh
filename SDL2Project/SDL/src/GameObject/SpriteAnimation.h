@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseObject.h"
+#include "GSPlay.h"
 #include <SDL_render.h>
 #include <SDL_mixer.h>
 class TextureManager;
