@@ -20,11 +20,11 @@ float RandomNumber()
 	float temp2;
 	if (temp1 == 1)
 	{
-		temp2 = rand() % 151 + 1300;
+		temp2 = rand() % 151 + 1000;
 	}
 	else
 	{
-		temp2 = -(rand() % 151 + 1000);
+		temp2 = -(rand() % 151 + 800);
 	}
 	return temp2;
 }
@@ -86,17 +86,7 @@ void GSPlay::Init()
 		});
 	m_listButton.push_back(button);
 
-	// Animation 
 
-	texture = ResourceManagers::GetInstance()->GetTexture("PlayerAnimation.png");
-	obj = std::make_shared<SpriteAnimation>(texture, 1, 8, 3, 0.03f);
-	//obj->SetFlip(SDL_FLIP_HORIZONTAL);
-	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
-	obj->SetSize(50, 50);
-	obj->Set2DPosition(m_background->GetWidth() / 2, m_background->GetHeight() / 2);
-	Camera::GetInstance()->SetTarget(obj);        //Set target to obj
-	Camera::GetInstance()->Init();
-	m_listAnimation.push_back(obj);
 
 	texture = ResourceManagers::GetInstance()->GetTexture("Menu/GrayBorder.png");
 	grayBorder = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
@@ -116,7 +106,15 @@ void GSPlay::Init()
 	greenBox->Set2DPosition(redBox->Get2DPosition().x, redBox->Get2DPosition().y);
 	greenBox->SetType(DYNAMIC);
 
-
+	// Animation 
+	texture = ResourceManagers::GetInstance()->GetTexture("PlayerAnimation.png");
+	obj = std::make_shared<SpriteAnimation>(texture, 1, 8, 3, 0.03f);
+	obj->SetFlip(SDL_FLIP_NONE);      //None == right, Horizontal = left
+	obj->SetSize(50, 50);
+	obj->Set2DPosition(m_background->GetWidth() / 2, m_background->GetHeight() / 2);
+	Camera::GetInstance()->SetTarget(obj, m_border);        //Set target to obj
+	Camera::GetInstance()->Init();
+	m_listAnimation.push_back(obj);
 	
 	//weapon	
 	texture = texture = ResourceManagers::GetInstance()->GetTexture("brotato_presskit/weapons/laser_pistol.png");
@@ -134,6 +132,7 @@ void GSPlay::Init()
 	m_KeyPress = 0;
 
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
+
 
 
 
@@ -400,6 +399,16 @@ void GSPlay::Update(float deltaTime)
 				if ((*it2)->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()) == true)
 		 		{
 					(*it)->Damaged((*it2)->GetDamageAmount());
+
+					auto texture = ResourceManagers::GetInstance()->GetTexture("BulletHitEnemy.png");
+					boom = std::make_shared<SpriteAnimation>(texture, 1, 7, 1, 0.03f);
+					boom->SetFlip(SDL_FLIP_NONE);     
+					boom->SetSize(70, 70);
+					boom->Set2DPosition((*it2)->Get2DPosition().x + (*it2)->GetWidth() / 2- boom->GetWidth()/2, (*it2)->Get2DPosition().y + (*it2)->GetHeight() / 2 - boom->GetHeight()/2);
+					std::pair< std::shared_ptr<SpriteAnimation>, float >  temp;
+					temp.first = boom;
+					temp.second = 0.00f;
+					m_vectorBoom.push_back(temp);
 					(*it2).reset();
 					it2 = m_vectorBullet.erase(it2);
 				}
@@ -443,8 +452,28 @@ void GSPlay::Update(float deltaTime)
 		}
 	}
 
+	if (m_vectorBoom.size() > 0)
+	{
+		for (auto it = m_vectorBoom.begin(); it != m_vectorBoom.end();)
+		{
+			(*it).first->Update(deltaTime);
+			(*it).second += deltaTime;
+			if ((*it).second > 0.21f)
+			{
+				(*it) = std::make_pair(nullptr, 0);   //giai phong bo nho cho pair
+				it = m_vectorBoom.erase(it);
+			}
+			else
+			{
+				++it;
+			}
+		}
+	}
+
 	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
-	printf("%d____%d____%d\n", obj->getHP(), INIT_HEALTHBAR_WIDTH* (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
+
+
+
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
 }
@@ -510,6 +539,15 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	{
 		it->Draw(renderer);
 	}
+
+	if (m_vectorBoom.size() > 0)
+	{
+		for (auto it : m_vectorBoom)
+		{
+			it.first->Draw(renderer);
+		}
+	}
+
 	m_border->Draw(renderer);
 
 
@@ -532,11 +570,12 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	redBox->Draw(renderer);
 	greenBox->Draw(renderer);
 
+
+
 	if (m_isUpdate)
 	{
 		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 128);
-
 		SDL_RenderFillRect(renderer, &m_darkOverlay);
 		//rand 3 num
 

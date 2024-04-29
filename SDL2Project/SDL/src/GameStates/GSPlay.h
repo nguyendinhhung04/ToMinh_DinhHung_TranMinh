@@ -12,6 +12,8 @@
 
 
 
+
+
 class Sprite2D;
 class SpriteAnimation;
 
@@ -35,6 +37,7 @@ public:
 	void	Update(float deltaTime) override;
 	void	Draw(SDL_Renderer* renderer) override;
 	int m_KeyPress;
+
 
 private:
 	void createChooseButtonFromFile(std::string& filename, std::vector<std::shared_ptr<MouseButton>>& buttonList);
@@ -70,16 +73,22 @@ private:
 	std::shared_ptr<Sprite2D> redBox;
 	std::shared_ptr<Sprite2D> greenBox;
 
+	std::shared_ptr<SpriteAnimation> boom;
+	//std::vector<std::shared_ptr<SpriteAnimation>> m_vectorBoom;
+	std::vector<std::pair<std::shared_ptr<SpriteAnimation>, float>> m_vectorBoom;
+
 	int op1, op2, op3;
 
 
 	SDL_Rect m_darkOverlay;
+	SDL_Rect m_HealthBarHitEffect;
+
 	
 	float time = 0.0f;
 	float m_Velocity = 10.0f;
 
 	bool m_isPlaying;
-	
+
 
 };
 

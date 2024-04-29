@@ -318,6 +318,7 @@ void SpriteAnimation::GotHit(float deltaTime)
 			m_frameTime = 0.03f;
 			isGotHit = false;
 			m_timeSinceLastAnim = 0;
+	
 		}
 	}
 	
