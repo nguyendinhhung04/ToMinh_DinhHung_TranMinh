@@ -1,7 +1,7 @@
 brotato_presskit/enemies/Enemy1Animation.png
-5 1000000 10 50
+5 10 10 200
 brotato_presskit/enemies/2.png
-5 1 10 50
+5 20 10 200
 brotato_presskit/enemies/3.png
 5 1 10 50
 brotato_presskit/enemies/4.png

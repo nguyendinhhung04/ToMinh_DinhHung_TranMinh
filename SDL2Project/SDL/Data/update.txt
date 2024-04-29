@@ -1,10 +1,18 @@
 brotato_presskit/update/heal.png
 30 0 0
 brotato_presskit/update/run.png
-0 0 10
+0 0 0.1
 brotato_presskit/update/powerUp.png
-0 10 0
+0 0.02 0
 brotato_presskit/update/heal.png
 30 0 0
 brotato_presskit/update/heal.png
 30 0 0
+brotato_presskit/update/acid.png
+0 0.03 0
+brotato_presskit/update/powerUp.png
+0 0.02 0
+brotato_presskit/update/powerUp.png
+0 0.02 0
+brotato_presskit/update/powerUp.png
+0 0.02 0

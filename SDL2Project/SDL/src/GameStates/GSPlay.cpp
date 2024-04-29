@@ -569,7 +569,7 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 	{
 		auto texture = ResourceManagers::GetInstance()->GetTexture(texturePath);
 		std::istringstream iss(bonus); // Construct istringstream with 'bonus'
-		float hp, damage, speed;
+		float hp = 0.f, damage = 0.f, speed = 0.f;
 		if (iss >> hp >> damage >> speed)
 		{
 			chooseButton = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
@@ -583,10 +583,10 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 				op2 = -1;
 				op3 = -1;
 				obj->setHP(obj->getHP() + hp);
-				obj->m_MoveSpeed += speed;
+				obj->m_MoveSpeed += obj->m_MoveSpeed * speed;
 				for (auto it : m_vectorWeapon)
 				{
-					it->setDamage(it->getDamage() + damage);
+					it->setDamage(it->getDamage() + it->getDamage() * damage);
 				}
 				//obj->
 				});
