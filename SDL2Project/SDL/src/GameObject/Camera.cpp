@@ -40,7 +40,7 @@ void Camera::Update(float deltaTime)
 		float lastPosY = m_Position.y;
 		m_ViewBox.x = (m_Target->Get2DPosition().x - SCREEN_WIDTH / 2);
 		m_ViewBox.y = (m_Target->Get2DPosition().y - SCREEN_HEIDHT / 2);
-		printf("%f__%f__%f__%f__%f__%f\n", m_ViewBox.x, m_ViewBox.y,m_Position.x, m_Position.y,m_map->Get2DPosition().x, m_map->Get2DPosition().y);
+		//printf("%f__%f__%f__%f__%f__%f\n", m_ViewBox.x, m_ViewBox.y,m_Position.x, m_Position.y,m_map->Get2DPosition().x, m_map->Get2DPosition().y);
 		if (m_ViewBox.x < m_map->Get2DPosition().x || m_ViewBox.x + m_ViewBox.w > m_map->Get2DPosition().x + m_map->GetWidth())
 		{
 			m_ViewBox.x = lastPosX;

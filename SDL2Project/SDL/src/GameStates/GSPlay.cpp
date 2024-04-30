@@ -14,19 +14,34 @@
 #define INIT_HEALTHBAR_WIDTH 290
 #define INIT_HEALTHBAR_HEIGHT 40
 
-float RandomNumber()
+Vector2 RandomVector2()
 {
-	float temp1 = rand() % 2 + 1 ;
-	float temp2;
+	float temp1 = rand() % 4 + 1 ;
+
+	Vector2 temp2;
 	if (temp1 == 1)
 	{
-		temp2 = rand() % 151 + 1000;
+		temp2.x = (rand() % 50)*60 - 300;
+		temp2.y = (rand() % 5)*60 - 300;
 	}
-	else
+	else if (temp1 == 2)
 	{
-		temp2 = -(rand() % 151 + 800);
+		temp2.x = (rand() % 5)*60 + 2200;
+		temp2.y = (rand() % 30)*60 - 300;
+	}
+	else if (temp1 == 3)
+	{
+		temp2.x = (rand() % 50)*60 - 300;
+		temp2.y = (rand() % 5) *60 + 1200;
+	}
+	else if (temp1 == 4)
+	{
+		temp2.x = (rand() % 5) *60 -300;
+		temp2.y = (rand() % 30) *60 - 300;
 	}
 	return temp2;
+
+
 }
 
 
@@ -439,9 +454,18 @@ void GSPlay::Update(float deltaTime)
 			}
 
 		}
+
+		if (m_timer->GetTime() <= 0)
+		{
+			while (m_vectorEnemyS[m_level].size() > 0)
+			{
+				m_vectorEnemyS[m_level].pop_back();
+			}
+		}
 		
 		if (m_vectorEnemyS[m_level].size() == 0)
 		{
+			m_timer->SetTime(m_timer->GetTime() + 15);
 			m_isPlaying = false;
 			m_isUpdate = true;
 			if (op1 == -1 && op2 == -1 && op3 == -1)
@@ -481,7 +505,10 @@ void GSPlay::Update(float deltaTime)
 	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
 
 	m_enemyKilledDisplay->LoadFromRenderText("Enemy Remaining: " + std::to_string(m_vectorEnemyS[m_level].size()));
-	m_timer->Update(deltaTime);
+	if (m_isPlaying == true)
+	{
+		m_timer->Update(deltaTime);
+	}
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
 }
@@ -717,9 +744,8 @@ void GSPlay::createLevelFromFile(std::string& filename)
 				monster = std::make_shared<enemy>(textureEnemy, 1, 8, 1, 0.07f, hp/*enemy HP*/, damage/*enemy power*/, speed /*enemy speed*/);
 				monster->SetFlip(SDL_FLIP_NONE);
 				monster->SetSize(60, 60);
-				float temp1 = RandomNumber();
-				float temp2 = RandomNumber();
-				monster->Set2DPosition(temp1, temp2);
+				Vector2 temp = RandomVector2();
+				monster->Set2DPosition(temp.x,temp.y);
 				m_vectorEnemy.push_back(monster);
 			}
 			m_vectorEnemyS.push_back(m_vectorEnemy);

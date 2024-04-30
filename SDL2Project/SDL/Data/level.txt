@@ -3,15 +3,15 @@ brotato_presskit/enemies/Enemy1Animation.png
 brotato_presskit/enemies/2.png
 40 1 10 200
 brotato_presskit/enemies/3.png
-5 1 10 50
+40 1 10 50
 brotato_presskit/enemies/4.png
-5 1 10 50
+50 1 10 50
 brotato_presskit/enemies/5.png
-5 1 10 50
+50 1 10 50
 brotato_presskit/enemies/6.png
-5 1 10 50
+50 1 10 50
 brotato_presskit/enemies/7.png
-5 1 10 50
+50 1 10 50
 brotato_presskit/enemies/8.png
 5 1 10 50
 brotato_presskit/enemies/9.png
