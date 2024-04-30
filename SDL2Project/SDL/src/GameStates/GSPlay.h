@@ -9,6 +9,8 @@
 #include "Sound.h"
 #include "enemy.h"
 #include "BaseWeapon.h"
+#include "Text.h"
+#include "TextTimer.h"
 
 
 
@@ -76,6 +78,9 @@ private:
 	std::shared_ptr<SpriteAnimation> boom;
 	//std::vector<std::shared_ptr<SpriteAnimation>> m_vectorBoom;
 	std::vector<std::pair<std::shared_ptr<SpriteAnimation>, float>> m_vectorBoom;
+	std::shared_ptr<Text> m_enemyKilledDisplay;
+	std::shared_ptr<TextTimer> m_timer;
+	int enemyKilled;
 
 	int op1, op2, op3;
 

@@ -16,7 +16,7 @@
 
 float RandomNumber()
 {
-	float temp1 = rand() % 2 + 1;
+	float temp1 = rand() % 2 + 1 ;
 	float temp2;
 	if (temp1 == 1)
 	{
@@ -44,6 +44,7 @@ void GSPlay::Init()
 {
 	m_isPlaying = true;
 	op1 = -1, op2 = -1, op3 = -1;
+	enemyKilled = 0;
 
 	//auto model = ResourceManagers::GetInstance()->GetModel("Sprite2D.nfg");
 	auto texture = ResourceManagers::GetInstance()->GetTexture("Cave/Background_GSPlay.tga");
@@ -124,16 +125,22 @@ void GSPlay::Init()
 	m_vectorWeapon.push_back(weapon);
 
 
-
-
-
-
+	//enemy Killed Display
+	SDL_Color color = { 255,255,255 };
+	m_enemyKilledDisplay = std::make_shared<Text>("Data/RobotoMono-VariableFont_wght.ttf", color);
+	m_enemyKilledDisplay->Set2DPosition(grayBorder->Get2DPosition().x, grayBorder->Get2DPosition().y + grayBorder->GetHeight() + 10);
+	m_enemyKilledDisplay->SetSize(180, 30);
+	m_enemyKilledDisplay->LoadFromRenderText("Enemy Killed: " + std::to_string(m_vectorEnemyS[m_level].size()));
 
 	m_KeyPress = 0;
 
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
 
-
+	//Timer
+	m_timer = std::make_shared<TextTimer>("Data/RobotoMono-VariableFont_wght.ttf", color);
+	m_timer->SetSize(40, 30);
+	m_timer->Set2DPosition(SCREEN_WIDTH/2 - m_timer->GetWidth() / 2, 30);
+	m_timer->SetTime(90);
 
 
 }
@@ -422,6 +429,7 @@ void GSPlay::Update(float deltaTime)
 			{
 				(*it).reset();
 				it = m_vectorEnemyS[m_level].erase(it);
+				enemyKilled += 1;
 			}
 			else
 			{
@@ -472,8 +480,8 @@ void GSPlay::Update(float deltaTime)
 
 	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
 
-
-
+	m_enemyKilledDisplay->LoadFromRenderText("Enemy Remaining: " + std::to_string(m_vectorEnemyS[m_level].size()));
+	m_timer->Update(deltaTime);
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
 }
@@ -569,7 +577,8 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	grayBorder->Draw(renderer);
 	redBox->Draw(renderer);
 	greenBox->Draw(renderer);
-
+	m_enemyKilledDisplay->Draw(renderer);
+	m_timer->Draw(renderer);
 
 
 	if (m_isUpdate)
@@ -589,6 +598,10 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		b3->Set2DPosition(SCREEN_WIDTH / 2 + 250, SCREEN_HEIDHT / 2);
 		b3->Draw(renderer);
 
+		grayBorder->Draw(renderer);
+		redBox->Draw(renderer);
+		greenBox->Draw(renderer);
+		m_enemyKilledDisplay->Draw(renderer);
 
 	}
 }
@@ -616,18 +629,21 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 			chooseButton->Set2DPosition(0, 0);
 			chooseButton->SetType(DYNAMIC);
 			chooseButton->SetOnClick([this, hp,damage,speed]() {
-				m_isPlaying = !m_isPlaying;
-				m_isUpdate = false;
-				op1 = -1;
-				op2 = -1;
-				op3 = -1;
-				obj->setHP(obj->getHP() + hp);
-				obj->m_MoveSpeed += speed;
-				for (auto it : m_vectorWeapon)
+				if (m_isUpdate == true)
 				{
-					it->setDamage(it->getDamage() + damage);
+					m_isPlaying = !m_isPlaying;
+					m_isUpdate = false;
+					op1 = -1;
+					op2 = -1;
+					op3 = -1;
+					obj->setHP(obj->getHP() + hp);
+					obj->m_MoveSpeed += speed;
+					for (auto it : m_vectorWeapon)
+					{
+						it->setDamage(it->getDamage() + damage);
+					}
+					
 				}
-				//obj->
 				});
 
 			buttonList.push_back(chooseButton);
@@ -658,18 +674,21 @@ void GSPlay::createChooseGunButtonFromFile(std::string& filename, std::vector<st
 			chooseButton->Set2DPosition(0, 0);
 			chooseButton->SetType(DYNAMIC);
 			chooseButton->SetOnClick([this, damage, speed_rate, range , textureGunPath,bulletPath]() {
-		        m_isPlaying = !m_isPlaying;
-				m_isUpdate = false;
-				op1 = -1;
-				op2 = -1;
-				op3 = -1;
-				if (gun_slot <= 5)
+				if (m_isUpdate == true)
 				{
-					auto textureGun = ResourceManagers::GetInstance()->GetTexture(textureGunPath);
-					auto addWeapon = std::make_shared<BaseWeapon>(textureGun, 1, 1, 1, 1.00f,bulletPath, damage,speed_rate,range);
-					addWeapon->SetSize(40, 40);
-					m_vectorWeapon.push_back(addWeapon);
-					gun_slot++;
+					m_isPlaying = !m_isPlaying;
+					m_isUpdate = false;
+					op1 = -1;
+					op2 = -1;
+					op3 = -1;
+					if (gun_slot <= 5)
+					{
+						auto textureGun = ResourceManagers::GetInstance()->GetTexture(textureGunPath);
+						auto addWeapon = std::make_shared<BaseWeapon>(textureGun, 1, 1, 1, 1.00f, bulletPath, damage, speed_rate, range);
+						addWeapon->SetSize(40, 40);
+						m_vectorWeapon.push_back(addWeapon);
+						gun_slot++;
+					}
 				}
 				});
 
