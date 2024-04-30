@@ -16,7 +16,7 @@
 
 float RandomNumber()
 {
-	float temp1 = rand() % 2 + 1;
+	float temp1 = rand() % 2 + 1 ;
 	float temp2;
 	if (temp1 == 1)
 	{
@@ -130,13 +130,17 @@ void GSPlay::Init()
 	m_enemyKilledDisplay = std::make_shared<Text>("Data/RobotoMono-VariableFont_wght.ttf", color);
 	m_enemyKilledDisplay->Set2DPosition(grayBorder->Get2DPosition().x, grayBorder->Get2DPosition().y + grayBorder->GetHeight() + 10);
 	m_enemyKilledDisplay->SetSize(180, 30);
-	m_enemyKilledDisplay->LoadFromRenderText("Enemy Killed: " + std::to_string(enemyKilled));
+	m_enemyKilledDisplay->LoadFromRenderText("Enemy Killed: " + std::to_string(m_vectorEnemyS[m_level].size()));
 
 	m_KeyPress = 0;
 
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
 
-
+	//Timer
+	m_timer = std::make_shared<TextTimer>("Data/RobotoMono-VariableFont_wght.ttf", color);
+	m_timer->SetSize(40, 30);
+	m_timer->Set2DPosition(SCREEN_WIDTH/2 - m_timer->GetWidth() / 2, 30);
+	m_timer->SetTime(90);
 
 
 }
@@ -476,8 +480,8 @@ void GSPlay::Update(float deltaTime)
 
 	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
 
-	m_enemyKilledDisplay->LoadFromRenderText("Enemy Killed: " + std::to_string(enemyKilled));
-
+	m_enemyKilledDisplay->LoadFromRenderText("Enemy Remaining: " + std::to_string(m_vectorEnemyS[m_level].size()));
+	m_timer->Update(deltaTime);
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
 }
@@ -574,6 +578,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	redBox->Draw(renderer);
 	greenBox->Draw(renderer);
 	m_enemyKilledDisplay->Draw(renderer);
+	m_timer->Draw(renderer);
 
 
 	if (m_isUpdate)
