@@ -1,18 +1,22 @@
 brotato_presskit/update/heal.png
-30 0 0
+30 0 0 0
 brotato_presskit/update/run.png
-0 0 0.1
+0 0 0.1 0
 brotato_presskit/update/powerUp.png
-0 0.02 0
+0 0.02 0 0
 brotato_presskit/update/heal.png
-30 0 0
+30 0 0 0
 brotato_presskit/update/heal.png
-30 0 0
+30 0 0 0
 brotato_presskit/update/acid.png
-0 0.03 0
-brotato_presskit/update/powerUp.png
-0 0.02 0
-brotato_presskit/update/powerUp.png
-0 0.02 0
-brotato_presskit/update/powerUp.png
-0 0.02 0
+0 0.03 0 0
+brotato_presskit/update/bat.png
+0 0 0.07 0
+brotato_presskit/update/wing.png
+0 0 0.15 0
+brotato_presskit/update/fire.png
+0 0.15 0 0
+brotato_presskit/update/alien_tongue.png
+0 0.2 0 0.2
+brotato_presskit/update/blood_donation.png
+-50 0.4 0 0.4

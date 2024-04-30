@@ -1,22 +1,18 @@
 brotato_presskit/enemies/Enemy1Animation.png
-<<<<<<< HEAD
-5 10 10 200
-=======
-5 1 10 50
->>>>>>> 8760c8b6e357d9b01fd99ac751e3d2a06ba96c0a
+30 20 10 200
 brotato_presskit/enemies/2.png
-5 20 10 200
+35 40 10 220
 brotato_presskit/enemies/3.png
-5 1 10 50
+5 1 10 2000
 brotato_presskit/enemies/4.png
-5 1 10 50
+5 1 10 2000
 brotato_presskit/enemies/5.png
-5 1 10 50
+5 1 10 2000
 brotato_presskit/enemies/6.png
-5 1 10 50
+5 1 10 2000
 brotato_presskit/enemies/7.png
-5 1 10 50
+5 1 10 2000
 brotato_presskit/enemies/8.png
-5 1 10 50
+5 1 10 2000
 brotato_presskit/enemies/9.png
-5 1 10 50
+5 1 10 2000

@@ -373,7 +373,7 @@ void GSPlay::Update(float deltaTime)
 		for (auto it = m_vectorBullet.begin(); it!=m_vectorBullet.end(); )
 		{
 			(*it)->MoveToTarget(deltaTime);
-			if ((*it)->Get2DPosition().x > 2000 || (*it)->Get2DPosition().y > 1500) 
+			if ((*it)->Get2DPosition().x > 2000 || (*it)->Get2DPosition().y > 1500)
 			{
 				(*it).reset();
 				it = m_vectorBullet.erase(it);
@@ -608,14 +608,14 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 	{
 		auto texture = ResourceManagers::GetInstance()->GetTexture(texturePath);
 		std::istringstream iss(bonus); // Construct istringstream with 'bonus'
-		float hp = 0.f, damage = 0.f, speed = 0.f;
-		if (iss >> hp >> damage >> speed)
+		float hp = 0.f, damage = 0.f, speed = 0.f , range = 0.f;
+		if (iss >> hp >> damage >> speed >> range)
 		{
 			chooseButton = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 			chooseButton->SetSize(300, 300);
 			chooseButton->Set2DPosition(0, 0);
 			chooseButton->SetType(DYNAMIC);
-			chooseButton->SetOnClick([this, hp,damage,speed]() {
+			chooseButton->SetOnClick([this, hp,damage,speed,range]() {
 				m_isPlaying = !m_isPlaying;
 				m_isUpdate = false;
 				op1 = -1;
@@ -626,6 +626,7 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 				for (auto it : m_vectorWeapon)
 				{
 					it->setDamage(it->getDamage() + it->getDamage() * damage);
+					it->setRange(it->getRange() + it->getRange() * range);
 				}
 				//obj->
 				});
@@ -698,7 +699,7 @@ void GSPlay::createLevelFromFile(std::string& filename)
 				monster = std::make_shared<enemy>(textureEnemy, 1, 8, 1, 0.07f, hp/*enemy HP*/, damage/*enemy power*/, speed /*enemy speed*/);
 				monster->SetFlip(SDL_FLIP_NONE);
 				monster->SetSize(60, 60);
-				float temp1 = RandomNumber();
+				float temp1 = RandomNumber(); 
 				float temp2 = RandomNumber();
 				monster->Set2DPosition(temp1, temp2);
 				m_vectorEnemy.push_back(monster);

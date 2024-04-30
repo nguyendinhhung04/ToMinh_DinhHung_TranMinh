@@ -71,4 +71,5 @@ public:
 
 	void setFireSpeed(float sr) { this->m_fireSpeed = sr; }
 	void setRange(float range) { this->m_range = range; }
+	float getRange() { return m_range; }
 };
