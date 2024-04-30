@@ -152,10 +152,10 @@ void GSPlay::Init()
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
 
 	//Timer
-	m_timer = std::make_shared<TextTimer>("Data/RobotoMono-VariableFont_wght.ttf", color);
-	m_timer->SetSize(40, 30);
-	m_timer->Set2DPosition(SCREEN_WIDTH/2 - m_timer->GetWidth() / 2, 30);
-	m_timer->SetTime(90);
+	//m_timer = std::make_shared<TextTimer>("Data/RobotoMono-VariableFont_wght.ttf", color);
+	//m_timer->SetSize(40, 30);
+	//m_timer->Set2DPosition(SCREEN_WIDTH/2 - m_timer->GetWidth() / 2, 30);
+	//m_timer->SetTime(90);
 
 
 }
@@ -455,17 +455,17 @@ void GSPlay::Update(float deltaTime)
 
 		}
 
-		if (m_timer->GetTime() <= 0)
+		/*if (m_timer->GetTime() <= 0)
 		{
 			while (m_vectorEnemyS[m_level].size() > 0)
 			{
 				m_vectorEnemyS[m_level].pop_back();
 			}
-		}
+		}*/
 		
 		if (m_vectorEnemyS[m_level].size() == 0)
 		{
-			m_timer->SetTime(m_timer->GetTime() + 15);
+			/*m_timer->SetTime(m_timer->GetTime() + 15);*/
 			m_isPlaying = false;
 			m_isUpdate = true;
 			if (op1 == -1 && op2 == -1 && op3 == -1)
@@ -505,10 +505,10 @@ void GSPlay::Update(float deltaTime)
 	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
 
 	m_enemyKilledDisplay->LoadFromRenderText("Enemy Remaining: " + std::to_string(m_vectorEnemyS[m_level].size()));
-	if (m_isPlaying == true)
-	{
-		m_timer->Update(deltaTime);
-	}
+	//if (m_isPlaying == true)
+	//{
+	//	m_timer->Update(deltaTime);
+	//}
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
 }
@@ -605,7 +605,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	redBox->Draw(renderer);
 	greenBox->Draw(renderer);
 	m_enemyKilledDisplay->Draw(renderer);
-	m_timer->Draw(renderer);
+	//m_timer->Draw(renderer);
 
 
 	if (m_isUpdate)
