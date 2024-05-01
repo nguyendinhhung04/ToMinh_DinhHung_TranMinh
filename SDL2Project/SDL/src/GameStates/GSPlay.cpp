@@ -21,23 +21,23 @@ Vector2 RandomVector2()
 	Vector2 temp2;
 	if (temp1 == 1)
 	{
-		temp2.x = (rand() % 50)*60 - 300;
-		temp2.y = (rand() % 5)*60 - 300;
+		temp2.x = rand() % 2050 - 25;
+		temp2.y = rand() % 50 - 50;
 	}
 	else if (temp1 == 2)
 	{
-		temp2.x = (rand() % 5)*60 + 2200;
-		temp2.y = (rand() % 30)*60 - 300;
+		temp2.x = rand()%50 + 2000;
+		temp2.y = rand() % 1164 -25;
 	}
 	else if (temp1 == 3)
 	{
-		temp2.x = (rand() % 50)*60 - 300;
-		temp2.y = (rand() % 5) *60 + 1200;
+		temp2.x = rand() % 2050 - 25;
+		temp2.y = rand() % 50 + 1164;
 	}
 	else if (temp1 == 4)
 	{
-		temp2.x = (rand() % 5) *60 -300;
-		temp2.y = (rand() % 30) *60 - 300;
+		temp2.x = rand() % 50 - 50;
+		temp2.y = rand() % 1164 - 25;
 	}
 	return temp2;
 
@@ -142,10 +142,7 @@ void GSPlay::Init()
 
 	//enemy Killed Display
 	SDL_Color color = { 255,255,255 };
-	m_enemyKilledDisplay = std::make_shared<Text>("Data/RobotoMono-VariableFont_wght.ttf", color);
-	m_enemyKilledDisplay->Set2DPosition(grayBorder->Get2DPosition().x, grayBorder->Get2DPosition().y + grayBorder->GetHeight() + 10);
-	m_enemyKilledDisplay->SetSize(180, 30);
-	m_enemyKilledDisplay->LoadFromRenderText("Enemy Killed: " + std::to_string(m_vectorEnemyS[m_level].size()));
+	
 
 	m_KeyPress = 0;
 
@@ -507,7 +504,7 @@ void GSPlay::Update(float deltaTime)
 
 	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
 
-	m_enemyKilledDisplay->LoadFromRenderText("Enemy Remaining: " + std::to_string(m_vectorEnemyS[m_level].size()));
+	//m_enemyKilledDisplay->LoadFromRenderText("Enemy Remaining: " + std::to_string(m_vectorEnemyS[m_level].size()));
 	if (m_isPlaying == true)
 	{
 		m_timer->Update(deltaTime);
@@ -607,7 +604,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	grayBorder->Draw(renderer);
 	redBox->Draw(renderer);
 	greenBox->Draw(renderer);
-	m_enemyKilledDisplay->Draw(renderer);
+	//m_enemyKilledDisplay->Draw(renderer);
 	m_timer->Draw(renderer);
 
 
@@ -631,7 +628,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		grayBorder->Draw(renderer);
 		redBox->Draw(renderer);
 		greenBox->Draw(renderer);
-		m_enemyKilledDisplay->Draw(renderer);
+		//m_enemyKilledDisplay->Draw(renderer);
 
 	}
 }
@@ -667,6 +664,11 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 					op2 = -1;
 					op3 = -1;
 					obj->setHP(obj->getHP() + hp);
+					if (obj->getHP() > 100)
+					{
+						obj->setHP(100);
+					}
+
 					obj->m_MoveSpeed += speed;
 					for (auto it : m_vectorWeapon)
 					{
