@@ -1,11 +1,11 @@
 brotato_presskit/updateGun/shotgunn.png
 brotato_presskit/weapons/double_barrel_shotgun.png 
 Bullet/Laser_Sprites/03.png 
-20 3 500 
+20 1.5 500 
 brotato_presskit/updateGun/shotgunn.png
 brotato_presskit/weapons/double_barrel_shotgun.png
 Bullet/Laser_Sprites/04.png
-20 6 500
+5 6 500
 brotato_presskit/updateGun/GhostScepter.png
 brotato_presskit/weapons/ghost_scepter.png
 Bullet/Laser_Sprites/05.png

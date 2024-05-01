@@ -81,6 +81,8 @@ void GSPlay::Init()
 	std::string fileName3 = "Data/level.txt";
 	createChooseGunButtonFromFile(fileName2, m_listUpdateButton);
 	createChooseButtonFromFile(fileName, m_listUpdateButton);
+	m_vectorEnemy.resize(0);
+	m_vectorEnemyS.resize(0);
 	createLevelFromFile(fileName3);
 	// button close
 	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Pause Square Button.png");
@@ -152,11 +154,11 @@ void GSPlay::Init()
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
 
 	//Timer
-	m_timer = std::make_shared<TextTimer>("Data/RobotoMono-VariableFont_wght.ttf", color);
+	/*m_timer = std::make_shared<TextTimer>("Data/RobotoMono-VariableFont_wght.ttf", color);
 	m_timer->SetSize(40, 30);
 	m_timer->Set2DPosition(SCREEN_WIDTH/2 - m_timer->GetWidth() / 2, 30);
 	m_timer->SetTime(90);
-
+	*/
 
 }
 
@@ -362,6 +364,7 @@ void GSPlay::Update(float deltaTime)
 						std::shared_ptr<enemy> temp_monster = *temp;
 						*temp = *(temp + 1);
 						*(temp + 1) = temp_monster;
+						temp_monster.reset();
 					}
 				}
 			}
@@ -375,9 +378,9 @@ void GSPlay::Update(float deltaTime)
 			if (i == 0) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x - 10, obj->Get2DPosition().y - 25);
 			else if (i == 1) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x + obj->GetWidth() - 5, obj->Get2DPosition().y - 25);
 			else if (i == 2) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x - 10, obj->Get2DPosition().y + obj->GetHeight() / 2);
-			else if (i == 4) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x - 10 + obj->GetWidth(), obj->Get2DPosition().y + obj->GetHeight()/ 2 - 25);
-			else if (i == 5) i = 5; // sua cho nay
-			else if (i == 6) i = 6; // sua cho nay
+			else if (i == 3) m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x - 10 + obj->GetWidth(), obj->Get2DPosition().y + obj->GetHeight()/ 2 - 25);
+			else if (i == 4) i = 5; // sua cho nay
+			else if (i == 5) i = 6; // sua cho nay
 			//m_vectorWeapon[i]->Set2DPosition(obj->Get2DPosition().x + 35 * i, obj->Get2DPosition().y - 25);
 			if (m_vectorWeapon[i]->CheckEnemyInRange(m_vectorEnemyS[m_level], obj->Get2DPosition()))
 			{
@@ -385,7 +388,6 @@ void GSPlay::Update(float deltaTime)
 				if(bullet)
 				{
 					m_vectorBullet.push_back(bullet);
-					
 				}
 			}
 			m_vectorWeapon[i]->Update(deltaTime);
@@ -407,7 +409,10 @@ void GSPlay::Update(float deltaTime)
 			}
 		}
 		
-		for (auto it = m_vectorEnemyS[m_level].begin(); it != m_vectorEnemyS[m_level].end()&& m_vectorEnemyS[m_level].size()>0; )
+
+		//
+		
+		for (auto it = m_vectorEnemyS[m_level].begin(); it != m_vectorEnemyS[m_level].end() && m_vectorEnemyS[m_level].size()>0;)
 		{
 			(*it)->MoveToCharacterX(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
 			(*it)->MoveToCharacterY(deltaTime, (*it)->getSpeed(), obj->Get2DPosition(), m_vectorEnemyS[m_level]);
@@ -416,7 +421,7 @@ void GSPlay::Update(float deltaTime)
 			{
 				obj->minusHP((*it)->getPower(), deltaTime);
 			}
-			for (auto it2 = m_vectorBullet.begin(); it2 != m_vectorBullet.end() && m_vectorBullet.size()>0 ; )
+			for (auto it2 = m_vectorBullet.begin(); it2 != m_vectorBullet.end() && m_vectorBullet.size()>0 ;)
 			{
 				if ((*it2)->CheckCollision((*it)->Get2DPosition(), (*it)->GetWidth(), (*it)->GetHeight()) == true)
 		 		{
@@ -450,22 +455,22 @@ void GSPlay::Update(float deltaTime)
 			{
 				(*it)->Update(deltaTime);
 				++it;
-				
 			}
+			
 
 		}
 
-		if (m_timer->GetTime() <= 0)
+		/*if (m_timer->GetTime() <= 0)
 		{
 			while (m_vectorEnemyS[m_level].size() > 0)
 			{
 				m_vectorEnemyS[m_level].pop_back();
 			}
-		}
+		}*/
 		
 		if (m_vectorEnemyS[m_level].size() == 0)
 		{
-			m_timer->SetTime(m_timer->GetTime() + 15);
+			//m_timer->SetTime(m_timer->GetTime() + 15);
 			m_isPlaying = false;
 			m_isUpdate = true;
 			if (op1 == -1 && op2 == -1 && op3 == -1)
@@ -484,7 +489,7 @@ void GSPlay::Update(float deltaTime)
 		}
 	}
 
-	if (m_vectorBoom.size() > 0)
+	/*if (m_vectorBoom.size() > 0)
 	{
 		for (auto it = m_vectorBoom.begin(); it != m_vectorBoom.end();)
 		{
@@ -500,15 +505,15 @@ void GSPlay::Update(float deltaTime)
 				++it;
 			}
 		}
-	}
+	}*/
 
-	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
+	//greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
 
 	m_enemyKilledDisplay->LoadFromRenderText("Enemy Remaining: " + std::to_string(m_vectorEnemyS[m_level].size()));
-	if (m_isPlaying == true)
+	/*if (m_isPlaying == true)
 	{
 		m_timer->Update(deltaTime);
-	}
+	}*/
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
 }
@@ -605,7 +610,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	redBox->Draw(renderer);
 	greenBox->Draw(renderer);
 	m_enemyKilledDisplay->Draw(renderer);
-	m_timer->Draw(renderer);
+	//m_timer->Draw(renderer);
 
 
 	if (m_isUpdate)
@@ -739,7 +744,7 @@ void GSPlay::createLevelFromFile(std::string& filename)
 		if (iss >> number >> hp >> damage >> speed)
 		{
 			std::srand(static_cast<unsigned int>(std::time(nullptr)));
-			for (int i = 0; i <= number; i++)
+			for (int i = 0; i < number; i++)
 			{
 				monster = std::make_shared<enemy>(textureEnemy, 1, 8, 1, 0.07f, hp/*enemy HP*/, damage/*enemy power*/, speed /*enemy speed*/);
 				monster->SetFlip(SDL_FLIP_NONE);
@@ -747,6 +752,7 @@ void GSPlay::createLevelFromFile(std::string& filename)
 				Vector2 temp = RandomVector2();
 				monster->Set2DPosition(temp.x,temp.y);
 				m_vectorEnemy.push_back(monster);
+				monster.reset();
 			}
 			m_vectorEnemyS.push_back(m_vectorEnemy);
 			m_vectorEnemy.clear();
