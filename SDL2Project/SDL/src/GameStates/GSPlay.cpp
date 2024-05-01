@@ -427,9 +427,10 @@ void GSPlay::Update(float deltaTime)
 					boom->SetFlip(SDL_FLIP_NONE);     
 					boom->SetSize(70, 70);
 					boom->Set2DPosition((*it2)->Get2DPosition().x + (*it2)->GetWidth() / 2- boom->GetWidth()/2, (*it2)->Get2DPosition().y + (*it2)->GetHeight() / 2 - boom->GetHeight()/2);
-					std::pair< std::shared_ptr<SpriteAnimation>, float >  temp;
+					std::pair< std::shared_ptr<SpriteAnimation>, float* >  temp;
 					temp.first = boom;
-					temp.second = 0.00f;
+					temp.second = new float;
+					*(temp.second) = 0.00f;
 					m_vectorBoom.push_back(temp);
 					(*it2).reset();
 					it2 = m_vectorBullet.erase(it2);
@@ -489,10 +490,12 @@ void GSPlay::Update(float deltaTime)
 		for (auto it = m_vectorBoom.begin(); it != m_vectorBoom.end();)
 		{
 			(*it).first->Update(deltaTime);
-			(*it).second += deltaTime;
-			if ((*it).second > 0.21f)
+			*((*it).second) += deltaTime;
+			if (*((*it).second) > 0.21f)
 			{
-				(*it) = std::make_pair(nullptr, 0);   //giai phong bo nho cho pair
+				//(*it) = std::make_pair(nullptr, nullptr);   //giai phong bo nho cho pair
+				(*it).first.reset();
+				delete (*it).second;
 				it = m_vectorBoom.erase(it);
 			}
 			else
