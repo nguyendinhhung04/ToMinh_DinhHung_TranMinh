@@ -1,145 +1,1129 @@
 ﻿cl : command line  warning D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
   BaseWeapon.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(72,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(72,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(167,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(222,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(72,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(72,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(167,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(222,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Bullet.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(71,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(71,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(204,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(206,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(208,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(210,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(203,7): warning C4101: 'check': unreferenced local variable
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(238,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(246,6): warning C4805: '==': unsafe mix of type 'float' and type 'bool' in operation
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(71,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(71,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(204,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(206,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(208,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(210,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(203,7): warning C4101: 'check': unreferenced local variable
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(238,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(246,6): warning C4805: '==': unsafe mix of type 'float' and type 'bool' in operation
   enemy.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(25,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(43,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(43,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(229,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(268,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(25,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(43,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(43,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(229,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(268,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   enemyBoomer.cpp
   TextTimer.cpp
   GSCredit.cpp
   GSLose.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(32,110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(32,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(44,119): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(44,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(57,116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(57,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(32,110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(32,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(44,119): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(44,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(57,116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(57,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   GSOption.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(24,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(24,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(31,123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(31,74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(50,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(24,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(24,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(31,123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(31,74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(50,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Game.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C7525: inline variables require at least '/std:c++17'
-  (compiling source file 'src/Game.cpp')
-  
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C2864: 'KeyState::keystate': a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'
-  (compiling source file 'src/Game.cpp')
-  E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,40):
-  type is 'const Uint8 *'
-  
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\Game.cpp(68,27): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\Game.cpp(68,27): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
   ResourceManagers.cpp
   Camera.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(2,1): warning C4005: 'WIDTH_OFFSET': macro redefinition
-  E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.h(8,1):
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(2,1): warning C4005: 'WIDTH_OFFSET': macro redefinition
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.h(8,1):
   see previous definition of 'WIDTH_OFFSET'
   
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(7,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(8,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(29,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(30,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(41,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(42,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(46,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(50,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(73,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(73,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(7,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(8,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(29,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(30,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(41,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(42,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(46,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(50,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(73,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(73,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   CMath.cpp
   MouseButton.cpp
   Renderer.cpp
   Sound.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sound.cpp(100,21): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sound.cpp(100,21): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
   Sprite2D.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(39,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(39,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(43,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(43,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(39,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(39,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(43,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(43,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   SpriteAnimation.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(44,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(44,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(275,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(277,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(279,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(281,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(44,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(44,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(275,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(277,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(279,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(281,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Text.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Text.cpp(34,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Text.cpp(34,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Text.cpp(34,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Text.cpp(34,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   TextureManager.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,70): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,70): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(104,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(105,18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,32): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,58): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,58): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,77): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,77): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,87): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,87): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,69): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,69): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,70): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,70): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(104,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(105,18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,32): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,58): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,58): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,77): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,77): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,87): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,87): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,69): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,69): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Timer.cpp
   Compiling...
   GameStateBase.cpp
   GameStateMachine.cpp
   GSIntro.cpp
   GSMenu.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(33,110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(33,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(46,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(57,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(68,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(81,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(33,110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(33,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(46,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(57,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(68,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(81,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   GSPlay.cpp
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C7525: inline variables require at least '/std:c++17'
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(19,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(24,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(25,20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(29,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(30,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(34,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(35,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(39,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(40,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(79,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(80,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(80,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(136,77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(136,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(152,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(167,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(182,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(200,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(567,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(338,2): warning C4065: switch statement contains 'default' but no 'case' labels
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244: '=': conversion from '_Ty' to '_Ty2', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:             _Ty2=float
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39): warning C4244:         ]
   (compiling source file 'src/GameStates/GSPlay.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility(400,39):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(557,11):
+  	see reference to function template instantiation 'std::pair<std::shared_ptr<SpriteAnimation>,float> &std::pair<std::shared_ptr<SpriteAnimation>,float>::operator =<nullptr,int,0>(std::pair<nullptr,int> &&) noexcept' being compiled
+  		C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(557,11):
+  		see the first reference to 'std::pair<std::shared_ptr<SpriteAnimation>,float>::operator =' in 'GSPlay::Update'
   
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C2864: 'KeyState::keystate': a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'
-  (compiling source file 'src/GameStates/GSPlay.cpp')
-  E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,40):
-  type is 'const Uint8 *'
-  
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(19,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(24,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(25,20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(29,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(30,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(34,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(35,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(39,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(40,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(79,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(80,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(80,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(136,77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(136,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(152,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(167,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(182,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(200,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(567,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(338,2): warning C4065: switch statement contains 'default' but no 'case' labels
   main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 2144 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  SDL.vcxproj -> C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\x64\Release\SDL.exe
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDLLib\DynamicLib\SDL2.dll
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDLLib\DynamicLib\SDL2_image.dll
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDLLib\DynamicLib\SDL2_mixer.dll
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDLLib\DynamicLib\SDL2_ttf.dll
+  4 File(s) copied
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Asap-Bold.ttf
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\BMYEONSUNG_ttf.ttf
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Chewy-Regular.ttf
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\lazy.ttf
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\level.txt
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\RobotoMono-VariableFont_wght.ttf
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\update.txt
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\updateGun.txt
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Presentation\Presentation.pptx
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Character Selecting.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Double Shotgun Sound.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Footstep SFX.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Hitting With Stick Sound.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Laser_Bullet_Sound.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Level Up Sound.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Main Menu Music.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Mainmenu.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\OST - After Midnight.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\OST - Extreme Chaos.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\OST - Power Punch By 2050.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\OST - Time Jumper.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Pistol Shooting Sound.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Pistol With SMG SFX.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Pistol, Stun Gun, Spear Together SFX.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Play-1.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Play.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Retro FootStep 03.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Retro PowerUP 09.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Retro Weapon Gun LoFi 03.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Run Lost (2) SFX.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Run Lost.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Selecting SFX.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\SMG Shooting Sound.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Stun Gun SFX.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Triple Pistol SFX.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Sounds\Wave Completed.mp3
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\SoundsInGame\Retro FootStep 03.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\SoundsInGame\Retro PowerUP 09.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\SoundsInGame\Retro Weapon Gun LoFi 03.wav
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\1.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\2.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\3.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\4.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\5.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Actor1_2.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\adventurer-Sheet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\background.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\bg_main_menu.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\bg_play1.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\bg_play2.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Border (1).png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Border.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Brotato.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_close.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_help.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_menu.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_music.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_music_off.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_next.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_ok.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_pause.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_play.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_prev.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_restart.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_settings.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_sfx.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\btn_sfx_off.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\BulletHitEnemy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Credit_background.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\enemy1.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Game_over.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Ground.jpeg
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\GUI.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\GUI_1.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\logo.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\logo1.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\newlogo.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\peter.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\PlayerAnimation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\PlayerCharacter.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\PlayerCharacter2.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\volume_bar.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\volume_knob.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\adventurer-Sheet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack1-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack1-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack1-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack1-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack1-04.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack2-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack2-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack2-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack2-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack2-04.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack2-05.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack3-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack3-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack3-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack3-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack3-04.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-attack3-05.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-clmb-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-clmb-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-clmb-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-clmb-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-clmb-04.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-grb-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-grb-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-grb-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-grb-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-jmp-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-jmp-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crnr-jmp-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crouch-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crouch-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crouch-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-crouch-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-die-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-die-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-die-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-die-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-die-04.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-die-05.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-die-06.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-fall-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-fall-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-hurt-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-hurt-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-hurt-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-2-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-2-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-2-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-idle-2-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-jump-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-jump-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-jump-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-jump-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-run-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-run-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-run-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-run-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-run-04.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-run-05.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-slide-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-slide-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-smrslt-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-smrslt-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-smrslt-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-smrslt-03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-stand-00.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-stand-01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Adventurer\Individual Sprites\adventurer-stand-02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\1.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\2.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\3.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\4.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\5.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\key_art_1.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\key_art_2.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\logo.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\splash_art.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\splash_art_brotato.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\splash_art_no_logo.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\thumbnail.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\thumbnail_no_logo.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\apprentice.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\arms_dealer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\artificer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\base.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\base_no_legs.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\brawler.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\bull.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\chunky.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\crazy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\cryptid.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\cyborg.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\demon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\doctor.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\engineer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\entrepreneur.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\explorer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\farmer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\fisherman.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\generalist.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\ghost.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\gladiator.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\gladiator_with_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\glutton.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\golem.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\hunter.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\jack.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\king.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\knight.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\knight_with_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\lich.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\loud.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\lucky.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\mage.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\masochist.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\multitasker.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\mutant.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\old.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\one_handed.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\pacifist.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\PlayerCharacter.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\ranger.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\renegade.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\saver.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\sick.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\soldier.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\speedy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\streamer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\well_rounded.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\characters\wildling.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\apprentice_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\apprentice_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\apprentice_robe.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\arms_dealer_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\arms_dealer_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\artificer_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\artificer_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\brawler_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\brawler_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\bull_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\bull_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\chunky_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\chunky_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\crazy_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\crazy_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\cryptid_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\cryptid_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\cyborg_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\cyborg_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\cyborg_skin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\demon_ear_1.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\demon_ear_2.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\demon_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\demon_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\demon_tail.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\doctor_glasses.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\doctor_mask.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\engineer_mask.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\entrepreneur_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\entrepreneur_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\entrepreneur_vest.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\explorer_beard.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\explorer_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\explorer_hair.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\farmer_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\farmer_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\farmer_nose.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\fisherman_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\fisherman_hat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\fisherman_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\generalist_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\generalist_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\ghost_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\ghost_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\gladiator_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\gladiator_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\gladiator_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\glutton_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\glutton_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\golem_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\golem_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\golem_skin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\hunter_bandana.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\hunter_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\hunter_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\jack_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\jack_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\jack_nose.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\king_crown.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\king_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\king_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\knight_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\knight_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\knight_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\lich_diadem.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\lich_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\lich_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\loud_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\loud_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\lucky_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\lucky_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\mage_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\mage_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\masochist_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\masochist_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\multitasker_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\multitasker_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\mutant_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\mutant_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\old_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\old_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\one_armed_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\one_armed_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\pacifist_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\pacifist_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\ranger_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\ranger_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\renegade_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\renegade_hair.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\renegade_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\saver_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\saver_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\sick_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\sick_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\soldier_glasses.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\soldier_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\speedy_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\speedy_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\streamer_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\streamer_gamepad.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\well_rounded_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\well_rounded_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\wildling_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\character_appearances\wildling_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\1.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\10.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\11.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\12.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\13.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\14.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\15.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\16.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\17.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\18.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\19.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\2.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\20.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\21.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\22.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\23.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\24.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\25.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\26.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\27.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\28.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\3.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\32.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\33.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\34.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\4.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\5.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\6.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\7.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\8.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\9.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\e1.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\e2.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\e3.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\e4.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\e5-3.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\e6-2.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\Enemy1Animation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\Enemy2Animation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\Enemy3Animation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\enemies\Enemy4Animation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\acid.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\adrenaline.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\alien_baby.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\alien_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\alien_magic.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\alien_tongue.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\alloy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\anvil.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\baby_elephant.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\baby_gecko.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\baby_with_a_beard.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\bag.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\bait.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\bandana.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\banner.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\barricade.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\bat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\beanie.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\bean_teacher.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\big_arms.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\black_belt.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\blindfold.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\bloody_hand.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\blood_donation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\blood_leech.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\boiling_water.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\book.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\bowler_hat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\boxing_glove.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\broken_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\butterfly.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\cake.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\campfire.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\candle.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\cape.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\chameleon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\charcoal.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\claw_tree.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\clover.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\coffee.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\cog.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\community_support.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\compass.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\coupon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\crown.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\cute_monkey.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\cyberball.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\cyclops_worm.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\dangerous_bunny.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\defective_steroids.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\diploma.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\duct_tape.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\dynamite.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\energy_bracelet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\estys_couch.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\exoskeleton.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\explosive_shells.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\extra_stomach.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\eye_surgery.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\fairy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\fertilizer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\fin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\flame_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\focus.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\fuel_tank.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\gambling_token.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\garden.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\gentle_alien.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\giant_belt.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\glasses.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\glass_cannon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\gnome.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\goat_skull.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\grinds_magical_leaf.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\gummy_berserker.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\handcuffs.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\head_injury.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\healing_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\heavy_bullets.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\hedgehog.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\hunting_trophy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\improved_tools.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\injection.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\insanity.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\jetpack.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\landmines.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\laser_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\leather_vest.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\lemonade.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\lens.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\little_frog.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\little_muscley_dude.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\living_booger.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\lost_duck.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\lucky_charm.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\lucky_coin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\lumberjack_shirt.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\lure.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\mammoth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\mastery.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\medal.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\medikit.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\metal_detector.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\metal_plate.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\missile.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\mouse.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\mushroom.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\mutation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\night_goggles.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\octopus.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\padding.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\panda.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\peaceful_bee.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\peacock.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\pencil.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\piggy_bank.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\plant.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\plastic_explosive.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\pocket_factory.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\poisonous_tonic.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\potato.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\potion.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\power_generator.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\propeller_hat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\pumpkin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\recycling_machine.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\retromations_hoodie.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\ricochet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\riposte.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\rip_and_tear.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\ritual.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\robot_arm.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\rocket_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\sad_tomato.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\scar.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\scared_sausage.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\schackles.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\scope.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\serpent.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\shady_potion.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\sharp_bullet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\shmoop.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\sifds_relic.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\silver_bullet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\small_magazine.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\snail.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\spicy_sauce.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\spider.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\statue.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\stone_skin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\strange_book.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\sunglasses.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\tardigrade.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\tentacle.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\terrified_onion.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\toolbox.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\torture.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\toxic_sludge.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\tractor.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\tree.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\triangle_of_power.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\tyler.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\ugly_tooth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\vigilante_ring.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\wandering_bot.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\warrior_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\weird_food.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\weird_ghost.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\wheat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\wheelbarrow.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\whetstone.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\white_flag.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\wings.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\wisdom.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items\wolf_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\acid.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\adrenaline.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\alien_baby.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\alien_eyes.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\alien_magic.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\alien_tongue.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\alloy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\anvil.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\baby_elephant.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\baby_gecko.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\baby_with_a_beard.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bag.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bait_0.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bait_1.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bandana.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\banner.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\barricade.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\beanie.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bean_teacher.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\big_arms.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\black_belt.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\blindfold.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bloody_hand.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\blood_donation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\blood_leech.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\boiling_water.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\book.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\bowler_hat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\boxing_glove.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\broken_mouth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\butterfly.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\cake.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\campfire.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\candle.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\cape.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\chameleon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\charcoal.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\claw_tree.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\clover.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\coffee.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\cog.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\community_support.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\compass.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\coupon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\crown.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\cute_monkey_a.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\cute_monkey_b.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\cyberball.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\cyclops_worm.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\dangerous_bunny.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\defective_steroids.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\diploma.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\duct_tape.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\dynamite.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\energy_bracelet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\estys_couch.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\exoskeleton_a.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\exoskeleton_b.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\extra_stomach.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\eyes_surgery.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\fairy.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\fertilizer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\fin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\focus.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\fuel_tank.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\gambling_token.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\gentle_alien.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\giant_belt.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\glasses.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\glass_cannon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\gnome.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\goat_skull_a.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\goat_skull_b.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\grinds_magical_leaf.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\gummy_berserker.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\handcuffs.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\head_injury.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\hedgehog.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\hunting_trophy_a.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\hunting_trophy_b.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\improved_tools.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\injection.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\insanity.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\jetpack.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\leather_vest.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\lemonade.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\lens.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\little_frog.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\little_muscley_dude.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\living_booger.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\lost_duck.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\lucky_charm.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\lumberjack_shirt.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\mammoth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\mastery.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\medal.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\medikit.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\metal_detector.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\metal_plate.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\missile.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\mouse.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\mushroom.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\mutation.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\night_goggles.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\octopus.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\padding.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\panda.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\peaceful_bee.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\peacock.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\pencil.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\piggy_bank.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\plant.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\plastic_explosive.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\pocket_factory.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\poisonous_tonic.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\potato.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\potion.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\power_generator.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\propeller_hat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\pumpkin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\recycling_machine.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\retromations_hoodie.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\rip_and_tear.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\ritual.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\robot_arm.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\sad_tomato.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\scar.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\scared_sausage.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\scope.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\shackles.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\shady_potion.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\shmoop.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\sifds_relic.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\snail.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\snake.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\spicy_sauce.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\spider.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\statue.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\stone_skin.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\strange_book.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\sunglasses.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\tardigrade.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\tentacle.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\terrified_onion.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\toolbox.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\torture_a.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\torture_b.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\toxic_sludge.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\tractor.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\tree.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\triangle_of_power.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\ugly_tooth.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\vigilante_ring.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\warrior_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\weird_food.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\weird_ghost.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\wheelbarrow.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\white_flag.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\wings.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\wisdom.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\items_on_character\wolf_helmet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\neutrals_and_structures\flame_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\neutrals_and_structures\healing_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\neutrals_and_structures\landmine.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\neutrals_and_structures\laser_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\neutrals_and_structures\rocket_turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\neutrals_and_structures\turret.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\neutrals_and_structures\tyler.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Acid.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Alien Tongue.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Bat.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Blood Bag.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Campfire.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Medkit.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Poison.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Robot Arm.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\update\Wings.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\updateGun\Flamegun.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\updateGun\Ghostscepter.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\updateGun\Magic Sword.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\updateGun\Medical gun.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\updateGun\Shotgun.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\cacti_club.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\cacti_club_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\chain_gun.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\chain_gun_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\chopper.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\chopper_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\circular_saw.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\circular_saw_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\claw.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\claw_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\crossbow.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\crossbow_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\dagger.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\dagger_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\double_barrel_shotgun.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\double_barrel_shotgun_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\drill.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\drill_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\excalibur.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\excalibur_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\fighting_stick.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\fighting_stick_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\fist.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\fist_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\flamethrower.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\flamethrower_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\flaming_knuckles_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\ghost_axe.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\ghost_axe_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\ghost_flint.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\ghost_flint_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\ghost_scepter.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\ghost_scepter_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\hammer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\hammer_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\hand.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\hand_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\hatchet.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\hatchet_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\jousting_lance.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\jousting_lance_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\knife.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\knife_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\knuckles.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\knuckles_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\laser_gatling.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\laser_gatling_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\laser_pistol.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\laser_pistol_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\lightning_shiv.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\lightning_shiv_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\medical_gun.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\medical_gun_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\minigun.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\minigun_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\nuclear_launcher.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\nuclear_launcher_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\obliterator.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\obliterator_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\pistol.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\pistol_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\plank.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\plank_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\plasma_sledgehammer.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\plasma_sledgehammer_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\potato_thrower.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\potato_thrower_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\power_fist.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\power_fist_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\pruner.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\pruner_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\revolver.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\revolver_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\rock.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\rocket_launcher.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\rocket_launcher_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\rock_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\scissors.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\scissors_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\screwdriver.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\screwdriver_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\scythe.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\scythe_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\shredder.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\shredder_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\shuriken.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\shuriken_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\slingshot.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\slingshot_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\smg.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\smg_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\sniper.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\sniper_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\spear.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\spear_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\spiky_shield.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\spiky_shield_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\stick.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\stick_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\sword.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\sword_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\taser.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\taser_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\thunder_sword.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\thunder_sword_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\torch.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\torch_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\wand.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\wand_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\wrench.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\brotato_presskit\weapons\wrench_icon.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\01_Pixel_FX_Texture.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\01.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\02.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\03.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\04.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\05.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\06.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\07.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\08.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\09.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\10.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\11.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\12.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\13.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\14.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\15.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\16.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\17.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\18.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\19.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\20.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\21.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\22.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\23.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\24.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\25.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\26.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\27.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\28.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\29.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\30.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\31.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\32.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\33.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\34.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\35.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\36.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\37.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\38.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\39.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\40.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\41.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\42.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\43.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\44.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\45.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\46.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\47.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\48.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\49.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\50.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\51.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\52.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\53.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\54.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\55.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\56.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\57.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\58.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\59.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\60.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\61.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\62.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\63.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\64.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\65.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Bullet\Laser_Sprites\66.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Back  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Continue  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Controls  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Exit  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Load  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Menu  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\New Game  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Options  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Play col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Quit  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Resume  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Settings  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Colored Large Buttons\Start  col_Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Back Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Continue Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Controls Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Exit Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Load Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Menu Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\New game Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Options Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Play Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Quit Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Resume Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Settings Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Large Buttons\Large Buttons\Start Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Audio col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Back col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Down col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Home col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Info col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Music col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Next col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\On Off col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Pause col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Play col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Questionmark col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Return col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Settings col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\Up col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\V col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Colored Square Buttons\X col_Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Audio Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Back Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Down Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Home Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Info Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Music Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Next Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\On Off Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Pause Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Play Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Questionmark Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Return Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Settings Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\Up Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\V Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Buttons\Square Buttons\Square Buttons\X Square Button.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\Background_GSPlay.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\caveObjects_.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\caveStructures_-_bridgeAnimations_.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\caveStructures_-_fountainPortalBridge_.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\caveStructures_-_wall_.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\cave_-_cliff_.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\cave_.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Cave\railway_.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Menu\GrayBorder.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Menu\GreenBox.png
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Menu\Menu2.tga
+  C:\Users\dinhh\OneDrive\Desktop\Project File\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\Data\Textures\Menu\RedBox.png
+  972 File(s) copied

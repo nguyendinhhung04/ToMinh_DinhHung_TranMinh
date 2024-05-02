@@ -87,9 +87,6 @@
     <ClCompile Include="src\GameObject\enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameStates\GSPause.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\GameObject\Bullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -97,6 +94,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\GameObject\enemyBoomer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject\TextTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameStates\GSLose.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -173,9 +176,6 @@
     <ClInclude Include="src\GameObject\enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\GameStates\GSPause.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\GameObject\BaseWeapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -183,6 +183,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\GameObject\enemyBoomer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject\TextTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameStates\GSLose.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
