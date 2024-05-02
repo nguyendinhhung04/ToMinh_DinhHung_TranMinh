@@ -4,10 +4,6 @@ brotato_presskit/update/Poison.png
 0 0 0.1 0
 brotato_presskit/update/Robot Arm.png
 0 0.02 0 0
-brotato_presskit/update/Medkit.png
-30 0 0 0
-brotato_presskit/update/Medkit.png
-30 0 0 0
 brotato_presskit/update/Acid.png
 0 0.03 0 0
 brotato_presskit/update/Bat.png

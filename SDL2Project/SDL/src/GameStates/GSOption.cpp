@@ -15,19 +15,21 @@ void GSOption::Init() {
     m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
     m_background->SetSize(SCREEN_WIDTH, SCREEN_HEIDHT);
     m_background->Set2DPosition(0, 0);
+    m_background->SetType(DYNAMIC);
 
     // Load volume bar texture
     texture = ResourceManagers::GetInstance()->GetTexture("volume_bar.png");
     m_volumeBar = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
     m_volumeBar->SetSize(400, 50);
     m_volumeBar->Set2DPosition((SCREEN_WIDTH - m_volumeBar->GetWidth()) / 2, (SCREEN_HEIDHT - m_volumeBar->GetHeight()) / 2);
+    m_volumeBar->SetType(DYNAMIC);
 
     // Load volume knob texture
     texture = ResourceManagers::GetInstance()->GetTexture("volume_knob.png");
     m_volumeKnob = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
     m_volumeKnob->SetSize(30, 30);
     m_volumeKnob->Set2DPosition((SCREEN_WIDTH - m_volumeBar->GetWidth()) / 2, (SCREEN_HEIDHT - m_volumeKnob->GetHeight()) / 2);
-
+    m_volumeKnob->SetType(DYNAMIC);
     // Initialize volume level
     m_volumeLevel = 50; // Assuming 50% initial volume
 
@@ -38,6 +40,7 @@ void GSOption::Init() {
     button->SetOnClick([]() {
         GameStateMachine::GetInstance()->PopState();
         });
+    button->SetType(DYNAMIC);
     m_listButton.push_back(button);
 
 

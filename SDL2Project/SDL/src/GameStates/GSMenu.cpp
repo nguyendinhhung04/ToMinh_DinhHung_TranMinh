@@ -23,9 +23,10 @@ void GSMenu::Init()
 	m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
 	m_background->SetSize(SCREEN_WIDTH, SCREEN_HEIDHT);
 	m_background->Set2DPosition(0, 0);
+	m_background->SetType(DYNAMIC);
 
 	// play button
-	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/New game button.png");
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Start button.png");
 	std::shared_ptr<MouseButton> btnPlay = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 
 	btnPlay->SetSize(270, 80);
@@ -33,7 +34,9 @@ void GSMenu::Init()
 	btnPlay->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
 		});
+	btnPlay->SetType(DYNAMIC);
 	m_listButton.push_back(btnPlay);
+	
 
 	// exit button
 	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Exit button.png");
@@ -44,6 +47,7 @@ void GSMenu::Init()
 	btnClose->SetOnClick([]() {
 		exit(0);
 		});
+	btnClose->SetType(DYNAMIC);
 	m_listButton.push_back(btnClose);
 
 	//Setting game
@@ -54,6 +58,7 @@ void GSMenu::Init()
 	btnOption->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_OPTION);
 		});
+	btnOption->SetType(DYNAMIC);
 	m_listButton.push_back(btnOption);
 
 	//CREDIT game
@@ -65,6 +70,7 @@ void GSMenu::Init()
 	btnCredit->SetOnClick([]() {
 		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PAUSE);
 		});
+	btnCredit->SetType(DYNAMIC);
 	m_listButton.push_back(btnCredit);
 
 	// game title

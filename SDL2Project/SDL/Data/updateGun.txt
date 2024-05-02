@@ -15,6 +15,6 @@ brotato_presskit/weapons/medical_gun.png
 Bullet/Laser_Sprites/06.png
 15 15 500
 brotato_presskit/updateGun/Magic Sword.png
-brotato_presskit/weapons/excalibur.png
+brotato_presskit/weapons/thunder_sword.png
 Bullet/Laser_Sprites/07.png
 40 5 500

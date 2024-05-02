@@ -12,6 +12,7 @@ void GSCredit::Init() {
     m_background = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);
     m_background->SetSize(SCREEN_WIDTH, SCREEN_HEIDHT);
     m_background->Set2DPosition(0, 0);
+    m_background->SetType(DYNAMIC);
 
     texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Back Button.png");
     button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
@@ -20,6 +21,7 @@ void GSCredit::Init() {
     button->SetOnClick([]() {
         GameStateMachine::GetInstance()->PopState();
         });
+    button->SetType(DYNAMIC);
     m_listButton.push_back(button);
 }
 

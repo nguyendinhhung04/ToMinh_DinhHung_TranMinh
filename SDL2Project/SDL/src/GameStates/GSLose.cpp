@@ -25,6 +25,42 @@ void GSLose::Init()
 	m_background->Set2DPosition(0, 0);
 	m_background->SetType(DYNAMIC);
 
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Home Square button.png");
+	std::shared_ptr<MouseButton> btnHome = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
+
+	btnHome->SetSize(80, 80);
+	btnHome->Set2DPosition((SCREEN_WIDTH - btnHome->GetWidth()) / 2, (SCREEN_HEIDHT - btnHome->GetHeight()) / 2 + 310);
+	btnHome->SetOnClick([]() {
+		GameStateMachine::GetInstance()->PopState();
+		GameStateMachine::GetInstance()->PopState();
+	});
+	btnHome->SetType(DYNAMIC);
+	m_listButton.push_back(btnHome);
+
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/Return Square button.png");
+	std::shared_ptr<MouseButton> btnRestart = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
+
+	btnRestart->SetSize(80, 80);
+	btnRestart->Set2DPosition((SCREEN_WIDTH - btnHome->GetWidth()) / 2 + 120, (SCREEN_HEIDHT - btnHome->GetHeight()) / 2 + 310);
+	btnRestart->SetOnClick([]() {
+		GameStateMachine::GetInstance()->PopState();
+		GameStateMachine::GetInstance()->PopState();
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
+	});
+	btnRestart->SetType(DYNAMIC);
+	m_listButton.push_back(btnRestart);
+
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Square Buttons/Square Buttons/On Off Square button.png");
+	std::shared_ptr<MouseButton> btnQuit = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
+
+	btnQuit->SetSize(80, 80);
+	btnQuit->Set2DPosition((SCREEN_WIDTH - btnHome->GetWidth()) / 2 - 120, (SCREEN_HEIDHT - btnHome->GetHeight()) / 2 + 310);
+	btnQuit->SetOnClick([]() {
+		exit(0);
+		});
+	btnQuit->SetType(DYNAMIC);
+	m_listButton.push_back(btnQuit);
+
 
 
 }

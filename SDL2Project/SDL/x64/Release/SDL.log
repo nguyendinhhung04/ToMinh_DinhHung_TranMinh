@@ -1,0 +1,145 @@
+﻿cl : command line  warning D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
+  BaseWeapon.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(72,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(72,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(167,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\BaseWeapon.cpp(222,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Bullet.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(71,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(71,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(204,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(206,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(208,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(210,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(203,7): warning C4101: 'check': unreferenced local variable
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(238,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Bullet.cpp(246,6): warning C4805: '==': unsafe mix of type 'float' and type 'bool' in operation
+  enemy.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(25,12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(43,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(43,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(229,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\enemy.cpp(268,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  enemyBoomer.cpp
+  TextTimer.cpp
+  GSCredit.cpp
+  GSLose.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(32,110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(32,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(44,119): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(44,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(57,116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSLose.cpp(57,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GSOption.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(24,121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(24,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(31,123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(31,74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSOption.cpp(50,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C7525: inline variables require at least '/std:c++17'
+  (compiling source file 'src/Game.cpp')
+  
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C2864: 'KeyState::keystate': a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'
+  (compiling source file 'src/Game.cpp')
+  E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,40):
+  type is 'const Uint8 *'
+  
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\Game.cpp(68,27): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+  ResourceManagers.cpp
+  Camera.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(2,1): warning C4005: 'WIDTH_OFFSET': macro redefinition
+  E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.h(8,1):
+  see previous definition of 'WIDTH_OFFSET'
+  
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(7,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(8,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(29,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(30,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(41,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(42,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(46,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(50,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(73,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Camera.cpp(73,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  CMath.cpp
+  MouseButton.cpp
+  Renderer.cpp
+  Sound.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sound.cpp(100,21): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Sprite2D.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(39,47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(39,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(43,63): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Sprite2D.cpp(43,49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  SpriteAnimation.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(44,51): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(44,37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(275,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(277,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(279,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\SpriteAnimation.cpp(281,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Text.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Text.cpp(34,45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\Text.cpp(34,31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  TextureManager.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,70): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(97,70): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(104,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(105,18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,32): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,58): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,58): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,77): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,77): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,87): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(106,87): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,69): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\TextureManager.cpp(107,69): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Timer.cpp
+  Compiling...
+  GameStateBase.cpp
+  GameStateMachine.cpp
+  GSIntro.cpp
+  GSMenu.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(33,110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(33,62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(46,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(57,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(68,66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSMenu.cpp(81,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GSPlay.cpp
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C7525: inline variables require at least '/std:c++17'
+  (compiling source file 'src/GameStates/GSPlay.cpp')
+  
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,29): error C2864: 'KeyState::keystate': a static data member with an in-class initializer must have non-volatile const integral type or be specified as 'inline'
+  (compiling source file 'src/GameStates/GSPlay.cpp')
+  E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameObject\KeyState.h(15,40):
+  type is 'const Uint8 *'
+  
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(19,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(24,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(25,20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(29,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(30,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(34,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(35,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(39,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(40,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(79,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(80,91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(80,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(136,77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(136,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(152,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(167,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(182,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(200,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(567,41): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\TLU\Code\LEAP2024\ToMinh_DinhHung_TranMinh\SDL2Project\SDL\src\GameStates\GSPlay.cpp(338,2): warning C4065: switch statement contains 'default' but no 'case' labels
+  main.cpp

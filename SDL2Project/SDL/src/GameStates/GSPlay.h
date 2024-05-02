@@ -61,6 +61,9 @@ private:
 	std::shared_ptr<MouseButton> update_button;
 	std::vector<std::shared_ptr<MouseButton>>	m_listUpdateButton;
 
+	std::shared_ptr<MouseButton> gun_update_button;
+	std::vector<std::shared_ptr<MouseButton>>	m_listGunUpdateButton;
+
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 	std::shared_ptr<SpriteAnimation> obj;
@@ -84,6 +87,8 @@ private:
 	std::shared_ptr<Sprite2D> greenBox;
 
 	std::shared_ptr<MouseButton> pause_button;
+	std::shared_ptr<MouseButton> pause_restart_button;
+	std::shared_ptr<MouseButton> pause_option_button;
 	std::vector<std::shared_ptr<MouseButton>>	m_listPauseButton;
 
 	std::shared_ptr<SpriteAnimation> boom;
@@ -96,6 +101,8 @@ private:
 
 	SDL_Rect m_darkOverlay;
 	SDL_Rect m_HealthBarHitEffect;
+
+	std::shared_ptr<Sound>					m_Sound;
 
 	
 	float time = 0.0f;

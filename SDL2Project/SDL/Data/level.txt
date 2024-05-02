@@ -1,18 +1,18 @@
 brotato_presskit/enemies/Enemy1Animation.png
-5 100000 10 200
+3 10 10 200
 brotato_presskit/enemies/Enemy1Animation.png
-10 20 10 220
+5 20 10 200
 brotato_presskit/enemies/Enemy2Animation.png
-10 25 10 200
+10 25 10 220
 brotato_presskit/enemies/Enemy2Animation.png
-15 25 10 200
+15 30 10 220
 brotato_presskit/enemies/Enemy3Animation.png
-15 30 10 200
+15 35 10 240
 brotato_presskit/enemies/Enemy3Animation.png
-20 30 10 2000
+20 40 10 240
 brotato_presskit/enemies/Enemy4Animation.png
-15 40 10 2000
+15 45 10 260
 brotato_presskit/enemies/Enemy4Animation.png
-30 30 10 2000
+30 50 10 260
 brotato_presskit/enemies/Enemy4Animation.png
-5 1 10 2000
+5 1 10 280
