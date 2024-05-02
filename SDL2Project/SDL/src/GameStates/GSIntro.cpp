@@ -13,9 +13,9 @@ GSIntro::~GSIntro()
 void GSIntro::Init()
 {
 	printf("Hello");
-	auto texture = ResourceManagers::GetInstance()->GetTexture("peter.tga");  //Create a image tga instance
+	auto texture = ResourceManagers::GetInstance()->GetTexture("newlogo.png");  //Create a image tga instance
 	m_logo = std::make_shared<Sprite2D>(texture, SDL_FLIP_NONE);   //Make pointer point to it
-	m_logo->SetSize(800/2, 451/2);   //change the size 
+	m_logo->SetSize(800/2, 800/2);   //change the size 
 	m_logo->Set2DPosition((float)(SCREEN_WIDTH - m_logo->GetWidth())/2 , (float)(SCREEN_HEIDHT - m_logo->GetHeight())/2);
 	//set the position (in this case the logo is at the center of the screen)
 	//SREEN Width, height is the size of the window

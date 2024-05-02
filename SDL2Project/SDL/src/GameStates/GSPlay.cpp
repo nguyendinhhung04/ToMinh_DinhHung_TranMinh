@@ -140,7 +140,16 @@ void GSPlay::Init()
 	m_vectorWeapon.push_back(weapon);
 
 
+	texture = ResourceManagers::GetInstance()->GetTexture("Buttons/Large Buttons/Large Buttons/Menu button.png");
+	std::shared_ptr<MouseButton> pause_button = std::make_shared<MouseButton>(texture, SDL_FLIP_NONE);
 
+	pause_button->SetSize(270, 80);
+	pause_button->Set2DPosition((SCREEN_WIDTH - pause_button->GetWidth()) / 2, (SCREEN_HEIDHT - pause_button->GetHeight()) / 2 + 120);
+	pause_button->SetOnClick([]() 
+	{
+		GameStateMachine::GetInstance()->PopState();	
+	});
+	m_listPauseButton.push_back(pause_button);
 
 
 
@@ -155,6 +164,8 @@ void GSPlay::Init()
 	m_timer->SetSize(40, 30);
 	m_timer->Set2DPosition(SCREEN_WIDTH / 2 - m_timer->GetWidth() / 2, 30);
 	m_timer->SetTime(90);
+
+
 
 
 }
@@ -251,6 +262,17 @@ void GSPlay::HandleTouchEvents(SDL_Event& e)
 		if (button->HandleTouchEvent(&e))
 		{
 			break;
+		}
+	}
+
+	if (!m_isPlaying)
+	{
+		for (auto button : m_listPauseButton)
+		{
+			if (button->HandleTouchEvent(&e))
+			{
+				break;
+			}
 		}
 	}
 }
@@ -510,7 +532,7 @@ void GSPlay::Update(float deltaTime)
 	Camera::GetInstance()->Update(deltaTime);
 
 	if (obj->getHP() <= 0) {
-		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_LOSE);
 	}
 }
 
@@ -518,7 +540,6 @@ void GSPlay::Update(float deltaTime)
 
 void GSPlay::Draw(SDL_Renderer* renderer)
 {
-
 
 	m_background->Draw(renderer);
 	m_border->Draw(renderer);
@@ -594,6 +615,12 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 128);
 
 		SDL_RenderFillRect(renderer, &m_darkOverlay);
+
+		for (auto it : m_listPauseButton)
+		{
+			it->Draw(renderer);
+		}
+
 		for (auto it : m_listButton)
 		{
 			it->Draw(renderer);
@@ -653,25 +680,29 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 			chooseButton->Set2DPosition(0, 0);
 			chooseButton->SetType(DYNAMIC);
 			chooseButton->SetOnClick([this, hp,damage,speed,range]() {
-				m_isPlaying = !m_isPlaying;
-				m_isUpdate = false;
-				op1 = -1;
-				op2 = -1;
-				op3 = -1;
-				obj->setHP(obj->getHP() + hp);
-				if (obj->getHP() > 100)
+				if (m_isUpdate)
 				{
-					obj->setHP(100);
-				}
+					m_isPlaying = !m_isPlaying;
+					m_isUpdate = false;
+					op1 = -1;
+					op2 = -1;
+					op3 = -1;
+					obj->setHP(obj->getHP() + hp);
+					if (obj->getHP() > 100)
+					{
+						obj->setHP(100);
+					}
 
-				obj->m_MoveSpeed += obj->m_MoveSpeed * speed;
-				for (auto it : m_vectorWeapon)
-				{
-					it->setDamage(it->getDamage() + it->getDamage() * damage);
-					it->setRange(it->getRange() + it->getRange() * range);
+					obj->m_MoveSpeed += obj->m_MoveSpeed * speed;
+					for (auto it : m_vectorWeapon)
+					{
+						it->setDamage(it->getDamage() + it->getDamage() * damage);
+						it->setRange(it->getRange() + it->getRange() * range);
+					}
 				}
+				
 				//obj->
-				});
+			});
 
 			buttonList.push_back(chooseButton);
 			chooseButton.reset();
@@ -701,20 +732,24 @@ void GSPlay::createChooseGunButtonFromFile(std::string& filename, std::vector<st
 			chooseButton->Set2DPosition(0, 0);
 			chooseButton->SetType(DYNAMIC);
 			chooseButton->SetOnClick([this, damage, speed_rate, range , textureGunPath,bulletPath]() {
-		        m_isPlaying = !m_isPlaying;
-				m_isUpdate = false;
-				op1 = -1;
-				op2 = -1;
-				op3 = -1;
-				if (gun_slot <= 5)
+				if (m_isUpdate)
 				{
-					auto textureGun = ResourceManagers::GetInstance()->GetTexture(textureGunPath);
-					auto addWeapon = std::make_shared<BaseWeapon>(textureGun, 1, 1, 1, 1.00f,bulletPath, damage,speed_rate,range);
-					addWeapon->SetSize(40, 40);
-					m_vectorWeapon.push_back(addWeapon);
-					gun_slot++;
+					m_isPlaying = !m_isPlaying;
+					m_isUpdate = false;
+					op1 = -1;
+					op2 = -1;
+					op3 = -1;
+					if (gun_slot <= 5)
+					{
+						auto textureGun = ResourceManagers::GetInstance()->GetTexture(textureGunPath);
+						auto addWeapon = std::make_shared<BaseWeapon>(textureGun, 1, 1, 1, 1.00f, bulletPath, damage, speed_rate, range);
+						addWeapon->SetSize(40, 40);
+						m_vectorWeapon.push_back(addWeapon);
+						gun_slot++;
+					}
 				}
-				});
+		        
+			});
 
 			buttonList.push_back(chooseButton);
 			chooseButton.reset();

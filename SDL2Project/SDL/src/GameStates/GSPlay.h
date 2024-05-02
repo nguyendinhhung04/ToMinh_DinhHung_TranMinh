@@ -47,16 +47,20 @@ private:
 	int getRandomNumber(int low, int high);
 	void generateUniqueRandomNumbers(int n,int &x,int &y,int &z);
 	void DrawPauseScreen(SDL_Renderer* renderer);
+
 	int m_level = 0;
 	int gun_slot = 0;
 	bool m_isUpdate = false;
 	bool m_isChooseUpdate = false;
+
 	std::shared_ptr<Sprite2D>	m_background;
+
 	std::vector<std::shared_ptr<Sprite2D>> m_listUpdate;
 	std::shared_ptr<Sprite2D>	m_update;
 	//std::shared_ptr<Text>		m_score;
 	std::shared_ptr<MouseButton> update_button;
 	std::vector<std::shared_ptr<MouseButton>>	m_listUpdateButton;
+
 	std::list<std::shared_ptr<MouseButton>>	m_listButton;               
 	std::list<std::shared_ptr<SpriteAnimation>>	m_listAnimation;
 	std::shared_ptr<SpriteAnimation> obj;
@@ -64,15 +68,23 @@ private:
 	std::vector<std::vector<std::shared_ptr<enemy>>> m_vectorEnemyS;
 	std::vector<std::shared_ptr<enemy>> m_vectorEnemy;
 	std::shared_ptr<enemy> monster;
+
 	std::shared_ptr<MouseButton> button;
+
 	std::shared_ptr<Sprite2D> m_border;
+
 	std::shared_ptr<BaseWeapon> weapon;
 	std::vector<std::shared_ptr<BaseWeapon>> m_vectorWeapon;
+
 	std::shared_ptr<Bullet> bullet;
 	std::vector<std::shared_ptr<Bullet>> m_vectorBullet;
+
 	std::shared_ptr<Sprite2D> grayBorder;
 	std::shared_ptr<Sprite2D> redBox;
 	std::shared_ptr<Sprite2D> greenBox;
+
+	std::shared_ptr<MouseButton> pause_button;
+	std::vector<std::shared_ptr<MouseButton>>	m_listPauseButton;
 
 	std::shared_ptr<SpriteAnimation> boom;
 	//std::vector<std::shared_ptr<SpriteAnimation>> m_vectorBoom;
