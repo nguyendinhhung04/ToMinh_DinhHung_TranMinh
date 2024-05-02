@@ -1,22 +1,22 @@
-brotato_presskit/update/heal.png
+brotato_presskit/update/Medkit.png
 30 0 0 0
-brotato_presskit/update/run.png
+brotato_presskit/update/Poison.png
 0 0 0.1 0
-brotato_presskit/update/powerUp.png
+brotato_presskit/update/Robot Arm.png
 0 0.02 0 0
-brotato_presskit/update/heal.png
+brotato_presskit/update/Medkit.png
 30 0 0 0
-brotato_presskit/update/heal.png
+brotato_presskit/update/Medkit.png
 30 0 0 0
-brotato_presskit/update/acid.png
+brotato_presskit/update/Acid.png
 0 0.03 0 0
-brotato_presskit/update/bat.png
+brotato_presskit/update/Bat.png
 0 0 0.07 0
-brotato_presskit/update/wing.png
+brotato_presskit/update/Wings.png
 0 0 0.15 0
-brotato_presskit/update/fire.png
+brotato_presskit/update/Campfire.png
 0 0.15 0 0
-brotato_presskit/update/alien_tongue.png
+brotato_presskit/update/Alien Tongue.png
 0 0.2 0 0.2
-brotato_presskit/update/blood_donation.png
+brotato_presskit/update/Blood Bag.png
 -50 0.4 0 0.4

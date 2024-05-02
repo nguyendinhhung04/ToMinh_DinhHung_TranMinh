@@ -1,20 +1,20 @@
-brotato_presskit/updateGun/shotgunn.png
+brotato_presskit/updateGun/Shotgun.png
 brotato_presskit/weapons/double_barrel_shotgun.png 
 Bullet/Laser_Sprites/03.png 
 20 3 500 
-brotato_presskit/updateGun/shotgunn.png
-brotato_presskit/weapons/double_barrel_shotgun.png
+brotato_presskit/updateGun/Flamegun.png
+brotato_presskit/weapons/flamethrower.png
 Bullet/Laser_Sprites/04.png
 20 6 500
-brotato_presskit/updateGun/GhostScepter.png
+brotato_presskit/updateGun/Ghostscepter.png
 brotato_presskit/weapons/ghost_scepter.png
 Bullet/Laser_Sprites/05.png
 30 20 400
-brotato_presskit/updateGun/medical_gun.png
+brotato_presskit/updateGun/Medical gun.png
 brotato_presskit/weapons/medical_gun.png
 Bullet/Laser_Sprites/06.png
 15 15 500
-brotato_presskit/updateGun/magic_sword.png
+brotato_presskit/updateGun/Magic Sword.png
 brotato_presskit/weapons/excalibur.png
 Bullet/Laser_Sprites/07.png
 40 5 500

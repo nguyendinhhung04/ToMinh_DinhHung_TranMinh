@@ -129,7 +129,7 @@ void SpriteAnimation::MoveLeft(float deltaTime, float speed)
 	
 	if (m_position.x < 111 || m_position.x >1835 || m_position.y < 80 || m_position.y >942)
 	{
-		printf("OUT");
+
 		m_position.x += speed * deltaTime;
 	}
 }

@@ -11,7 +11,7 @@ public:
 	void		Draw(SDL_Renderer* renderer) override;
 	void		Update(float deltatime) override;
 	void LoadFromRenderText(std::string textureText);
-private:
+protected:
 	//std::shared_ptr<TextureManager> m_Texture;
 	std::string m_TextureText;
 	SDL_Color  m_TextColor;

@@ -14,20 +14,36 @@
 #define INIT_HEALTHBAR_WIDTH 290
 #define INIT_HEALTHBAR_HEIGHT 40
 
-float RandomNumber()
+Vector2 RandomVector2()
 {
-	float temp1 = rand() % 2 + 1;
-	float temp2;
+	float temp1 = rand() % 4 + 1;
+
+	Vector2 temp2;
 	if (temp1 == 1)
 	{
-		temp2 = rand() % 151 + 1000;
+		temp2.x = rand() % 2000;
+		temp2.y = rand() % 2;
 	}
-	else
+	else if (temp1 == 2)
 	{
-		temp2 = -(rand() % 151 + 800);
+		temp2.x = rand() % 2 + 1900;
+		temp2.y = rand() % 1114 ;
+	}
+	else if (temp1 == 3)
+	{
+		temp2.x = rand() % 2000;
+		temp2.y = rand() % 2 + 1064;
+	}
+	else if (temp1 == 4)
+	{
+		temp2.x = rand() % 2 +1;
+		temp2.y = rand() % 1114;
 	}
 	return temp2;
+
+
 }
+
 
 
 GSPlay::GSPlay()
@@ -133,7 +149,12 @@ void GSPlay::Init()
 
 	m_darkOverlay = { 0,0,SCREEN_WIDTH, SCREEN_HEIDHT };
 
-
+	//Timer
+	SDL_Color color = { 255,255,255 };
+	m_timer = std::make_shared<TextTimer>("Data/RobotoMono-VariableFont_wght.ttf", color);
+	m_timer->SetSize(40, 30);
+	m_timer->Set2DPosition(SCREEN_WIDTH / 2 - m_timer->GetWidth() / 2, 30);
+	m_timer->SetTime(90);
 
 
 }
@@ -431,6 +452,14 @@ void GSPlay::Update(float deltaTime)
 			}
 
 		}
+
+		if (m_timer->GetTime() <= 0)
+		{
+			while (m_vectorEnemyS[m_level].size() > 0)
+			{
+				m_vectorEnemyS[m_level].pop_back();
+			}
+		}
 		
 		if (m_vectorEnemyS[m_level].size() == 0)
 		{
@@ -471,11 +500,18 @@ void GSPlay::Update(float deltaTime)
 	}
 
 	greenBox->SetSize(INIT_HEALTHBAR_WIDTH * (obj->getHP() / 100), INIT_HEALTHBAR_HEIGHT);
-
+	if (m_isPlaying == true)
+	{
+		m_timer->Update(deltaTime);
+	}
 
 
 	//Update position of camera
 	Camera::GetInstance()->Update(deltaTime);
+
+	if (obj->getHP() <= 0) {
+		GameStateMachine::GetInstance()->ChangeState(StateType::STATE_PLAY);
+	}
 }
 
 
@@ -485,6 +521,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 
 
 	m_background->Draw(renderer);
+	m_border->Draw(renderer);
 	//m_score->Draw();
 
 	for (auto it : m_listButton)
@@ -548,7 +585,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 		}
 	}
 
-	m_border->Draw(renderer);
+
 
 
 	if (!m_isPlaying)
@@ -569,7 +606,7 @@ void GSPlay::Draw(SDL_Renderer* renderer)
 	grayBorder->Draw(renderer);
 	redBox->Draw(renderer);
 	greenBox->Draw(renderer);
-
+	m_timer->Draw(renderer);
 
 
 	if (m_isUpdate)
@@ -622,6 +659,11 @@ void GSPlay::createChooseButtonFromFile(std::string& filename, std::vector<std::
 				op2 = -1;
 				op3 = -1;
 				obj->setHP(obj->getHP() + hp);
+				if (obj->getHP() > 100)
+				{
+					obj->setHP(100);
+				}
+
 				obj->m_MoveSpeed += obj->m_MoveSpeed * speed;
 				for (auto it : m_vectorWeapon)
 				{
@@ -699,9 +741,8 @@ void GSPlay::createLevelFromFile(std::string& filename)
 				monster = std::make_shared<enemy>(textureEnemy, 1, 8, 1, 0.07f, hp/*enemy HP*/, damage/*enemy power*/, speed /*enemy speed*/);
 				monster->SetFlip(SDL_FLIP_NONE);
 				monster->SetSize(60, 60);
-				float temp1 = RandomNumber(); 
-				float temp2 = RandomNumber();
-				monster->Set2DPosition(temp1, temp2);
+				Vector2 temp = RandomVector2();
+				monster->Set2DPosition(temp.x,temp.y);
 				m_vectorEnemy.push_back(monster);
 			}
 			m_vectorEnemyS.push_back(m_vectorEnemy);

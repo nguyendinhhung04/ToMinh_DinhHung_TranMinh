@@ -170,7 +170,9 @@
     <ClCompile Include="src\GameObject\Bullet.cpp" />
     <ClCompile Include="src\GameObject\enemy.cpp" />
     <ClCompile Include="src\GameObject\enemyBoomer.cpp" />
+    <ClCompile Include="src\GameObject\TextTimer.cpp" />
     <ClCompile Include="src\GameStates\GSCredit.cpp" />
+    <ClCompile Include="src\GameStates\GSLose.cpp" />
     <ClCompile Include="src\GameStates\GSOption.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameManager\ResourceManagers.cpp" />
@@ -197,7 +199,9 @@
     <ClInclude Include="src\GameObject\Bullet.h" />
     <ClInclude Include="src\GameObject\enemy.h" />
     <ClInclude Include="src\GameObject\enemyBoomer.h" />
+    <ClInclude Include="src\GameObject\TextTimer.h" />
     <ClInclude Include="src\GameStates\GSCredit.h" />
+    <ClInclude Include="src\GameStates\GSLose.h" />
     <ClInclude Include="src\GameStates\GSOption.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\GameManager\ResourceManagers.h" />
